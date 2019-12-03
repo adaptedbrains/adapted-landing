@@ -215,7 +215,14 @@
         }
 
         .accordion .accordion__title:before {
-            font-family: 'Helvetica', 'Arial';
+            font-family: "stack-interface";
+            content: none;
+            margin-right: 6px;
+            color: #252525;
+        }
+
+        .accordion li.active .accordion__title:before {
+            content: none;
         }
     </style>
 </head>
@@ -1046,7 +1053,7 @@
                                     src="wp-content/themes/stackWordPressTheme/style/img/logo-dark.png" />
                                 <img class="logo logo-light" alt="logo"
                                     src="wp-content/themes/stackWordPressTheme/style/img/logo-light.png" /> -->
-                                    <span class="h3" style="font-weight: bold;">Nurture Labs</span>
+                                <span class="h3" style="font-weight: bold;">Nurture Labs</span>
                             </a> </div>
                         <!-- <div>
                             <div class="footer-stack-copyright">
