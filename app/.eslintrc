@@ -1,0 +1,46 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": ["airbnb"],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 6,
+        "sourceType": "module"
+    },
+    "parser": "babel-eslint",
+    "root": true,
+    "plugins": ["react"],
+    "rules": {
+        "indent": ["off", 4],
+        "linebreak-style": "off",
+        "quotes": ["error", "single"],
+        "react/prop-types": 0,
+        "react/destructuring-assignment": 0,
+        "react/jsx-filename-extension": [1, {"extensions": [".js", ".jsx"]}],
+        "react/jsx-indent": ["error", 4],
+        "react/jsx-indent-props": ["error", 4],
+        "react/no-array-index-key": 0,
+        "semi": ["error", "always"],
+        "template-curly-spacing": "off",
+        "max-len": ["warn", {"code": 100}],
+        "no-use-before-define": 0,
+        "no-dupe-keys": "warn",
+        "object-curly-spacing": ["error", "always"],
+        "object-curly-newline": [
+            "error",
+            {
+                "ImportDeclaration": {"multiline": true, "minProperties": 3},
+                "ExportDeclaration": {"multiline": true, "minProperties": 3}
+            }
+        ],
+        "object-property-newline": [
+            "error",
+            {"allowAllPropertiesOnSameLine": true}
+        ],
+        "camelcase": "warn"
+    }
+}

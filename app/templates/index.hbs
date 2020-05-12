@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Nurture Labs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    {{#each htmlWebpackPlugin.files.css}}
+    <link rel="stylesheet" type="text/css" href="{{this}}">
+    {{/each}}
+    <base href="/">
+</head>
+
+<body class="nav-fixed tabbed-nav">
+    <script type="text/javascript">
+    </script>
+    <div id="loaderDiv" class="loader circle"></div>
+    <section id="app"></section>
+    {{#each htmlWebpackPlugin.files.js}}
+    <script src="{{this}}"></script>
+    {{/each}}
+</body>
+
+</html>

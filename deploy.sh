@@ -1,5 +1,9 @@
-export TMP_BUCKET_NAME=nurturelabs.co
-export CLOUDFRONT_ID=E3PFDDQQ1JL288
-aws s3 cp . s3://$TMP_BUCKET_NAME --recursive --include "*" --exclude ".git/*" --exclude "tmp/*" --exclude "src/*" --profile nurture-labs-static-website-user
-aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_ID \
-  --paths /\*
+echo "building client bundle"
+npm run prod:build-client
+echo "building server bundle"
+npm run prod:build-server
+echo "restart nurturelabs pm2 server"
+pm2 delete mentions
+pm2 start ecosystem.config.js
+
+echo "yo yo vivek baba deployment successful"

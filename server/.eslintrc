@@ -1,0 +1,11 @@
+{
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaVersion": 2018
+    },
+    "rules": {
+        "no-console": ["error", {"allow": ["warn", "error", "log"]}],
+        "quotes": ["error", "single"],
+        "semi": ["error", "always"]
+    }
+}
