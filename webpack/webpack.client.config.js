@@ -43,11 +43,11 @@ const config = {
     plugins: [
         new webpack.NoEmitOnErrorsPlugin(),
         new webpack.optimize.OccurrenceOrderPlugin(true),
-        new CleanWebpackPlugin(path.join(__dirname, '../public', DIST_FOLDER), {
-            root: process.cwd(),
-            verbose: true,
-            exclude: ['stats.json']
-        }),
+        // new CleanWebpackPlugin(path.join(__dirname, '../public', DIST_FOLDER), {
+        //     root: process.cwd(),
+        //     verbose: true,
+        //     exclude: ['stats.json']
+        // }),
         new HtmlWebpackPlugin({
             inject: false,
             template: 'app/templates/index.hbs',

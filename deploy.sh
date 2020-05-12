@@ -1,3 +1,5 @@
+echo "Remove public"
+rm -rf /public/nurturelabs/*
 echo "building client bundle"
 npm run prod:build-client
 echo "building server bundle"
