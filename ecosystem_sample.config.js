@@ -1,15 +1,15 @@
 module.exports = {
     apps: [
         {
-            name: 'fractionalCTO',
+            name: 'NurtureLabs',
             script: './build/bundle.js',
             watch: true,
             env: {
-                PORT: 9000,
+                PORT: 5000,
                 NODE_ENV: 'development'
             },
             env_production: {
-                PORT: 9000,
+                PORT: 5000,
                 NODE_ENV: 'production'
             }
         }
