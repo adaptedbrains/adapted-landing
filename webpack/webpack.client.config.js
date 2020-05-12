@@ -63,13 +63,8 @@ const config = {
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
             REQUEST_TIMEOUT: REQUEST_TIMEOUT
-        }),
-        // new CopyWebpackPlugin([
-        //     {
-        //         from: path.join(__dirname, '..', '/pwaconfig'),
-        //         to: path.join(__dirname, '../public')
-        //     }
-        // ]) /* ,
+        })
+        /* ,
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',
             filename: isProd ? '[name]-[hash].min.js' : '[name].dev.js',
