@@ -8,9 +8,9 @@ import { setAuthorizationToken } from './config/axios';
 import { routes } from './Routes';
 import ReactGA from 'react-ga';
 import configureStore from './store/configureStore';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'react-toolbox/lib/input/theme.css';
-import 'shards-ui/dist/css/shards.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'react-toolbox/lib/input/theme.css';
+// import 'shards-ui/dist/css/shards.min.css';
 // import registerServiceWorker from './registerServiceWorker';
 
 // Import CSS reset and Global Styles
