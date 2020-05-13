@@ -436,8 +436,9 @@ const DahsboardCss = styled.div`
               flex-direction: row;
               flex-wrap: wrap;
               img {
-                height: 40px;
-                margin-right: 10px;
+                height: 30px;
+                margin-right: 24px;
+                margin-bottom: 5px;
                 object-fit: contain;
               }
             }
@@ -667,7 +668,6 @@ const DahsboardCss = styled.div`
         .sideImage {
           width: 100%;
           object-fit: contain;
-          margin-top: 50px;
           margin-left: 10%;
         }
       }
