@@ -12,6 +12,110 @@ const DahsboardCss = styled.div`
     position: relative;
     height: 100vh;
   }
+  .footerBox {
+    display: flex;
+    padding: 20px 100px;
+    padding-top: 10vh;
+    background-color: #cde2d450;
+    .footerContainer {
+      display: flex;
+      width: 100%;
+      .firstFooterBox {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: flex-start;
+        img {
+          height: 50px;
+          object-fit: contain;
+          margin-bottom: 50px;
+        }
+        .firstHeading {
+          font-family: Poppins-Medium;
+          font-size: 17px;
+          color: #303030;
+          margin-bottom: 20px;
+          width: 75%;
+        }
+        .subheadingFooter {
+          font-family: Poppins-Regular;
+          font-size: 16px;
+          width: 100%;
+          color: #79818c;
+        }
+      }
+      .secondfooter {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        flex-direction: column;
+        .footerLinks {
+          width: 70%;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          span {
+            width: 50%;
+            margin: 10px 0px;
+            font-family: Poppins-Medium;
+            font-size: 17px;
+            color: #303030;
+          }
+        }
+        .subscribenow {
+          display: flex;
+          flex-direction: row;
+          margin-top: 100px;
+          margin-bottom: 50px;
+          width: 70%;
+          input {
+            border: solid 1px #dddddd;
+            padding: 10px;
+            font-family: Poppins-Medium;
+            font-size: 19px;
+            width: 70%;
+          }
+          .subscribeNowButton {
+            padding: 10px 25px;
+            font-family: Poppins-Regular;
+            border-radius: 5px;
+            color: #fff;
+            background-color: #303030;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+  .bottomFooter{
+    display:flex;
+    padding:25px 5vw;
+    align-items:center;
+    background-color:#d7e8dd;
+    justify-content: space-between;
+    .line{
+      height:30px;
+      width:2px;
+      background-color: #303030;
+    }
+    .rowBox{
+      display:flex;
+      align-items:center;
+    }
+    img{
+      height:20px;
+      object-fit:contain;
+      margin-right:20px;
+    }
+    span{
+      font-family: Poppins-Regular;
+      font-size:15px;
+      margin-right:30px;
+      color:#303030;
+    }
+  }
   .header {
     display: flex;
     flex: 1;
@@ -83,7 +187,7 @@ const DahsboardCss = styled.div`
         letter-spacing: 2px;
         overflow: hidden;
         height: 15px;
-        margin-bottom:60px;
+        margin-bottom: 60px;
       }
       .headercontainer8 {
         width: 80%;
