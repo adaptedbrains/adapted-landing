@@ -4,6 +4,7 @@ import base from './base';
 /* eslint no-unused-expressions: 0 */
 export default () => injectGlobal`
     html, body {
+        margin:0px;
         height: 100%;
     }
     p{

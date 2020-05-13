@@ -16,7 +16,7 @@ const DahsboardCss = styled.div`
     display: flex;
     flex: 1;
     height: 20vh;
-    padding: 30px 100px;
+    padding: 0px 100px;
     align-items: center;
     img {
       width: 130px;

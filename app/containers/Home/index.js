@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { DahsboardCss } from "./style";
 
-class Dashboard extends React.Component {
+class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state={
@@ -386,4 +386,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, null)(Dashboard);
+export default connect(mapStateToProps, null)(Home);

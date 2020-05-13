@@ -31,14 +31,14 @@ export function getRoutes(store) {
         },
         indexRoute: {
             getComponent(location, cb) {
-                cb(null, require('./containers/Dashboard').default);
+                cb(null, require('./containers/Home').default);
             },
         },
         childRoutes: [
             {
-                path: 'nurturelabs',
+                path: 'join',
                 getComponent(location, cb) {
-                    cb(null, require('./containers/redirect').default);
+                    cb(null, require('./containers/JoinNetwork').default);
                 },
             },
         ],
