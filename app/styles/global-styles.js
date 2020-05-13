@@ -1,5 +1,5 @@
-import { injectGlobal } from 'styled-components';
-import base from './base';
+import { injectGlobal } from "styled-components";
+import base from "./base";
 
 /* eslint no-unused-expressions: 0 */
 export default () => injectGlobal`

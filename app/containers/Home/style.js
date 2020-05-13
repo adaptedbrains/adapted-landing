@@ -825,7 +825,7 @@ const DahsboardCss = styled.div`
           padding: 15px 0px;
           border-radius: 5px;
           display: flex;
-          width: 48%;
+          width: 45%;
           justify-content: center;
           cursor: pointer;
           :hover {

@@ -72,7 +72,6 @@ export default (req, store, renderProps) => {
 				<meta name="theme-color" content="#fff" />
                 <meta name="description" content="Nurture Labs" />
                 <meta property="og:image" content="https://i.imgur.com/cUNg6jH.png">
-                <link rel="manifest" href="manifest.json">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
                 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
