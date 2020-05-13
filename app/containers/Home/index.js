@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { DahsboardCss } from "./style";
-
+import Header from "../../components/Header";
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -16,24 +16,15 @@ class Home extends React.Component {
   }
   render() {
     const { loading } = this.state;
+    const { isMobile } = this.props;
     if (loading) {
       return null;
     }
     return (
       <DahsboardCss>
         <div className="containerBig">
-          <div className="greenHalf" />
-          <div className="header">
-            <div className="first">
-              <img src="https://i.imgur.com/oFgkGUI.png" />
-            </div>
-            <div className="second">
-              <div className="menuItem">Partner with us</div>
-              <div className="menuItem">Join Network</div>
-              <div className="menuItem">Portfolio</div>
-              <div className="menuItem roundButton">Contact us</div>
-            </div>
-          </div>
+          {!isMobile ? <div className="greenHalf" /> : null}
+          <Header />
           <div className="container1">
             <div className="first">
               <span className="headerTitle">
@@ -73,6 +64,7 @@ class Home extends React.Component {
                 of top-performing remote talent, available for roles ranging
                 from fractional, full-time to an independent contractor.
               </span>
+              <span className="knowMorespan">KNOW MORE</span>
             </div>
             <div className="feature">
               <img
@@ -85,6 +77,7 @@ class Home extends React.Component {
                 of dedicated remote software engineers and designers to design,
                 build, and run your product.
               </span>
+              <span className="knowMorespan">KNOW MORE</span>
             </div>
             <div className="feature">
               <img
@@ -97,13 +90,14 @@ class Home extends React.Component {
                 across industries to systematically test and launch the first
                 version of their product and raise first round of funding.{" "}
               </span>
+              <span className="knowMorespan">KNOW MORE</span>
             </div>
           </div>
         </div>
         <div className="container3">
           <span className="headingText">
-            Tackle all your technology challenges and technical bottlenecks with
-            our smarter alternative solutions
+            Work With Pre-Vetted Remote Tech Talent Skilled In New Technologies
+            And Tailor Matched To Your Needs
           </span>
           <div className="teamSize">
             <div className="team">
@@ -129,10 +123,12 @@ class Home extends React.Component {
           </div>
         </div>
         <div className="container4">
-          <span className="headingText">
-            Work With Pre-Vetted Remote Tech Talent Skilled In New Technologies
-            And Tailor Matched To Your Needs
-          </span>
+          {!isMobile ? (
+            <span className="headingText">
+              Work With Pre-Vetted Remote Tech Talent Skilled In New
+              Technologies And Tailor Matched To Your Needs
+            </span>
+          ) : null}
           <div className="containerBox">
             <div className="firstBox">
               <span className="firstText">Skill Set</span>
@@ -297,6 +293,20 @@ class Home extends React.Component {
               </div>
             </div>
             <div className="secondBox">
+              {isMobile ? (
+                <div className="secondChild">
+                  <span className="headline">Project Name</span>
+                  <span className="subtitleline">
+                    Digital Media, Los Angeles, California, USA
+                  </span>
+                  <div className="technologyBox">
+                    <img src="https://i.imgur.com/Tz8RR4F.png" />
+                    <img src="https://i.imgur.com/OP0Ek0B.png" />
+                    <img src="https://i.imgur.com/9SgQBl0.png" />
+                    <img src="https://i.imgur.com/28JDguE.png" />
+                  </div>
+                </div>
+              ) : null}
               <div className="firstimage">
                 <img src="https://i.imgur.com/xdSxfy3.png" />
               </div>
@@ -375,64 +385,60 @@ class Home extends React.Component {
             </div>
           </div>
         </div>
-        <div className="footerBox">
-          <div className="footerContainer">
-            <div className="firstFooterBox">
-              <img src="https://i.imgur.com/kK7cxAz.png" />
-              <span className="firstHeading">
-                Sed ut perspiciatis unde omnis iste natus error sit volu ptatem
-                accusantium doloremque laud
-              </span>
-              <span className="subheadingFooter">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo invent
-              </span>
-            </div>
-            <div className="secondfooter">
-              <div className="footerLinks">
-                <span>Service</span>
-                <span>Join Us</span>
-                <span>Work</span>
-                <span>Contact Us</span>
-                <span>Pricing</span>
-                <span>Terms and Conditions</span>
-                <span>Blogs</span>
-                <span>Privacy Policy</span>
+        {!isMobile ? (
+          <div className="footerBox">
+            <div className="footerContainer">
+              <div className="firstFooterBox">
+                <img src="https://i.imgur.com/kK7cxAz.png" />
+                <span className="firstHeading">
+                  Sed ut perspiciatis unde omnis iste natus error sit volu
+                  ptatem accusantium doloremque laud
+                </span>
+                <span className="subheadingFooter">
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                  accusantium doloremque laudantium, totam rem aperiam, eaque
+                  ipsa quae ab illo invent
+                </span>
               </div>
-              <div className="subscribenow">
-                <input placeholder="Enter Email" />
-                <div className="subscribeNowButton">Subscribe</div>
+              <div className="secondfooter">
+                <div className="footerLinks">
+                  <span>Service</span>
+                  <span>Join Us</span>
+                  <span>Work</span>
+                  <span>Contact Us</span>
+                  <span>Pricing</span>
+                  <span>Terms and Conditions</span>
+                  <span>Blogs</span>
+                  <span>Privacy Policy</span>
+                </div>
+                <div className="subscribenow">
+                  <input placeholder="Enter Email" />
+                  <div className="subscribeNowButton">Subscribe</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        ) : null}
         <div className="bottomFooter">
-          <div className="rowBox">
-          <img src="https://i.imgur.com/EiQJ3KT.png"/>
-          <span>
-          +1 12345666
-          </span>
-          </div>
-          <div className="rowBox">
-          <img src="https://i.imgur.com/2aAwphY.png"/>
-          <span>
-          support@companyname.com
-          </span>
-          </div>
-          <div className="line">
+          {!isMobile ? (
+            <>
+              <div className="rowBox">
+                <img src="https://i.imgur.com/EiQJ3KT.png" />
+                <span>+1 12345666</span>
+              </div>
+              <div className="rowBox">
+                <img src="https://i.imgur.com/2aAwphY.png" />
+                <span>support@companyname.com</span>
+              </div>
+              <div className="line"></div>
+              <div className="rowBox">
+                <span>Follow-Us</span>
 
-          </div>
-          <div className="rowBox">
-          <span>
-          Follow-Us
-          </span>
-         
-          <img src="https://i.imgur.com/pStgaAW.png"/>
-          </div>
-          <span>
-          All rights reserved by company name
-          </span>
+                <img src="https://i.imgur.com/pStgaAW.png" />
+              </div>
+            </>
+          ) : null}
+          <span>All rights reserved by company name</span>
         </div>
       </DahsboardCss>
     );

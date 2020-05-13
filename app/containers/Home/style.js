@@ -122,51 +122,7 @@ const DahsboardCss = styled.div`
       color: #303030;
     }
   }
-  .header {
-    display: flex;
-    flex: 1;
-    height: 20vh;
-    padding: 0px 100px;
-    align-items: center;
-    img {
-      width: 130px;
-      height: 50px;
-    }
-    .first {
-      flex: 1;
-      display: flex;
-    }
-    .second {
-      flex: 5;
-      font-family: Poppins;
-      font-weight: 500;
-      font-size: 16px;
-      color: #303030;
-      display: flex;
-      justify-content: flex-end;
-    }
-    .menuItem {
-      margin: 0px 40px;
-      cursor: pointer;
-      font-size: 17px;
-      display: flex;
-      min-width: 9vw;
-      align-items: center;
-      justify-content: center;
-    }
-    .roundButton {
-      border: solid 2px #303030;
-      border-radius: 5px;
-      display: flex;
-      padding: 15px 25px;
-      align-items: center;
-      justify-content: center;
-      :hover {
-        background-color: #303030;
-        color: #ffffff;
-      }
-    }
-  }
+
   .greenHalf {
     width: 50vw;
     height: 100vh;
@@ -181,6 +137,10 @@ const DahsboardCss = styled.div`
     flex-direction: row;
     padding: 60px 130px;
     background-color: #f5f5f9;
+    @media (max-width: ${base.small}) {
+      flex-direction: column;
+      padding: 60px 20px;
+    }
     .supportBox {
       display: flex;
       flex: 1;
@@ -188,6 +148,10 @@ const DahsboardCss = styled.div`
       justify-content: flex-start;
       padding-top: 5%;
       flex-direction: column;
+      @media (max-width: ${base.small}) {
+        align-items: center;
+        padding-left: 0%;
+      }
       .dottedLine {
         width: 100%;
         font-family: Poppins;
@@ -204,6 +168,10 @@ const DahsboardCss = styled.div`
         color: #303030;
         font-size: 24px;
         margin-bottom: 55px;
+        @media (max-width: ${base.small}) {
+          text-align: center;
+          margin-top: 20px;
+        }
       }
       .bookacall {
         border-radius: 5px;
@@ -221,6 +189,9 @@ const DahsboardCss = styled.div`
           background-color: #303030;
           color: #fff;
         }
+        @media (max-width: ${base.small}) {
+          margin-bottom: 35px;
+        }
       }
       .contactUsStrip {
         display: flex;
@@ -231,12 +202,18 @@ const DahsboardCss = styled.div`
         img {
           width: 30px;
           margin-right: 20px;
+          @media (max-width: ${base.small}) {
+            width: 20px;
+          }
         }
         span {
           font-family: Poppins;
           font-weight: 400;
           font-size: 22px;
           color: #303030;
+          @media (max-width: ${base.small}) {
+            font-size: 15px;
+          }
         }
       }
     }
@@ -295,6 +272,10 @@ const DahsboardCss = styled.div`
     padding-top: 10vh;
     position: relative;
     padding-bottom: 10vh;
+    @media (max-width: ${base.small}) {
+      padding: 0px 20px;
+      padding-top: 10vh;
+    }
     .container7Heading {
       font-family: Poppins;
       font-weight: 500;
@@ -302,6 +283,13 @@ const DahsboardCss = styled.div`
       color: #303030;
       padding-left: 20px;
       margin-bottom: 60px;
+      @media (max-width: ${base.small}) {
+        padding: 0px;
+        font-size: 18px;
+        line-height: 32px;
+        text-align: center;
+        margin-bottom: 30px;
+      }
     }
     .contentBox {
       display: flex;
@@ -310,6 +298,9 @@ const DahsboardCss = styled.div`
         display: flex;
         flex: 1;
         align-items: center;
+        @media (max-width: ${base.small}) {
+          display: none;
+        }
         img {
           width: 40px;
           cursor: pointer;
@@ -320,6 +311,9 @@ const DahsboardCss = styled.div`
         display: flex;
         flex: 1;
         align-items: center;
+        @media (max-width: ${base.small}) {
+          display: none;
+        }
         img {
           width: 40px;
           cursor: pointer;
@@ -328,11 +322,13 @@ const DahsboardCss = styled.div`
       }
       .sliderContent {
         display: flex;
+        @media (max-width: ${base.small}) {
+          flex-direction: column;
+        }
         .sideimg {
           display: flex;
           height: 50vh;
           flex: 2;
-
           object-fit: contain;
         }
         .contentText {
@@ -347,10 +343,16 @@ const DahsboardCss = styled.div`
           font-weight: 400;
           font-size: 19px;
           color: #303030;
+          @media (max-width: ${base.small}) {
+            align-items: center;
+          }
           span {
             z-index: 9;
             text-align: justify;
             width: 90%;
+            @media (max-width: ${base.small}) {
+              margin-top: 20%;
+            }
           }
           .floating {
             position: absolute;
@@ -377,6 +379,9 @@ const DahsboardCss = styled.div`
     background-color: #fff;
     padding-top: 30vh;
     position: relative;
+    @media (max-width: ${base.small}) {
+      padding-top: 25vh;
+    }
     .container6Heading {
       font-family: Poppins;
       font-weight: 500;
@@ -389,11 +394,20 @@ const DahsboardCss = styled.div`
       display: flex;
       flex-direction: row;
       padding-left: 50px;
+      @media (max-width: ${base.small}) {
+        padding-left: 0px;
+        flex-direction: column;
+      }
       .firstBox {
         display: flex;
         flex-direction: column;
         padding-bottom: 25vh;
         flex: 1;
+        @media (max-width: ${base.small}) {
+          padding-bottom: 0vh;
+          overflow: scroll;
+          flex-direction: row;
+        }
         .childbox {
           display: flex;
           padding: 40px 70px;
@@ -403,17 +417,27 @@ const DahsboardCss = styled.div`
           :hover {
             border: solid 2px #f0f6f2;
           }
+          @media (max-width: ${base.small}) {
+            padding: 15px;
+            border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
+          }
           .firstChild {
             display: flex;
             flex-direction: row;
             flex: 1;
             img {
               width: 60px;
-
               object-fit: contain;
+              @media (max-width: ${base.small}) {
+                width: 50px;
+              }
             }
           }
           .secondChild {
+            @media (max-width: ${base.small}) {
+              display: none;
+            }
             display: flex;
             flex-direction: column;
             flex: 4;
@@ -455,6 +479,39 @@ const DahsboardCss = styled.div`
         flex-direction: column;
         background-color: #f0f6f2;
         flex: 1;
+        @media (max-width: ${base.small}) {
+          height: 80vh;
+        }
+        .secondChild {
+          display: flex;
+          flex-direction: column;
+          padding: 35px 25px;
+          .headline {
+            font-family: Poppins;
+            font-weight: 500;
+            font-size: 20px;
+            color: #303030;
+            margin-bottom: 10px;
+          }
+          .subtitleline {
+            font-family: Poppins;
+            font-weight: 400;
+            color: #79818c;
+            font-size: 15px;
+            margin-bottom: 20px;
+          }
+          .technologyBox {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            img {
+              height: 25px;
+              margin-right: 20px;
+              margin-bottom: 5px;
+              object-fit: contain;
+            }
+          }
+        }
         .firstimage {
           display: flex;
           position: relative;
@@ -467,6 +524,12 @@ const DahsboardCss = styled.div`
             margin: auto;
             width: 50vw;
             object-fit: contain;
+            @media (max-width: ${base.small}) {
+              width: 90vw;
+              right: auto;
+              left: -11vw;
+              margin: 0px;
+            }
           }
         }
         .secondimage {
@@ -483,6 +546,12 @@ const DahsboardCss = styled.div`
             z-index: 9;
             width: 45vw;
             object-fit: contain;
+            @media (max-width: ${base.small}) {
+              width: 90vw;
+              left: auto;
+              right: -20vw;
+              margin: 0px;
+            }
           }
         }
       }
@@ -495,15 +564,30 @@ const DahsboardCss = styled.div`
     background-color: #f0f6f2;
     padding-top: 100px;
     position: relative;
+    @media (max-width: ${base.small}) {
+      padding: 0px 20px;
+      padding-top: 60px;
+      padding-bottom: 22vh;
+    }
     .rightimg {
       height: 100%;
       position: absolute;
       right: 0;
+      @media (max-width: ${base.small}) {
+        display: none;
+      }
     }
     .leftimg {
       height: 100%;
       position: absolute;
       left: 0;
+      @media (max-width: ${base.small}) {
+        height: 50vh;
+        right: -10vw;
+        height: 40vh;
+        left: auto;
+        bottom: 20px;
+      }
     }
     .rightbottombox {
       position: absolute;
@@ -513,12 +597,24 @@ const DahsboardCss = styled.div`
       right: 0;
       bottom: -10%;
       z-index: 9;
+      @media (max-width: ${base.small}) {
+        width: 100vw;
+        box-shadow: none;
+        bottom: -15%;
+        flex-direction: column;
+      }
       .firstrbbox {
         display: flex;
         flex-direction: column;
         flex: 1;
         padding: 40px;
         background-color: #fff;
+        text-transform: uppercase;
+        @media (max-width: ${base.small}) {
+          padding: 20px;
+          margin-right: 20%;
+          box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+        }
       }
       .secondrbbox {
         display: flex;
@@ -526,15 +622,23 @@ const DahsboardCss = styled.div`
         flex-direction: column;
         padding: 40px;
         background-color: #cde2d4;
+        @media (max-width: ${base.small}) {
+          padding: 20px;
+          margin-left: 20%;
+          box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+        }
       }
       .boxheading {
         font-family: Poppins;
         font-weight: 400;
         font-size: 50px;
         color: #303030;
-
         margin: 10px 0px;
         margin-top: 30px;
+        @media (max-width: ${base.small}) {
+          margin-top: 10px;
+          font-size: 40px;
+        }
       }
       .boxsubheading {
         font-family: Poppins;
@@ -542,6 +646,9 @@ const DahsboardCss = styled.div`
         font-size: 20px;
         color: #303030;
         line-height: 20px;
+        @media (max-width: ${base.small}) {
+          font-size: 19px;
+        }
       }
     }
     .headingCont5 {
@@ -551,6 +658,10 @@ const DahsboardCss = styled.div`
       text-align: center;
       padding: 0px 20%;
       color: #404040;
+      @media (max-width: ${base.small}) {
+        padding: 0px;
+        font-size: 16px;
+      }
     }
     .subheadCont5 {
       font-family: Poppins;
@@ -561,10 +672,19 @@ const DahsboardCss = styled.div`
       margin-top: 35px;
       margin-bottom: 130px;
       color: #303030;
+      @media (max-width: ${base.small}) {
+        padding: 0px;
+        font-size: 16px;
+        margin-bottom: 60px;
+        margin-top: 20px;
+      }
     }
     .bottomBox {
       display: flex;
       flex-direction: row;
+      @media (max-width: ${base.small}) {
+        flex-direction: column;
+      }
       .firstBotbox {
         display: flex;
         flex-direction: column;
@@ -572,12 +692,21 @@ const DahsboardCss = styled.div`
         height: 100px;
         margin-bottom: 100px;
         flex-wrap: wrap;
+        @media (max-width: ${base.small}) {
+          height: auto;
+          flex-direction: row;
+          margin-bottom: 75px;
+        }
         span {
           font-family: Poppins;
           font-weight: 500;
           font-size: 19px;
           color: #303030;
           margin: 10px 0px;
+          @media (max-width: ${base.small}) {
+            width: 50%;
+            font-size: 15px;
+          }
         }
       }
       .secondBotbox {
@@ -590,6 +719,9 @@ const DahsboardCss = styled.div`
     display: flex;
     padding-top: 30vh;
     flex-direction: column;
+    @media (max-width: ${base.small}) {
+      padding-top: 20px;
+    }
     .headingText {
       font-family: Poppins;
       font-weight: 500;
@@ -599,32 +731,58 @@ const DahsboardCss = styled.div`
       text-align: center;
       padding: 0px 200px;
       margin-bottom: 100px;
+      @media (max-width: ${base.small}) {
+        padding: 0px;
+        font-size: 16px;
+        line-height: 32px;
+      }
     }
     .containerBox {
       display: flex;
 
       flex-direction: row;
+      @media (max-width: ${base.small}) {
+        flex-direction: column;
+      }
       .firstBox {
         display: flex;
         background-color: #f0f6f2;
         padding-left: 100px;
         flex-direction: column;
         flex: 1;
+        @media (max-width: ${base.small}) {
+          align-items: center;
+          padding: 0px 20px;
+          padding-bottom: 30px;
+        }
         .skillSet {
           display: flex;
           flex-direction: row;
           flex-wrap: wrap;
-
+          @media (max-width: ${base.small}) {
+            flex-direction: column;
+          }
           .skillSingle {
             width: 50%;
             display: flex;
             margin: 55px 0px;
             flex-direction: column;
             align-items: flex-start;
+            @media (max-width: ${base.small}) {
+              width: 100%;
+              flex-wrap: wrap;
+              padding-left: 5%;
+              margin: 25px 0px;
+              flex-direction: row;
+            }
             .skillImg {
               width: 45px;
               height: 45px;
               margin-bottom: 20px;
+              @media (max-width: ${base.small}) {
+                margin-right: 20px;
+                margin-bottom: 0px;
+              }
             }
             .skillHeader {
               font-family: Poppins;
@@ -632,6 +790,9 @@ const DahsboardCss = styled.div`
               font-size: 19px;
               color: #303030;
               margin: 8px 0px;
+              @media (max-width: ${base.small}) {
+                font-weight: 500;
+              }
             }
             .skillSub {
               font-family: Poppins;
@@ -639,6 +800,10 @@ const DahsboardCss = styled.div`
               font-size: 19px;
               color: #79818c;
               margin: 8px 0px;
+              @media (max-width: ${base.small}) {
+                margin: 2px 0px;
+                margin-left: 65px;
+              }
             }
           }
         }
@@ -650,6 +815,11 @@ const DahsboardCss = styled.div`
           margin: 40px;
           margin-left: 0px;
           text-align: left;
+          @media (max-width: ${base.small}) {
+            margin-left: 40px;
+            width: 90%;
+            margin-bottom: 10px;
+          }
         }
       }
       .secondBox {
@@ -657,6 +827,9 @@ const DahsboardCss = styled.div`
         padding-right: 100px;
         flex: 1;
         flex-direction: column;
+        @media (max-width: ${base.small}) {
+          padding: 20px;
+        }
         .firstText {
           font-family: Poppins;
           font-weight: 500;
@@ -664,11 +837,17 @@ const DahsboardCss = styled.div`
           margin: 40px;
           color: #303030;
           text-align: left;
+          @media (max-width: ${base.small}) {
+            display: none;
+          }
         }
         .sideImage {
           width: 100%;
           object-fit: contain;
           margin-left: 10%;
+          @media (max-width: ${base.small}) {
+            margin-left: 0%;
+          }
         }
       }
     }
@@ -679,6 +858,11 @@ const DahsboardCss = styled.div`
     padding: 0px 100px;
     padding-top: 150px;
     flex-direction: column;
+    @media (max-width: ${base.small}) {
+      padding: 0px 20px;
+      padding-top: 40px;
+      height: auto;
+    }
     .headingText {
       font-family: Poppins;
       font-weight: 500;
@@ -687,6 +871,11 @@ const DahsboardCss = styled.div`
       line-height: 40px;
       text-align: center;
       padding: 0px 100px;
+      @media (max-width: ${base.small}) {
+        padding: 0px;
+        font-size: 16px;
+        line-height: 32px;
+      }
     }
     .teamSize {
       display: flex;
@@ -695,11 +884,19 @@ const DahsboardCss = styled.div`
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
+      @media (max-width: ${base.small}) {
+        flex-direction: column;
+      }
       .team {
         display: flex;
         width: 22.5%;
         flex-direction: column;
         align-items: flex-start;
+        @media (max-width: ${base.small}) {
+          align-items: center;
+          margin-bottom: 70px;
+          width: 100%;
+        }
         .box {
           background-color: #f0f6f2;
           width: 12vw;
@@ -707,6 +904,10 @@ const DahsboardCss = styled.div`
           border-radius: 20px;
           position: absolute;
           z-index: -1;
+          @media (max-width: ${base.small}) {
+            width: 35vw;
+            height: 20vw;
+          }
         }
         .firstGreenFload {
           transform: rotate(-10deg);
@@ -738,12 +939,15 @@ const DahsboardCss = styled.div`
   }
   .container2 {
     display: flex;
-    height: 100vh;
     padding: 0px 100px;
     padding-top: 100px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @media (max-width: ${base.small}) {
+      padding: 0px 20px;
+      padding-top: 70px;
+    }
     .headingText {
       font-family: Poppins;
       font-weight: 500;
@@ -752,6 +956,12 @@ const DahsboardCss = styled.div`
       line-height: 40px;
       text-align: center;
       padding: 0px 100px;
+      @media (max-width: ${base.small}) {
+        padding: 0px;
+        font-size: 16px;
+        margin-bottom: 10vh;
+        line-height: 32px;
+      }
     }
     .features {
       display: flex;
@@ -760,11 +970,19 @@ const DahsboardCss = styled.div`
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
+      @media (max-width: ${base.small}) {
+        margin-top: 10px;
+        flex-direction: column;
+      }
       .feature {
         display: flex;
         width: 30%;
         flex-direction: column;
         align-items: flex-start;
+        @media (max-width: ${base.small}) {
+          width: 100%;
+          align-items: center;
+        }
         .featureHeading {
           font-family: Poppins;
           font-weight: 500;
@@ -772,16 +990,42 @@ const DahsboardCss = styled.div`
           margin-top: 70px;
           font-size: 23px;
           margin-bottom: 30px;
+          @media (max-width: ${base.small}) {
+            font-size: 18px;
+            margin-top: 30px;
+            text-align: center;
+            margin-bottom: 15px;
+          }
+        }
+        .knowMorespan {
+          display: none;
+          color: #36d28f;
+          font-family: Poppins;
+          font-size: 16px;
+          text-align: center;
+          margin-top: 25px;
+          margin-bottom: 70px;
+          @media (max-width: ${base.small}) {
+            display: flex;
+          }
         }
         .featureSubHeading {
           font-family: Poppins;
           font-weight: 400;
           color: #79818c;
           font-size: 19px;
+          @media (max-width: ${base.small}) {
+            font-size: 16px;
+            text-align: center;
+            width: 90%;
+          }
         }
         .featureimg {
           object-fit: contain;
           width: 12.5vw;
+          @media (max-width: ${base.small}) {
+            width: 37.5vw;
+          }
         }
       }
     }
@@ -790,11 +1034,18 @@ const DahsboardCss = styled.div`
     display: flex;
     height: 80vh;
     padding: 0px 100px;
+    @media (max-width: ${base.small}) {
+      padding: 0px 20px;
+      flex-direction: column-reverse;
+    }
     .first {
       display: flex;
       flex-direction: column;
       flex: 1;
       padding-top: 5%;
+      @media (max-width: ${base.small}) {
+        align-items: center;
+      }
       .headerTitle {
         font-family: Poppins;
         font-weight: 500;
@@ -802,6 +1053,12 @@ const DahsboardCss = styled.div`
         color: #303030;
         line-height: 60px;
         margin-bottom: 30px;
+        @media (max-width: ${base.small}) {
+          line-height: 30px;
+          margin-bottom: 15px;
+          font-size: 22px;
+          text-align: center;
+        }
       }
       .subtitle {
         color: #79818c;
@@ -809,12 +1066,20 @@ const DahsboardCss = styled.div`
         font-weight: 400;
         font-size: 19px;
         margin-bottom: 75px;
+        @media (max-width: ${base.small}) {
+          margin-bottom: 15px;
+          text-align: center;
+          font-size: 15px;
+        }
       }
       .btnHome {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 90%;
+        @media (max-width: ${base.small}) {
+          flex-direction: column;
+        }
         .btn1 {
           background-color: #303030;
           color: #ffffff;
@@ -828,6 +1093,10 @@ const DahsboardCss = styled.div`
           width: 45%;
           justify-content: center;
           cursor: pointer;
+          @media (max-width: ${base.small}) {
+            width: 90%;
+            margin: 10px 0px;
+          }
           :hover {
             background-color: #fff;
             border: solid 2px #303030;
@@ -845,6 +1114,9 @@ const DahsboardCss = styled.div`
         object-fit: contain;
         height: 100%;
         margin-left: 5%;
+        @media (max-width: ${base.small}) {
+          margin-left: 0;
+        }
       }
       .tree {
         object-fit: contain;
@@ -855,6 +1127,9 @@ const DahsboardCss = styled.div`
         left: 10%;
         right: 0;
         margin: auto;
+        @media (max-width: ${base.small}) {
+          left: 0;
+        }
       }
     }
   }
