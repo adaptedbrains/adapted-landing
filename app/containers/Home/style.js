@@ -31,14 +31,16 @@ const DahsboardCss = styled.div`
           margin-bottom: 50px;
         }
         .firstHeading {
-          font-family: Poppins-Medium;
+          font-family: Poppins;
+          font-weight: 500;
           font-size: 17px;
           color: #303030;
           margin-bottom: 20px;
           width: 75%;
         }
         .subheadingFooter {
-          font-family: Poppins-Regular;
+          font-family: Poppins;
+          font-weight: 400;
           font-size: 16px;
           width: 100%;
           color: #79818c;
@@ -57,7 +59,8 @@ const DahsboardCss = styled.div`
           span {
             width: 50%;
             margin: 10px 0px;
-            font-family: Poppins-Medium;
+            font-family: Poppins;
+            font-weight: 500;
             font-size: 17px;
             color: #303030;
           }
@@ -71,13 +74,15 @@ const DahsboardCss = styled.div`
           input {
             border: solid 1px #dddddd;
             padding: 10px;
-            font-family: Poppins-Medium;
+            font-family: Poppins;
+            font-weight: 500;
             font-size: 19px;
             width: 70%;
           }
           .subscribeNowButton {
             padding: 10px 25px;
-            font-family: Poppins-Regular;
+            font-family: Poppins;
+            font-weight: 400;
             border-radius: 5px;
             color: #fff;
             background-color: #303030;
@@ -89,31 +94,32 @@ const DahsboardCss = styled.div`
       }
     }
   }
-  .bottomFooter{
-    display:flex;
-    padding:25px 5vw;
-    align-items:center;
-    background-color:#d7e8dd;
+  .bottomFooter {
+    display: flex;
+    padding: 25px 5vw;
+    align-items: center;
+    background-color: #d7e8dd;
     justify-content: space-between;
-    .line{
-      height:30px;
-      width:2px;
+    .line {
+      height: 30px;
+      width: 2px;
       background-color: #303030;
     }
-    .rowBox{
-      display:flex;
-      align-items:center;
+    .rowBox {
+      display: flex;
+      align-items: center;
     }
-    img{
-      height:20px;
-      object-fit:contain;
-      margin-right:20px;
+    img {
+      height: 20px;
+      object-fit: contain;
+      margin-right: 20px;
     }
-    span{
-      font-family: Poppins-Regular;
-      font-size:15px;
-      margin-right:30px;
-      color:#303030;
+    span {
+      font-family: Poppins;
+      font-weight: 400;
+      font-size: 15px;
+      margin-right: 30px;
+      color: #303030;
     }
   }
   .header {
@@ -132,7 +138,8 @@ const DahsboardCss = styled.div`
     }
     .second {
       flex: 5;
-      font-family: Poppins-Medium;
+      font-family: Poppins;
+      font-weight: 500;
       font-size: 16px;
       color: #303030;
       display: flex;
@@ -183,7 +190,8 @@ const DahsboardCss = styled.div`
       flex-direction: column;
       .dottedLine {
         width: 100%;
-        font-family: Poppins-Medium;
+        font-family: Poppins;
+        font-weight: 500;
         letter-spacing: 2px;
         overflow: hidden;
         height: 15px;
@@ -191,7 +199,8 @@ const DahsboardCss = styled.div`
       }
       .headercontainer8 {
         width: 80%;
-        font-family: Poppins-Medium;
+        font-family: Poppins;
+        font-weight: 500;
         color: #303030;
         font-size: 24px;
         margin-bottom: 55px;
@@ -199,7 +208,8 @@ const DahsboardCss = styled.div`
       .bookacall {
         border-radius: 5px;
         border: solid 2px #303030;
-        font-family: Poppins-Medium;
+        font-family: Poppins;
+        font-weight: 500;
         background-size: #fff;
         cursor: pointer;
         color: #303030;
@@ -223,7 +233,8 @@ const DahsboardCss = styled.div`
           margin-right: 20px;
         }
         span {
-          font-family: Poppins-Regular;
+          font-family: Poppins;
+          font-weight: 400;
           font-size: 22px;
           color: #303030;
         }
@@ -239,7 +250,8 @@ const DahsboardCss = styled.div`
         padding: 14px;
         cursor: pointer;
         border: solid 2px #303030;
-        font-family: Poppins-Medium;
+        font-family: Poppins;
+        font-weight: 500;
         color: #fff;
         font-size: 15px;
         text-align: center;
@@ -251,7 +263,8 @@ const DahsboardCss = styled.div`
 
       .inputBox {
         span {
-          font-family: Poppins-Regular;
+          font-family: Poppins;
+          font-weight: 400;
           color: #000;
           font-size: 20px;
           margin-bottom: 10px;
@@ -283,7 +296,8 @@ const DahsboardCss = styled.div`
     position: relative;
     padding-bottom: 10vh;
     .container7Heading {
-      font-family: Poppins-Medium;
+      font-family: Poppins;
+      font-weight: 500;
       font-size: 28px;
       color: #303030;
       padding-left: 20px;
@@ -329,7 +343,8 @@ const DahsboardCss = styled.div`
           justify-content: flex-start;
           padding-top: 5%;
           flex-direction: column;
-          font-family: Poppins-Regular;
+          font-family: Poppins;
+          font-weight: 400;
           font-size: 19px;
           color: #303030;
           span {
@@ -363,7 +378,8 @@ const DahsboardCss = styled.div`
     padding-top: 30vh;
     position: relative;
     .container6Heading {
-      font-family: Poppins-Medium;
+      font-family: Poppins;
+      font-weight: 500;
       font-size: 28px;
       color: #303030;
       padding-left: 16vw;
@@ -402,13 +418,15 @@ const DahsboardCss = styled.div`
             flex-direction: column;
             flex: 4;
             .headline {
-              font-family: Poppins-Medium;
+              font-family: Poppins;
+              font-weight: 500;
               font-size: 22px;
               color: #303030;
               margin-bottom: 10px;
             }
             .subtitleline {
-              font-family: Poppins-Regular;
+              font-family: Poppins;
+              font-weight: 400;
               color: #79818c;
               font-size: 19px;
               margin-bottom: 20px;
@@ -509,7 +527,8 @@ const DahsboardCss = styled.div`
         background-color: #cde2d4;
       }
       .boxheading {
-        font-family: Poppins-Regular;
+        font-family: Poppins;
+        font-weight: 400;
         font-size: 50px;
         color: #303030;
 
@@ -517,21 +536,24 @@ const DahsboardCss = styled.div`
         margin-top: 30px;
       }
       .boxsubheading {
-        font-family: Poppins-Regular;
+        font-family: Poppins;
+        font-weight: 400;
         font-size: 20px;
         color: #303030;
         line-height: 20px;
       }
     }
     .headingCont5 {
-      font-family: Poppins-Medium;
+      font-family: Poppins;
+      font-weight: 500;
       font-size: 28px;
       text-align: center;
       padding: 0px 20%;
       color: #404040;
     }
     .subheadCont5 {
-      font-family: Poppins-Regular;
+      font-family: Poppins;
+      font-weight: 400;
       font-size: 19px;
       text-align: center;
       padding: 0px 30%;
@@ -550,7 +572,8 @@ const DahsboardCss = styled.div`
         margin-bottom: 100px;
         flex-wrap: wrap;
         span {
-          font-family: Poppins-Medium;
+          font-family: Poppins;
+          font-weight: 500;
           font-size: 19px;
           color: #303030;
           margin: 10px 0px;
@@ -567,7 +590,8 @@ const DahsboardCss = styled.div`
     padding-top: 30vh;
     flex-direction: column;
     .headingText {
-      font-family: Poppins-Medium;
+      font-family: Poppins;
+      font-weight: 500;
       font-size: 28px;
       color: #303030;
       line-height: 40px;
@@ -602,13 +626,15 @@ const DahsboardCss = styled.div`
               margin-bottom: 20px;
             }
             .skillHeader {
-              font-family: Poppins-SemiBold;
+              font-family: Poppins;
+              font-weight: 700;
               font-size: 19px;
               color: #303030;
               margin: 8px 0px;
             }
             .skillSub {
-              font-family: Poppins-Regular;
+              font-family: Poppins;
+              font-weight: 400;
               font-size: 19px;
               color: #79818c;
               margin: 8px 0px;
@@ -616,7 +642,8 @@ const DahsboardCss = styled.div`
           }
         }
         .firstText {
-          font-family: Poppins-Medium;
+          font-family: Poppins;
+          font-weight: 500;
           font-size: 23px;
           color: #303030;
           margin: 40px;
@@ -630,7 +657,8 @@ const DahsboardCss = styled.div`
         flex: 1;
         flex-direction: column;
         .firstText {
-          font-family: Poppins-Medium;
+          font-family: Poppins;
+          font-weight: 500;
           font-size: 23px;
           margin: 40px;
           color: #303030;
@@ -652,7 +680,8 @@ const DahsboardCss = styled.div`
     padding-top: 150px;
     flex-direction: column;
     .headingText {
-      font-family: Poppins-Medium;
+      font-family: Poppins;
+      font-weight: 500;
       font-size: 28px;
       color: #303030;
       line-height: 40px;
@@ -692,13 +721,15 @@ const DahsboardCss = styled.div`
           transform: rotate(-25deg);
         }
         .teamHeading {
-          font-family: Poppins-Regular;
+          font-family: Poppins;
+          font-weight: 400;
           color: #36d28f;
           font-size: 49px;
           margin-bottom: 15px;
         }
         .teamSubtitle {
-          font-family: Poppins-Regular;
+          font-family: Poppins;
+          font-weight: 400;
           color: #303030;
           font-size: 20px;
         }
@@ -714,7 +745,8 @@ const DahsboardCss = styled.div`
     align-items: center;
     justify-content: center;
     .headingText {
-      font-family: Poppins-Medium;
+      font-family: Poppins;
+      font-weight: 500;
       font-size: 28px;
       color: #303030;
       line-height: 40px;
@@ -734,14 +766,16 @@ const DahsboardCss = styled.div`
         flex-direction: column;
         align-items: flex-start;
         .featureHeading {
-          font-family: Poppins-Medium;
+          font-family: Poppins;
+          font-weight: 500;
           color: #303030;
           margin-top: 70px;
           font-size: 23px;
           margin-bottom: 30px;
         }
         .featureSubHeading {
-          font-family: Poppins-Regular;
+          font-family: Poppins;
+          font-weight: 400;
           color: #79818c;
           font-size: 19px;
         }
@@ -762,7 +796,8 @@ const DahsboardCss = styled.div`
       flex: 1;
       padding-top: 5%;
       .headerTitle {
-        font-family: Poppins-Medium;
+        font-family: Poppins;
+        font-weight: 500;
         font-size: 43px;
         color: #303030;
         line-height: 60px;
@@ -770,7 +805,8 @@ const DahsboardCss = styled.div`
       }
       .subtitle {
         color: #79818c;
-        font-family: Poppins-Regular;
+        font-family: Poppins;
+        font-weight: 400;
         font-size: 19px;
         margin-bottom: 75px;
       }
@@ -783,7 +819,8 @@ const DahsboardCss = styled.div`
           background-color: #303030;
           color: #ffffff;
           border: solid 2px #303030;
-          font-family: Poppins-Medium;
+          font-family: Poppins;
+          font-weight: 500;
           font-size: 16px;
           padding: 15px 0px;
           border-radius: 5px;

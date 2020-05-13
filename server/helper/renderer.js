@@ -74,12 +74,10 @@ export default (req, store, renderProps) => {
                 <meta property="og:image" content="https://i.imgur.com/cUNg6jH.png">
                 <link rel="manifest" href="manifest.json">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
-                <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
                 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 				<link rel="shortcut icon" href="https://frontend-asset-files.s3.ap-south-1.amazonaws.com/favicon.ico" />
                 <script src="https://cdn.rawgit.com/progers/pathseg/master/pathseg.js"></script>
-
-                <link rel="stylesheet" href="https://use.typekit.net/djd8ufd.css">
                 <base href="/">
 				${helmet.title.toString()}
 				${helmet.meta.toString()}

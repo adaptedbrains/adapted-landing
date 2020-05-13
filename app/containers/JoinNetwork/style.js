@@ -28,7 +28,8 @@ const DahsboardCss = styled.div`
     }
     .second {
       flex: 5;
-      font-family: Poppins-Medium;
+      font-family: Poppins;
+      font-weight: 500;
       font-size: 16px;
       color: #303030;
       display: flex;
@@ -84,14 +85,16 @@ const DahsboardCss = styled.div`
           margin-bottom: 50px;
         }
         .firstHeading {
-          font-family: Poppins-Medium;
+          font-family: Poppins;
+          font-weight: 500;
           font-size: 17px;
           color: #303030;
           margin-bottom: 20px;
           width: 75%;
         }
         .subheadingFooter {
-          font-family: Poppins-Regular;
+          font-family: Poppins;
+          font-weight: 400;
           font-size: 16px;
           width: 100%;
           color: #79818c;
@@ -110,7 +113,8 @@ const DahsboardCss = styled.div`
           span {
             width: 50%;
             margin: 10px 0px;
-            font-family: Poppins-Medium;
+            font-family: Poppins;
+            font-weight: 500;
             font-size: 17px;
             color: #303030;
           }
@@ -124,13 +128,15 @@ const DahsboardCss = styled.div`
           input {
             border: solid 1px #dddddd;
             padding: 10px;
-            font-family: Poppins-Medium;
+            font-family: Poppins;
+            font-weight: 500;
             font-size: 19px;
             width: 70%;
           }
           .subscribeNowButton {
             padding: 10px 25px;
-            font-family: Poppins-Regular;
+            font-family: Poppins;
+            font-weight: 400;
             border-radius: 5px;
             color: #fff;
             background-color: #303030;
@@ -142,31 +148,32 @@ const DahsboardCss = styled.div`
       }
     }
   }
-  .bottomFooter{
-    display:flex;
-    padding:25px 5vw;
-    align-items:center;
-    background-color:#d7e8dd;
+  .bottomFooter {
+    display: flex;
+    padding: 25px 5vw;
+    align-items: center;
+    background-color: #d7e8dd;
     justify-content: space-between;
-    .line{
-      height:30px;
-      width:2px;
+    .line {
+      height: 30px;
+      width: 2px;
       background-color: #303030;
     }
-    .rowBox{
-      display:flex;
-      align-items:center;
+    .rowBox {
+      display: flex;
+      align-items: center;
     }
-    img{
-      height:20px;
-      object-fit:contain;
-      margin-right:20px;
+    img {
+      height: 20px;
+      object-fit: contain;
+      margin-right: 20px;
     }
-    span{
-      font-family: Poppins-Regular;
-      font-size:15px;
-      margin-right:30px;
-      color:#303030;
+    span {
+      font-family: Poppins;
+      font-weight: 400;
+      font-size: 15px;
+      margin-right: 30px;
+      color: #303030;
     }
   }
   .container4 {
@@ -177,7 +184,8 @@ const DahsboardCss = styled.div`
     flex-direction: column;
     align-items: center;
     .headinContainer2 {
-      font-family: Poppins-Medium;
+      font-family: Poppins;
+      font-weight: 500;
       font-size: 28px;
       text-align: center;
       color: #303030;
@@ -209,19 +217,21 @@ const DahsboardCss = styled.div`
           justify-content: flex-start;
           width: 75%;
           .headerspanBox {
-            font-family: Poppins-Regular;
+            font-family: Poppins;
+            font-weight: 400;
             font-size: 19px;
           }
           .contentBox {
-            font-family: Poppins-Regular;
+            font-family: Poppins;
+            font-weight: 400;
             font-size: 16px;
             transition: all 0.3s ease;
-            display:none;
+            display: none;
             margin-top: 15px;
             color: #777;
           }
-          .showContent{
-            display:flex;
+          .showContent {
+            display: flex;
           }
         }
       }
@@ -237,7 +247,8 @@ const DahsboardCss = styled.div`
         flex-direction: column;
         align-items: center;
         .headerText {
-          font-family: Poppins-Medium;
+          font-family: Poppins;
+          font-weight: 500;
           font-size: 19px;
           margin-top: 45px;
           text-align: center;
@@ -271,7 +282,8 @@ const DahsboardCss = styled.div`
       bottom: 20vh;
     }
     .headinContainer2 {
-      font-family: Poppins-Medium;
+      font-family: Poppins;
+      font-weight: 500;
       font-size: 28px;
       text-align: center;
       color: #303030;
@@ -293,13 +305,15 @@ const DahsboardCss = styled.div`
         flex-direction: column;
         align-items: flex-start;
         .headerSpan {
-          font-family: Poppins-Medium;
+          font-family: Poppins;
+          font-weight: 500;
           font-size: 23px;
           margin-bottom: 15px;
           color: #303030;
         }
         .subtitleSpan {
-          font-family: Poppins-Regular;
+          font-family: Poppins;
+          font-weight: 400;
           font-size: 19px;
           color: #303030;
         }
@@ -340,7 +354,8 @@ const DahsboardCss = styled.div`
         background-color: #e8f1eb;
         padding: 10px;
         align-items: center;
-        font-family: Poppins-Medium;
+        font-family: Poppins;
+        font-weight: 500;
         font-size: 19px;
         color: #303030;
         width: 22.5vw;
@@ -349,7 +364,8 @@ const DahsboardCss = styled.div`
       }
     }
     .headinContainer2 {
-      font-family: Poppins-Medium;
+      font-family: Poppins;
+      font-weight: 500;
       font-size: 28px;
       text-align: center;
       color: #303030;
@@ -372,13 +388,15 @@ const DahsboardCss = styled.div`
           margin-bottom: 55px;
         }
         .childboxheader {
-          font-family: Poppins-Medium;
+          font-family: Poppins;
+          font-weight: 500;
           color: #303030;
 
           font-size: 23px;
         }
         .childboxsubhead {
-          font-family: Poppins-Regular;
+          font-family: Poppins;
+          font-weight: 400;
           width: 90%;
           margin-top: 30px;
           color: #79818c;
@@ -398,7 +416,8 @@ const DahsboardCss = styled.div`
       flex: 1;
       padding-top: 5%;
       .headerTitle {
-        font-family: Poppins-Medium;
+        font-family: Poppins;
+        font-weight: 500;
         font-size: 43px;
         color: #303030;
         line-height: 60px;
@@ -406,7 +425,8 @@ const DahsboardCss = styled.div`
       }
       .subtitle {
         color: #79818c;
-        font-family: Poppins-Regular;
+        font-family: Poppins;
+        font-weight: 400;
         font-size: 19px;
         margin-bottom: 75px;
       }
@@ -419,7 +439,8 @@ const DahsboardCss = styled.div`
           background-color: #303030;
           color: #ffffff;
           border: solid 2px #303030;
-          font-family: Poppins-Medium;
+          font-family: Poppins;
+          font-weight: 500;
           font-size: 16px;
           padding: 15px 0px;
           border-radius: 5px;
@@ -442,7 +463,8 @@ const DahsboardCss = styled.div`
       padding-top: 5%;
       padding-left: 5%;
       .headerTitle {
-        font-family: Poppins-Medium;
+        font-family: Poppins;
+        font-weight: 500;
         font-size: 43px;
         color: #303030;
         line-height: 60px;
@@ -450,7 +472,8 @@ const DahsboardCss = styled.div`
       }
       .subtitle {
         color: #79818c;
-        font-family: Poppins-Regular;
+        font-family: Poppins;
+        font-weight: 400;
         font-size: 19px;
         margin-bottom: 75px;
       }
@@ -463,7 +486,8 @@ const DahsboardCss = styled.div`
           background-color: #303030;
           color: #ffffff;
           border: solid 2px #303030;
-          font-family: Poppins-Medium;
+          font-family: Poppins;
+          font-weight: 500;
           font-size: 16px;
           padding: 15px 0px;
           border-radius: 5px;
