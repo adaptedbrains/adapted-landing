@@ -3,11 +3,14 @@ import { connect } from "react-redux";
 import { DahsboardCss } from "./style";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import { Modal, ModalHeader, ModalBody } from "shards-react";
+
 class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       loading: true,
+      showModal: true,
     };
   }
   componentDidMount() {
@@ -15,6 +18,16 @@ class Home extends React.Component {
       loading: false,
     });
   }
+
+  closeModal() {
+    let offset = window.pageYOffset;
+    document.body.style.position = "static";
+    document.body.style.overflow = "auto";
+    document.body.style.top = -offset + "px";
+
+    this.setState({ showModal: false, directOtp: false });
+  }
+
   render() {
     const { loading } = this.state;
     const { isMobile } = this.props;
@@ -23,6 +36,93 @@ class Home extends React.Component {
     }
     return (
       <DahsboardCss>
+        <Modal
+          backdropClassName="lc-modal-backdrop"
+          size="lg"
+          open={true}
+          toggle={this.closeModal}
+        >
+          <ModalHeader className="headerBox">
+            <span>Rapid MVP Development</span>
+            <div className="headerSubeheader">
+              <span>How it work</span>
+              <span>Pricing</span>
+            </div>
+          </ModalHeader>
+          <ModalBody className="modalBodyHome">
+            <div className="leftBoxModal">
+              <div className="listEntries">
+                <div className="number">01</div>
+                <span>
+                  Tell us what you want to build and your long and short-term
+                  goals
+                </span>
+              </div>
+              <div className="listEntries">
+                <div className="number">01</div>
+                <span>
+                  Tell us what you want to build and your long and short-term
+                  goals
+                </span>
+              </div>
+              <div className="listEntries">
+                <div className="number">01</div>
+                <span>
+                  Tell us what you want to build and your long and short-term
+                  goals
+                </span>
+              </div>
+              <div className="listEntries">
+                <div className="number">01</div>
+                <span>
+                  Tell us what you want to build and your long and short-term
+                  goals
+                </span>
+              </div>
+              <div className="listEntries">
+                <div className="number">01</div>
+                <span>
+                  Tell us what you want to build and your long and short-term
+                  goals
+                </span>
+              </div>
+              <div className="modalButton">book a call</div>
+            </div>
+            <div className="rightBoxModal">
+              <div className="topBoxer">
+                <div className="listEntries">
+                  <div className="number"></div>
+                  <span>
+                    Tell us what you want to build and your long and short-term
+                    goals
+                  </span>
+                </div>
+                <div className="listEntries">
+                  <div className="number"></div>
+                  <span>
+                    Tell us what you want to build and your long and short-term
+                    goals
+                  </span>
+                </div>
+                <div className="listEntries">
+                  <div className="number"></div>
+                  <span>
+                    Tell us what you want to build and your long and short-term
+                    goals
+                  </span>
+                </div>
+              </div>
+              <div className="bottomBoxer">
+                <span>Pricing</span>
+                <span>
+                  We typically deliver most of our projects within 10 weeks and
+                  at a cost of $7500.
+                </span>
+              </div>
+              <div className="modalButton">get your quote now</div>
+            </div>
+          </ModalBody>
+        </Modal>
         <div className="containerBig">
           {!isMobile ? <div className="greenHalf" /> : null}
           <Header />

@@ -23,6 +23,11 @@ export default () => injectGlobal`
     margin-right: 10px;
     margin-bottom: 20px;
 }
+.modal{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
 
 .modal-backdrop.show{
     opacity: 0.6 !important;
@@ -70,6 +75,13 @@ export default () => injectGlobal`
     flex-direction: column !important;
     align-items: center !important;
     margin-bottom: 20px;
+}
+.lc-modal-backdrop {
+        background-color: rgba(0, 0, 0, 0.6) !important;
+        opacity: 1 !important;
+        width: 100vw;
+    height: 100vh;
+    position: fixed;
 }
 
 

@@ -8,6 +8,135 @@ const DahsboardCss = styled.div`
   ${base.flex};
   width: 100%;
   flex-direction: column;
+  .ModalBox {
+    width: 70vw;
+  }
+
+  .headerBox {
+    background-color: #cde2d4;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 25px 35px;
+    padding-top: 25px;
+    span {
+      font-family: Poppins;
+      font-weight: 400;
+      margin-bottom: 20px;
+      font-size: 25px;
+    }
+  }
+
+  .modalBodyHome {
+    padding: 25px 30px;
+    display: flex;
+    flex-direction: row;
+    .modalButton {
+      padding: 10px 25px;
+      font-family: Poppins;
+      font-weight: 500;
+      border-radius: 5px;
+      align-self: center;
+      color: #fff;
+      background-color: #303030;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      align-items: center;
+      width: 50%;
+      justify-content: center;
+      margin-top: 25px;
+    }
+    .rightBoxModal {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      margin-left: 10px;
+      .topBoxer {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        .listEntries {
+          padding: 10px 0px;
+          display: flex;
+          flex-direction: row;
+          .number {
+            font-weight: 500;
+            font-size: 15px;
+            height: 10px;
+            width: 15px;
+            border-radius: 19px;
+            background-color: #303030;
+            border: solid 1px #303030;
+            margin-right: 15px;
+          }
+          span {
+            font-size: 16px;
+            font-family: Poppins;
+            font-weight: 300;
+            color: #79818c;
+          }
+        }
+      }
+      .bottomBoxer {
+        display: flex;
+        flex: 1;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        background-color: #cde2d4;
+        border-radius: 10px;
+        padding: 15px;
+        span {
+          font-family: Poppins;
+          font-size: 16px;
+          margin: 5px 0px;
+          font-weight: 400;
+          color: #303030;
+        }
+      }
+    }
+    .leftBoxModal {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      margin-right: 10px;
+      .listEntries {
+        padding: 10px 0px;
+        display: flex;
+        flex-direction: row;
+        .number {
+          font-weight: 500;
+          font-size: 14px;
+          height: 18px;
+          padding: 5px 7px;
+          border-radius: 20px;
+          border: solid 1px #303030;
+          margin-right: 15px;
+        }
+        span {
+          font-size: 16px;
+          font-family: Poppins;
+          font-weight: 300;
+          color: #79818c;
+        }
+      }
+    }
+  }
+
+  .headerSubeheader {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    justify-content: space-between;
+    span {
+      font-family: Poppins;
+      flex: 1;
+      margin: 0px;
+      font-weight: 400;
+      font-size: 17px;
+    }
+  }
+
   .containerBig {
     position: relative;
     height: 100vh;
