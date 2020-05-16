@@ -17,7 +17,17 @@ const DahsboardCss = styled.div`
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     padding: 25px 35px;
+    position: relative;
     padding-top: 25px;
+    img {
+      width: 30px;
+      object-fit: contain;
+      position: absolute;
+      top: 25px;
+      right: 35px;
+      z-index: 9999;
+      cursor: pointer;
+    }
     span {
       font-family: Poppins;
       font-weight: 400;

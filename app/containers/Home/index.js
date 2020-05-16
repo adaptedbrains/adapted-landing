@@ -29,7 +29,7 @@ class Home extends React.Component {
   }
 
   render() {
-    const { loading } = this.state;
+    const { loading, showModal } = this.state;
     const { isMobile } = this.props;
     if (loading) {
       return null;
@@ -39,7 +39,7 @@ class Home extends React.Component {
         <Modal
           backdropClassName="lc-modal-backdrop"
           size="lg"
-          open={true}
+          open={showModal}
           toggle={this.closeModal}
         >
           <ModalHeader className="headerBox">
@@ -48,6 +48,14 @@ class Home extends React.Component {
               <span>How it work</span>
               <span>Pricing</span>
             </div>
+            <img
+              onClick={() => {
+                this.setState({
+                  showModal: false,
+                });
+              }}
+              src="https://i.imgur.com/9xfDfQO.png"
+            />
           </ModalHeader>
           <ModalBody className="modalBodyHome">
             <div className="leftBoxModal">
