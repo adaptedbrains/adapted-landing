@@ -1,6 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import { DahsboardCss } from "./style";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 class JoinNetwork extends React.Component {
   constructor(props) {
@@ -17,35 +19,29 @@ class JoinNetwork extends React.Component {
   }
   render() {
     const { loading, showfaq } = this.state;
+    const { isMobile } = this.props;
     if (loading) {
       return null;
     }
     return (
       <DahsboardCss>
         <div className="containerBig">
-          <div className="greenHalf" />
-          <div className="header">
-            <div className="first">
-              <img src="https://i.imgur.com/oFgkGUI.png" />
-            </div>
-            <div className="second">
-              <div className="menuItem">Partner with us</div>
-              <div className="menuItem">Join Network</div>
-              <div className="menuItem">Portfolio</div>
-              <div className="menuItem roundButton">Contact us</div>
-            </div>
-          </div>
+          {!isMobile ? <div className="greenHalf" /> : null}
+          <Header />
           <div className="container1">
             <div className="first">
               <span className="headerTitle">
-                Nurturing Ideas to Products that Scale
+                Find remote tech roles in promising companies
               </span>
             </div>
             <div className="second">
               <span className="subtitle">
-                At NurtureLabs, we bring together remote tech teams, advanced
-                product management skills and best in-class technologies to
-                bring your ideas to life and deliver high impact results.
+                Get access to continuous flow of highly rewarding and fully
+                remote work.
+              </span>
+              <span className="subtitle">
+                Apply and receive most suited and verified opportunities
+                directly in your inbox.
               </span>
               <div className="btnHome">
                 <div className="btn1">chat with nurture bot</div>
@@ -298,65 +294,7 @@ class JoinNetwork extends React.Component {
             </div>
           </div>
         </div>
-        <div className="footerBox">
-          <div className="footerContainer">
-            <div className="firstFooterBox">
-              <img src="https://i.imgur.com/kK7cxAz.png" />
-              <span className="firstHeading">
-                Sed ut perspiciatis unde omnis iste natus error sit volu ptatem
-                accusantium doloremque laud
-              </span>
-              <span className="subheadingFooter">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo invent
-              </span>
-            </div>
-            <div className="secondfooter">
-              <div className="footerLinks">
-                <span>Service</span>
-                <span>Join Us</span>
-                <span>Work</span>
-                <span>Contact Us</span>
-                <span>Pricing</span>
-                <span>Terms and Conditions</span>
-                <span>Blogs</span>
-                <span>Privacy Policy</span>
-              </div>
-              <div className="subscribenow">
-                <input placeholder="Enter Email" />
-                <div className="subscribeNowButton">Subscribe</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="bottomFooter">
-          <div className="rowBox">
-          <img src="https://i.imgur.com/EiQJ3KT.png"/>
-          <span>
-          +1 12345666
-          </span>
-          </div>
-          <div className="rowBox">
-          <img src="https://i.imgur.com/2aAwphY.png"/>
-          <span>
-          support@companyname.com
-          </span>
-          </div>
-          <div className="line">
-
-          </div>
-          <div className="rowBox">
-          <span>
-          Follow-Us
-          </span>
-         
-          <img src="https://i.imgur.com/pStgaAW.png"/>
-          </div>
-          <span>
-          All rights reserved by company name
-          </span>
-        </div>
+        <Footer />
       </DahsboardCss>
     );
   }
