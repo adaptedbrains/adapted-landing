@@ -39,13 +39,13 @@ class Footer extends React.Component {
               </div>
               <div className="secondfooter">
                 <div className="footerLinks">
-                  <span>Service</span>
-                  <span>Join Us</span>
+                  <span>Join our Network</span>
                   <span>Work</span>
-                  <span>Contact Us</span>
-                  <span>Pricing</span>
-                  <span>Terms and Conditions</span>
-                  <span>Blogs</span>
+                  <span>Partner with us</span>
+                  <span>Service</span>
+                  <span>Portfolio</span>
+                  <span>T&C</span>
+                  <span>Contact us</span>
                   <span>Privacy Policy</span>
                 </div>
                 <div className="subscribenow">

@@ -4,13 +4,15 @@ import { DahsboardCss } from "./style";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { Modal, ModalHeader, ModalBody } from "shards-react";
+import TextLoop from "react-text-loop";
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       loading: true,
-      showModal: true,
+      showModal: false,
+      type: null,
     };
   }
   componentDidMount() {
@@ -25,25 +27,32 @@ class Home extends React.Component {
     document.body.style.overflow = "auto";
     document.body.style.top = -offset + "px";
 
-    this.setState({ showModal: false, directOtp: false });
+    this.setState({ showModal: false, type: null });
   }
 
   render() {
-    const { loading, showModal } = this.state;
+    const { loading, showModal, type } = this.state;
     const { isMobile } = this.props;
     if (loading) {
       return null;
     }
+    const modalheader =
+      type == "cto"
+        ? "CTO as a Service"
+        : type == "elastic"
+        ? "Elastic Resourcing"
+        : "Rapid MVP Development";
     return (
       <DahsboardCss>
         <Modal
+          fade={false}
           backdropClassName="lc-modal-backdrop"
           size="lg"
           open={showModal}
           toggle={this.closeModal}
         >
           <ModalHeader className="headerBox">
-            <span>Rapid MVP Development</span>
+            <span>{modalheader}</span>
             <div className="headerSubeheader">
               <span>How it work</span>
               <span>Pricing</span>
@@ -52,6 +61,7 @@ class Home extends React.Component {
               onClick={() => {
                 this.setState({
                   showModal: false,
+                  type: null,
                 });
               }}
               src="https://i.imgur.com/9xfDfQO.png"
@@ -59,75 +69,193 @@ class Home extends React.Component {
           </ModalHeader>
           <ModalBody className="modalBodyHome">
             <div className="leftBoxModal">
-              <div className="listEntries">
-                <div className="number">01</div>
-                <span>
-                  Tell us what you want to build and your long and short-term
-                  goals
-                </span>
-              </div>
-              <div className="listEntries">
-                <div className="number">01</div>
-                <span>
-                  Tell us what you want to build and your long and short-term
-                  goals
-                </span>
-              </div>
-              <div className="listEntries">
-                <div className="number">01</div>
-                <span>
-                  Tell us what you want to build and your long and short-term
-                  goals
-                </span>
-              </div>
-              <div className="listEntries">
-                <div className="number">01</div>
-                <span>
-                  Tell us what you want to build and your long and short-term
-                  goals
-                </span>
-              </div>
-              <div className="listEntries">
-                <div className="number">01</div>
-                <span>
-                  Tell us what you want to build and your long and short-term
-                  goals
-                </span>
-              </div>
-              <div className="modalButton">book a call</div>
+              {type == "elastic" ? (
+                <div className="listwrapper">
+                  <div className="listEntries">
+                    <div className="numberBox">
+                      <div className="number">01</div>
+                      <div className="linebelow" />
+                    </div>
+
+                    <span>
+                      Tell us about your tech stack, desired skill set, and the
+                      role available
+                    </span>
+                  </div>
+                  <div className="listEntries">
+                    <div className="numberBox">
+                      <div className="number">02</div>
+                      <div className="linebelow" />
+                    </div>
+                    <span>
+                      Pay refundable down-payment to launch the talent search
+                      process.
+                    </span>
+                  </div>
+                  <div className="listEntries">
+                    <div className="numberBox">
+                      <div className="number">03</div>
+                      <div className="linebelow" />
+                    </div>
+                    <span>
+                      Get a list of top 3 matched candidates directly in your
+                      inbox
+                    </span>
+                  </div>
+                  <div className="listEntries">
+                    <div className="numberBox">
+                      <div className="number">04</div>
+                    </div>
+                    <span>
+                      Interview and hire the candidate who best fits your
+                      company culture.
+                    </span>
+                  </div>
+                </div>
+              ) : type == "cto" ? (
+                <div className="listwrapper">
+                  <div className="listEntries">
+                    <div className="numberBox">
+                      <div className="number">01</div>
+                      <div className="linebelow" />
+                    </div>
+
+                    <span>
+                      Tell us about your requirements, technical challenges, and
+                      business goals
+                    </span>
+                  </div>
+                  <div className="listEntries">
+                    <div className="numberBox">
+                      <div className="number">02</div>
+                      <div className="linebelow" />
+                    </div>
+                    <span>
+                      We’ll spin-off a custom remote team of fully dedicated
+                      resources (40+hrs/week)
+                    </span>
+                  </div>
+                  <div className="listEntries">
+                    <div className="numberBox">
+                      <div className="number">03</div>
+                    </div>
+                    <span>Scale your tech team up or down on the go .</span>
+                  </div>
+                </div>
+              ) : (
+                <div className="listwrapper">
+                  <div className="listEntries">
+                    <div className="numberBox">
+                      <div className="number">01</div>
+                      <div className="linebelow" />
+                    </div>
+
+                    <span>
+                      Tell us what you want to build and your long and
+                      short-term goals
+                    </span>
+                  </div>
+                  <div className="listEntries">
+                    <div className="numberBox">
+                      <div className="number">02</div>
+                      <div className="linebelow" />
+                    </div>
+                    <span>
+                      We’ll help you select core features and pick right
+                      technology stack
+                    </span>
+                  </div>
+                  <div className="listEntries">
+                    <div className="numberBox">
+                      <div className="number">03</div>
+                      <div className="linebelow" />
+                    </div>
+                    <span>
+                      We’ll onboard a team to design, develop and deploy your
+                      MVP
+                    </span>
+                  </div>
+                  <div className="listEntries">
+                    <div className="numberBox">
+                      <div className="number">04</div>
+                    </div>
+                    <span>
+                      Get post launch iteration and maintenance support.
+                    </span>
+                  </div>
+                </div>
+              )}
+              {type != "elastic" ? (
+                type == "cto" ? (
+                  <div className="modalButton">start building your team</div>
+                ) : (
+                  <div className="modalButton">book a call</div>
+                )
+              ) : null}
             </div>
             <div className="rightBoxModal">
-              <div className="topBoxer">
-                <div className="listEntries">
-                  <div className="number"></div>
-                  <span>
-                    Tell us what you want to build and your long and short-term
-                    goals
+              {type == "elastic" ? (
+                <>
+                  <div className="bottomBoxer">
+                    <span>Pricing</span>
+                    <span>
+                      <span className="priceTag">{`$199 `}</span>
+                      per successful hire
+                    </span>
+                  </div>
+                  <span className="elastictext">
+                    The down-payment is fully refundable if you end up hiring
+                    from somewhere else
                   </span>
-                </div>
-                <div className="listEntries">
-                  <div className="number"></div>
-                  <span>
-                    Tell us what you want to build and your long and short-term
-                    goals
+                  <div className="modalButton flexStartButton">book a call</div>
+                </>
+              ) : type == "cto" ? (
+                <>
+                  <span className="elastictext colorblack">
+                    Flat 15% management fee over the cost of the onboarded tech
+                    team.
                   </span>
-                </div>
-                <div className="listEntries">
-                  <div className="number"></div>
-                  <span>
-                    Tell us what you want to build and your long and short-term
-                    goals
+                  <span className="elastictext colorblack">
+                    You can choose to pay monthly, weekly or hourly basis
                   </span>
-                </div>
-              </div>
-              <div className="bottomBoxer">
-                <span>Pricing</span>
-                <span>
-                  We typically deliver most of our projects within 10 weeks and
-                  at a cost of $7500.
-                </span>
-              </div>
-              <div className="modalButton">get your quote now</div>
+                  <span className="ctogreen">Check out resource rate card</span>
+                  <div className="modalButton flexStartButton">book a call</div>
+                </>
+              ) : (
+                <>
+                  <div className="topBoxer">
+                    <div className="listwrapper">
+                      <div className="listEntries">
+                        <div className="number"></div>
+                        <span>Get upfront guaranteed cost and time</span>
+                      </div>
+                      <div className="listEntries">
+                        <div className="number"></div>
+                        <span>
+                          Start with 20% down payment and Pay remaining sum in
+                          equal weekly installments
+                        </span>
+                      </div>
+                      <div className="listEntries">
+                        <div className="number"></div>
+                        <span>
+                          Cancel anytime if you don't get the desired traction
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bottomBoxer">
+                    <span>Pricing</span>
+                    <span>
+                      We typically deliver most of our projects within 10 weeks
+                      and at a cost of $7500
+                    </span>
+                  </div>
+                  <div className="modalButton flexStartButton">
+                    get your quote now
+                  </div>
+                </>
+              )}
             </div>
           </ModalBody>
         </Modal>
@@ -137,8 +265,17 @@ class Home extends React.Component {
           <div className="container1">
             <div className="first">
               <span className="headerTitle">
-                Nurturing Ideas to Products that Scale
+                {`Nurturing Ideas to Products that `}{" "}
+                <TextLoop
+                  className="spanboxchangingtext"
+                  springConfig={{ stiffness: 180, damping: 8 }}
+                >
+                  <span>Scale</span>
+                  <span>Create value</span>
+                  <span>Raise funds</span>
+                </TextLoop>{" "}
               </span>
+
               <span className="subtitle">
                 At NurtureLabs, we bring together remote tech teams, advanced
                 product management skills and best in-class technologies to
@@ -173,7 +310,17 @@ class Home extends React.Component {
                 of top-performing remote talent, available for roles ranging
                 from fractional, full-time to an independent contractor.
               </span>
-              <span className="knowMorespan">KNOW MORE</span>
+              <span
+                onClick={() => {
+                  this.setState({
+                    showModal: true,
+                    type: "elastic",
+                  });
+                }}
+                className="knowMorespan"
+              >
+                KNOW MORE
+              </span>
             </div>
             <div className="feature">
               <img
@@ -186,7 +333,17 @@ class Home extends React.Component {
                 of dedicated remote software engineers and designers to design,
                 build, and run your product.
               </span>
-              <span className="knowMorespan">KNOW MORE</span>
+              <span
+                onClick={() => {
+                  this.setState({
+                    showModal: true,
+                    type: "cto",
+                  });
+                }}
+                className="knowMorespan"
+              >
+                KNOW MORE
+              </span>
             </div>
             <div className="feature">
               <img
@@ -199,7 +356,17 @@ class Home extends React.Component {
                 across industries to systematically test and launch the first
                 version of their product and raise first round of funding.{" "}
               </span>
-              <span className="knowMorespan">KNOW MORE</span>
+              <span
+                onClick={() => {
+                  this.setState({
+                    showModal: true,
+                    type: "mvp",
+                  });
+                }}
+                className="knowMorespan"
+              >
+                KNOW MORE
+              </span>
             </div>
           </div>
         </div>
@@ -232,12 +399,12 @@ class Home extends React.Component {
           </div>
         </div>
         <div className="container4">
-          {!isMobile ? (
+          {/* {!isMobile ? (
             <span className="headingText">
               Work With Pre-Vetted Remote Tech Talent Skilled In New
               Technologies And Tailor Matched To Your Needs
             </span>
-          ) : null}
+          ) : null} */}
           <div className="containerBox">
             <div className="firstBox">
               <span className="firstText">Skill Set</span>
@@ -249,8 +416,8 @@ class Home extends React.Component {
                   />
                   <span className="skillHeader">Artificial intelligence</span>
                   <span className="skillSub">Machine Learning</span>
-                  <span className="skillSub">Machine Learning</span>
-                  <span className="skillSub">Machine Learning</span>
+                  <span className="skillSub">Natural Language Processing</span>
+                  <span className="skillSub">Deep Learning</span>
                 </div>
                 <div className="skillSingle">
                   <img
@@ -259,7 +426,7 @@ class Home extends React.Component {
                   />
                   <span className="skillHeader">Web/Mobile Apps</span>
                   <span className="skillSub">Front end development</span>
-                  <span className="skillSub">Backend development</span>
+                  <span className="skillSub">Android/iOS development</span>
                   <span className="skillSub">Quality Assurance</span>
                 </div>
                 <div className="skillSingle">
@@ -279,7 +446,7 @@ class Home extends React.Component {
                   />
                   <span className="skillHeader">Product and Design</span>
                   <span className="skillSub">Product management</span>
-                  <span className="skillSub">Product analytics</span>
+                  <span className="skillSub">Prototyping</span>
                   <span className="skillSub">UI/UX designing</span>
                 </div>
               </div>
@@ -307,14 +474,14 @@ class Home extends React.Component {
             </div>
           </div>
           <span className="headingCont5">
-            Save your time and money by only focusing on the things that make
-            your idea unique
+            Directly use features from our reusable feature library and focus
+            only on what make your idea unique.
           </span>
-          <span className="subheadCont5">
+          {/* <span className="subheadCont5">
             Directly pick and plug components from our pre-built reusable
             feature library to launch your product faster and at a fraction of
             the cost.
-          </span>
+          </span> */}
           <div className="bottomBox">
             <div className="firstBotbox">
               <span>Marketplaces</span>

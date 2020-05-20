@@ -44,7 +44,7 @@ class JoinNetwork extends React.Component {
                 directly in your inbox.
               </span>
               <div className="btnHome">
-                <div className="btn1">chat with nurture bot</div>
+                <div className="btn1">Apply</div>
               </div>
             </div>
           </div>

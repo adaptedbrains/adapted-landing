@@ -77,9 +77,8 @@ export default () => injectGlobal`
     margin-bottom: 20px;
 }
 .lc-modal-backdrop {
-        background-color: rgba(0, 0, 0, 0.6) !important;
-        opacity: 1 !important;
-        width: 100vw;
+    background-color: rgba(0, 0, 0, 1) !important;
+    width: 100vw;
     height: 100vh;
     position: fixed;
 }

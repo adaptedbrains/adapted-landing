@@ -392,7 +392,7 @@ const DahsboardCss = styled.div`
       text-align: center;
       color: #303030;
       margin: 0px 10vw;
-      margin-bottom: 110px;
+      margin-bottom: 40px;
       @media (max-width: ${base.small}) {
         padding: 0px;
         font-size: 22px;
@@ -405,7 +405,7 @@ const DahsboardCss = styled.div`
     .container2Box {
       display: flex;
       flex-direction: row;
-      padding-bottom: 20vh;
+      padding-bottom: 35vh;
       @media (max-width: ${base.small}) {
         flex-direction: column;
         align-items: center;

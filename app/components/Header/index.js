@@ -117,7 +117,16 @@ class Header extends React.Component {
         {!isMobile ? (
           <div className="second">
             <div className="menuItem">Partner with us</div>
-            <div className="menuItem">Join Network</div>
+            <div
+              className="menuItem"
+              onClick={() => {
+                browserHistory.push({
+                  pathname: "join",
+                });
+              }}
+            >
+              Join Network
+            </div>
             <div className="menuItem">Portfolio</div>
             <div className="menuItem roundButton">Contact us</div>
           </div>

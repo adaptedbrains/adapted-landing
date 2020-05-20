@@ -16,7 +16,7 @@ const DahsboardCss = styled.div`
     background-color: #cde2d4;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    padding: 25px 35px;
+    padding: 10px 35px;
     position: relative;
     padding-top: 25px;
     img {
@@ -30,16 +30,19 @@ const DahsboardCss = styled.div`
     }
     span {
       font-family: Poppins;
-      font-weight: 400;
+      font-weight: 500;
       margin-bottom: 20px;
       font-size: 25px;
     }
   }
 
   .modalBodyHome {
-    padding: 25px 30px;
+    padding: 25px 30px !important;
     display: flex;
     flex-direction: row;
+    .flexStartButton {
+      align-self: flex-start !important;
+    }
     .modalButton {
       padding: 10px 25px;
       font-family: Poppins;
@@ -52,19 +55,57 @@ const DahsboardCss = styled.div`
       display: flex;
       align-items: center;
       align-items: center;
-      width: 50%;
+      width: 55%;
       justify-content: center;
       margin-top: 25px;
+      @media (max-width: ${base.small}) {
+        width: 85%;
+        font-size: 12px;
+        padding: 10px 10px;
+      }
     }
     .rightBoxModal {
       display: flex;
       flex: 1;
       flex-direction: column;
+      justify-content: space-between;
       margin-left: 10px;
+      .colorblack {
+        color: #303030 !important;
+      }
+      .ctogreen {
+        font-size: 16px;
+        padding-bottom: 5%;
+        width: 90%;
+        font-family: Poppins;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #36d28f;
+        @media (max-width: ${base.small}) {
+          font-size: 12px;
+          padding-bottom: 15px;
+        }
+      }
+      .elastictext {
+        font-size: 16px;
+        padding-bottom: 5%;
+        width: 90%;
+        font-family: Poppins;
+        font-weight: 300;
+        color: #79818c;
+        @media (max-width: ${base.small}) {
+          font-size: 12px;
+          padding-bottom: 15px;
+        }
+      }
       .topBoxer {
         display: flex;
         flex: 1;
         flex-direction: column;
+        .listwrapper {
+          display: flex;
+          flex-direction: column;
+        }
         .listEntries {
           padding: 10px 0px;
           display: flex;
@@ -73,7 +114,7 @@ const DahsboardCss = styled.div`
             font-weight: 500;
             font-size: 15px;
             height: 10px;
-            width: 15px;
+            width: 10px;
             border-radius: 19px;
             background-color: #303030;
             border: solid 1px #303030;
@@ -82,26 +123,38 @@ const DahsboardCss = styled.div`
           span {
             font-size: 16px;
             font-family: Poppins;
+            width: 90%;
             font-weight: 300;
             color: #79818c;
+            @media (max-width: ${base.small}) {
+              font-size: 12px;
+            }
           }
         }
       }
       .bottomBoxer {
         display: flex;
-        flex: 1;
         display: flex;
-        flex: 1;
         flex-direction: column;
         background-color: #cde2d4;
-        border-radius: 10px;
-        padding: 15px;
+        border-radius: 5px;
+        padding: 10px 15px;
+        .priceTag {
+          font-weight: 600;
+          font-size: 24px;
+          margin-right: 10px;
+        }
         span {
           font-family: Poppins;
           font-size: 16px;
-          margin: 5px 0px;
+          margin: 2px 0px;
           font-weight: 400;
+          align-items: center;
+          display: flex;
           color: #303030;
+          @media (max-width: ${base.small}) {
+            font-size: 12px;
+          }
         }
       }
     }
@@ -110,10 +163,26 @@ const DahsboardCss = styled.div`
       flex: 1;
       flex-direction: column;
       margin-right: 10px;
+      justify-content: space-between;
+      .listwrapper {
+        display: flex;
+        flex-direction: column;
+      }
       .listEntries {
-        padding: 10px 0px;
         display: flex;
         flex-direction: row;
+        .numberBox {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          /* justify-content: center; */
+          margin-right: 15px;
+          .linebelow {
+            width: 1px;
+            background-color: #000;
+            height: 100%;
+          }
+        }
         .number {
           font-weight: 500;
           font-size: 14px;
@@ -121,13 +190,18 @@ const DahsboardCss = styled.div`
           padding: 5px 7px;
           border-radius: 20px;
           border: solid 1px #303030;
-          margin-right: 15px;
         }
         span {
           font-size: 16px;
+          padding-bottom: 25px;
+          width: 90%;
           font-family: Poppins;
           font-weight: 300;
           color: #79818c;
+          @media (max-width: ${base.small}) {
+            font-size: 12px;
+            padding-bottom: 15px;
+          }
         }
       }
     }
@@ -136,13 +210,13 @@ const DahsboardCss = styled.div`
   .headerSubeheader {
     display: flex;
     flex-direction: row;
-    margin-top: 20px;
+    margin-top: 30px;
     justify-content: space-between;
     span {
       font-family: Poppins;
       flex: 1;
       margin: 0px;
-      font-weight: 400;
+      font-weight: 500;
       font-size: 17px;
     }
   }
@@ -795,11 +869,13 @@ const DahsboardCss = styled.div`
       font-weight: 500;
       font-size: 28px;
       text-align: center;
-      padding: 0px 20%;
+      padding: 0px 15%;
+      margin-bottom: 130px;
       color: #404040;
       @media (max-width: ${base.small}) {
         padding: 0px;
         font-size: 16px;
+        margin-bottom: 60px;
       }
     }
     .subheadCont5 {
@@ -828,8 +904,8 @@ const DahsboardCss = styled.div`
         display: flex;
         flex-direction: column;
         flex: 1;
-        height: 100px;
-        margin-bottom: 100px;
+        height: 150px;
+        margin-bottom: 70px;
         flex-wrap: wrap;
         @media (max-width: ${base.small}) {
           height: auto;
@@ -1107,7 +1183,7 @@ const DahsboardCss = styled.div`
       flex: 1;
       margin-top: 100px;
       flex-direction: row;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
       @media (max-width: ${base.small}) {
         margin-top: 10px;
@@ -1137,10 +1213,10 @@ const DahsboardCss = styled.div`
           }
         }
         .knowMorespan {
-          display: none;
           color: #36d28f;
           font-family: Poppins;
           font-size: 16px;
+          cursor: pointer;
           text-align: center;
           margin-top: 25px;
           margin-bottom: 70px;
@@ -1197,6 +1273,9 @@ const DahsboardCss = styled.div`
           margin-bottom: 15px;
           font-size: 22px;
           text-align: center;
+        }
+        .spanboxchangingtext {
+          color: #5dbc7d;
         }
       }
       .subtitle {
