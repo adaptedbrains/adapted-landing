@@ -108,6 +108,31 @@ class Header extends React.Component {
               >
                 Join Us
               </span>
+              <span
+                onClick={() => {
+                  this.setState(
+                    {
+                      menuCover: false,
+                      anim: false,
+                    },
+                    () => {
+                      browserHistory.push({
+                        pathname: "portfolio",
+                      });
+                    }
+                  );
+                }}
+                style={{
+                  fontFamily: "Poppins",
+                  textAlign: "center",
+                  margin: 20,
+                  fontWeight: 600,
+                  fontSize: 20,
+                  color: "#29235c",
+                }}
+              >
+                Portfolio
+              </span>
             </div>
           </div>
         ) : null}
@@ -127,7 +152,16 @@ class Header extends React.Component {
             >
               Join Network
             </div>
-            <div className="menuItem">Portfolio</div>
+            <div
+              className="menuItem"
+              onClick={() => {
+                browserHistory.push({
+                  pathname: "portfolio",
+                });
+              }}
+            >
+              Portfolio
+            </div>
             <div className="menuItem roundButton">Contact us</div>
           </div>
         ) : null}
