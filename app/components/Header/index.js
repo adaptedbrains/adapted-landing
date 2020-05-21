@@ -136,7 +136,14 @@ class Header extends React.Component {
             </div>
           </div>
         ) : null}
-        <div className="first">
+        <div
+          onClick={() => {
+            browserHistory.push({
+              pathname: "/",
+            });
+          }}
+          className="first"
+        >
           <img src="https://i.imgur.com/oFgkGUI.png" />
         </div>
         {!isMobile ? (
