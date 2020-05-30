@@ -36,12 +36,7 @@ class Partner extends React.Component {
     if (loading) {
       return null;
     }
-    const modalheader =
-      type == "cto"
-        ? "CTO as a Service"
-        : type == "elastic"
-        ? "Elastic Resourcing"
-        : "Rapid MVP Development";
+
     return (
       <PartnerCss>
         <div className="containerBig">
@@ -50,8 +45,7 @@ class Partner extends React.Component {
           <div className="container1">
             <div className="first">
               <span className="headerTitle">
-                {`NurtureLabs Partner 
-Network `}{" "}
+                {`NurtureLabs Partner Network `}
               </span>
 
               <span className="subtitle">
@@ -61,7 +55,7 @@ Network `}{" "}
               </span>
             </div>
             <div className="second">
-              <img src="https://i.imgur.com/l6e2w1X.png" className="tree" />
+              <img src="https://i.imgur.com/1mkFN1J.png" className="tree" />
             </div>
           </div>
         </div>

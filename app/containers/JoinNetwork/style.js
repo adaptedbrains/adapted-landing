@@ -405,11 +405,13 @@ const DahsboardCss = styled.div`
     .container2Box {
       display: flex;
       flex-direction: row;
-      padding-bottom: 35vh;
+      padding-bottom: 25vh;
+      padding-top: 10vh;
       @media (max-width: ${base.small}) {
         flex-direction: column;
         align-items: center;
         padding-bottom: 10vh;
+        padding-top: 0vh;
       }
       .childbox {
         display: flex;

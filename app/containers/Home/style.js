@@ -932,7 +932,7 @@ const DahsboardCss = styled.div`
   }
   .container4 {
     display: flex;
-    padding-top: 30vh;
+    padding-top: 10vh;
     flex-direction: column;
     @media (max-width: ${base.small}) {
       padding-top: 20px;
@@ -945,7 +945,7 @@ const DahsboardCss = styled.div`
       line-height: 40px;
       text-align: center;
       padding: 0px 200px;
-      margin-bottom: 100px;
+      margin-bottom: 60px;
       @media (max-width: ${base.small}) {
         padding: 0px;
         font-size: 16px;
@@ -1095,7 +1095,7 @@ const DahsboardCss = styled.div`
     .teamSize {
       display: flex;
       flex: 1;
-      margin-top: 100px;
+      margin-top: 50px;
       flex-direction: row;
       align-items: center;
       justify-content: space-between;

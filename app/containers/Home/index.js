@@ -306,9 +306,9 @@ class Home extends React.Component {
               ></img>
               <span className="featureHeading">Elastic Resourcing</span>
               <span className="featureSubHeading">
-                Fill gaps in your tech team by tapping into our global network
-                of top-performing remote talent, available for roles ranging
-                from fractional, full-time to an independent contractor.
+                Fill gaps within your tech team by tapping into our global
+                network of top-performing remote talent, available for roles
+                ranging from fractional, full-time to an independent contractor.
               </span>
               <span
                 onClick={() => {
@@ -329,9 +329,9 @@ class Home extends React.Component {
               ></img>
               <span className="featureHeading">CTO as a Service</span>
               <span className="featureSubHeading">
-                We work with founders and stakeholder m build and manage a team
-                of dedicated remote software engineers and designers to design,
-                build, and run your product.
+                Onboard us as your technical co-founder and we'll help you align
+                your technology with your business strategy without the risk &
+                cost of hiring and managing an in-house tech team
               </span>
               <span
                 onClick={() => {
@@ -352,9 +352,9 @@ class Home extends React.Component {
               ></img>
               <span className="featureHeading">Rapid MVP Development</span>
               <span className="featureSubHeading">
-                We've helped early-stage founders around the world with ideas
-                across industries to systematically test and launch the first
-                version of their product and raise first round of funding.{" "}
+                We've helped early stage founders around the world to
+                systematically develop, test and launch the first functional
+                version of their product at bootstrap friendly pricing plan.
               </span>
               <span
                 onClick={() => {
@@ -454,7 +454,7 @@ class Home extends React.Component {
             <div className="secondBox">
               <span className="firstText">Technologies</span>
               <img
-                src="https://i.imgur.com/c6Tsz5v.png"
+                src="https://i.imgur.com/ozoOYJA.png"
                 className="sideImage"
               />
             </div>

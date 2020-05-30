@@ -28,13 +28,12 @@ class Footer extends React.Component {
               <div className="firstFooterBox">
                 <img src="https://i.imgur.com/kK7cxAz.png" />
                 <span className="firstHeading">
-                  Sed ut perspiciatis unde omnis iste natus error sit volu
-                  ptatem accusantium doloremque laud
+                  Nurturing Ideas to Products that Raise fundsScale
                 </span>
                 <span className="subheadingFooter">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam, eaque
-                  ipsa quae ab illo invent
+                  At NurtureLabs, we bring together remote tech teams, advanced
+                  product management skills and best in-class technologies to
+                  bring your ideas to life and deliver high impact results.
                 </span>
               </div>
               <div className="secondfooter">
