@@ -92,6 +92,31 @@ class Header extends React.Component {
                     },
                     () => {
                       browserHistory.push({
+                        pathname: "partner-with-us",
+                      });
+                    }
+                  );
+                }}
+                style={{
+                  fontFamily: "Poppins",
+                  textAlign: "center",
+                  margin: 20,
+                  fontWeight: 600,
+                  fontSize: 20,
+                  color: "#303030",
+                }}
+              >
+                Partner with us
+              </span>
+              <span
+                onClick={() => {
+                  this.setState(
+                    {
+                      menuCover: false,
+                      anim: false,
+                    },
+                    () => {
+                      browserHistory.push({
                         pathname: "join",
                       });
                     }
@@ -103,7 +128,7 @@ class Header extends React.Component {
                   margin: 20,
                   fontWeight: 600,
                   fontSize: 20,
-                  color: "#29235c",
+                  color: "#303030",
                 }}
               >
                 Join Us
@@ -128,7 +153,7 @@ class Header extends React.Component {
                   margin: 20,
                   fontWeight: 600,
                   fontSize: 20,
-                  color: "#29235c",
+                  color: "#303030",
                 }}
               >
                 Portfolio
@@ -148,7 +173,16 @@ class Header extends React.Component {
         </div>
         {!isMobile ? (
           <div className="second">
-            <div className="menuItem">Partner with us</div>
+            <div
+              onClick={() => {
+                browserHistory.push({
+                  pathname: "partner-with-us",
+                });
+              }}
+              className="menuItem"
+            >
+              Partner with us
+            </div>
             <div
               className="menuItem"
               onClick={() => {

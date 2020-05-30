@@ -46,6 +46,12 @@ export function getRoutes(store) {
           cb(null, require("./containers/Portfolio").default);
         },
       },
+      {
+        path: "partner-with-us",
+        getComponent(location, cb) {
+          cb(null, require("./containers/Partner").default);
+        },
+      },
     ],
   };
 }
