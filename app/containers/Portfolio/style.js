@@ -44,6 +44,7 @@ const DahsboardCss = styled.div`
       align-self: flex-start !important;
     }
     .modalButton {
+      text-transform: uppercase;
       padding: 10px 25px;
       font-family: Poppins;
       font-weight: 500;
@@ -58,6 +59,7 @@ const DahsboardCss = styled.div`
       width: 55%;
       justify-content: center;
       margin-top: 25px;
+      cursor: pointer;
       @media (max-width: ${base.small}) {
         width: 85%;
         font-size: 12px;
@@ -360,13 +362,17 @@ const DahsboardCss = styled.div`
       width: 85vw;
       padding: 0px 7.5vw;
       padding-top: 5vh;
-      margin-bottom: 10vh;
-      flex-direction: column;
+      position: relative;
+      margin-bottom: 0vh;
+      flex-direction: column-reverse;
     }
     .phoneimg {
+      position: relative;
       height: 33vw;
       width: 40vw;
       margin-right: 5vw;
+      align-items: center;
+      display: flex;
       @media (max-width: ${base.small}) {
         margin-right: 0vw;
         height: 30vh;
@@ -375,12 +381,26 @@ const DahsboardCss = styled.div`
         justify-content: center;
         margin-bottom: 35px;
       }
+      position: relative;
       img {
         height: 33vw;
         width: 40vw;
         @media (max-width: ${base.small}) {
           height: 30vh;
           width: 60vh;
+        }
+      }
+      video {
+        height: 33vw;
+        position: absolute;
+        left: 0;
+        width: 40vw;
+        :focus {
+          outline: none;
+        }
+        @media (max-width: ${base.small}) {
+          height: 30vh;
+          width: 85vw;
         }
       }
     }
@@ -390,15 +410,15 @@ const DahsboardCss = styled.div`
       justify-content: center;
       padding-right: 5vw;
       .logoboxworth {
-        width: 10vw;
+        width: 5vw;
         height: 100px;
         object-fit: contain;
         margin-bottom: 15px;
         @media (max-width: ${base.small}) {
-          width: 15vh;
+          width: 15vw;
           height: 10vh;
           object-fit: contain;
-          margin-bottom: 0px;
+          margin-bottom: 5px;
         }
       }
       .subtitletext {
@@ -410,14 +430,14 @@ const DahsboardCss = styled.div`
           font-size: 12px;
           font-family: Poppins;
           font-weight: 300;
+          margin-bottom: 20px;
           color: #000;
         }
       }
       .bolderheader {
-        font-size: 20px;
+        font-size: 25px;
         font-family: Poppins;
-        margin-bottom: 50px;
-        margin-top: 20px;
+        margin-bottom: 10px;
         font-weight: 600;
         color: #000;
         @media (max-width: ${base.small}) {
@@ -469,16 +489,20 @@ const DahsboardCss = styled.div`
     @media (max-width: ${base.small}) {
       display: flex;
       height: auto;
+      position: relative;
       width: 85vw;
       padding: 0px 7.5vw;
-      padding-top: 5vh;
-      margin-bottom: 10vh;
-      flex-direction: column;
+      padding-top: 0vh;
+      margin-bottom: 0vh;
+      flex-direction: column-reverse;
     }
     .phoneimg {
+      position: relative;
       height: 40vw;
       width: 20vw;
       margin-right: 5vw;
+      align-items: center;
+      display: flex;
       @media (max-width: ${base.small}) {
         margin-right: 0vw;
         height: 60vh;
@@ -488,11 +512,32 @@ const DahsboardCss = styled.div`
         margin-bottom: 35px;
       }
       img {
-        height: 60vh;
+        z-index: 9;
+        object-fit: contain;
+        height: 65vh;
         width: 30vh;
+        top: 6vw;
         @media (max-width: ${base.small}) {
           height: 60vh;
           width: 30vh;
+          z-index: 9;
+        }
+      }
+      video {
+        height: 54vh;
+        width: 30vh;
+        top: 111px;
+        position: absolute;
+
+        height: 54vh;
+        width: 30vh;
+        top: 10vh;
+        position: absolute;
+
+        @media (max-width: ${base.small}) {
+          height: 51vh;
+          width: 30vh;
+          top: 44px;
         }
       }
     }
@@ -502,15 +547,15 @@ const DahsboardCss = styled.div`
       justify-content: center;
       padding-right: 5vw;
       .logoboxworth {
-        width: 10vw;
+        width: 5vw;
         height: 100px;
         object-fit: contain;
         margin-bottom: 15px;
         @media (max-width: ${base.small}) {
-          width: 15vh;
+          width: 15vw;
           height: 10vh;
           object-fit: contain;
-          margin-bottom: 0px;
+          margin-bottom: 5px;
         }
       }
       .subtitletext {
@@ -522,14 +567,14 @@ const DahsboardCss = styled.div`
           font-size: 12px;
           font-family: Poppins;
           font-weight: 300;
+          margin-bottom: 20px;
           color: #000;
         }
       }
       .bolderheader {
-        font-size: 20px;
+        font-size: 25px;
         font-family: Poppins;
-        margin-bottom: 50px;
-        margin-top: 20px;
+        margin-bottom: 10px;
         font-weight: 600;
         color: #000;
         @media (max-width: ${base.small}) {
@@ -580,20 +625,29 @@ const DahsboardCss = styled.div`
     padding-right: 0px;
     padding-left: 7.5vw;
     @media (max-width: ${base.small}) {
-      flex-direction: column;
+      flex-direction: column-reverse;
     }
     .phoneimg {
+      position: relative;
       margin-left: 5vw;
       margin-right: 0px;
+      align-items: center;
+      display: flex;
       @media (max-width: ${base.small}) {
         margin-left: 0vw;
+        height: auto;
+        width: 85vw;
+        /* top: 86px; */
+        object-fit: contain;
+        margin-bottom: 0px;
+        position: relative;
       }
     }
   }
   .reverserow {
     flex-direction: row-reverse;
     @media (max-width: ${base.small}) {
-      flex-direction: column;
+      flex-direction: column-reverse;
     }
   }
   .container1 {
@@ -662,6 +716,7 @@ const DahsboardCss = styled.div`
           width: 45%;
           justify-content: center;
           cursor: pointer;
+          text-transform: uppercase;
           @media (max-width: ${base.small}) {
             width: 90%;
             margin: 10px 0px;

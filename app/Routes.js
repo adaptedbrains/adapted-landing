@@ -52,6 +52,18 @@ export function getRoutes(store) {
           cb(null, require("./containers/Partner").default);
         },
       },
+      {
+        path: "service",
+        getComponent(location, cb) {
+          cb(null, require("./containers/Service").default);
+        },
+      },
+      {
+        path: "contact-us",
+        getComponent(location, cb) {
+          cb(null, require("./containers/ContactUs").default);
+        },
+      },
     ],
   };
 }

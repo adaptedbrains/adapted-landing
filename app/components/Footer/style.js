@@ -55,6 +55,7 @@ const FooterCss = styled.div`
             font-family: Poppins;
             font-weight: 500;
             font-size: 17px;
+            cursor: pointer;
             color: #303030;
           }
         }
@@ -113,6 +114,10 @@ const FooterCss = styled.div`
       font-size: 15px;
       margin-right: 30px;
       color: #303030;
+
+      @media (max-width: ${base.small}) {
+        font-size: 12px;
+      }
     }
   }
 `;

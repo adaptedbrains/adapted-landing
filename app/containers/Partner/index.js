@@ -67,7 +67,13 @@ class Partner extends React.Component {
               continuous stream of work so that you can focus on what you do the
               best
             </span>
-            <div className="btn1">become Technology partner</div>
+            <a
+              href="https://forms.gle/p27ADUtyWGST9Der6"
+              target="blank"
+              className="btn1"
+            >
+              Become technology partner
+            </a>
           </div>
           <div className="secondBox">
             <div className="boxes">Reduce Marketing Expense</div>
@@ -85,7 +91,13 @@ class Partner extends React.Component {
                 recurring income by just matching us with a potential client
                 within your network
               </span>
-              <div className="btn1">become sales partner</div>
+              <a
+                href="https://calendly.com/nurturelabs/meetingrequest"
+                target="blank"
+                className="btn1"
+              >
+                Become sales partner
+              </a>
             </div>
             <div className="secondBox">
               <div className="boxes">Earn Passive Income</div>
@@ -109,7 +121,13 @@ class Partner extends React.Component {
                 recurring income by just matching us with a potential client
                 within your network
               </span>
-              <div className="btn1">become sales partner</div>
+              <a
+                href="https://calendly.com/nurturelabs/meetingrequest"
+                target="blank"
+                className="btn1"
+              >
+                Become sales partner
+              </a>
             </div>
           </div>
         )}

@@ -507,6 +507,7 @@ const DahsboardCss = styled.div`
           display: flex;
           width: 48%;
           justify-content: center;
+          text-transform: uppercase;
           cursor: pointer;
           :hover {
             background-color: #fff;
@@ -568,6 +569,7 @@ const DahsboardCss = styled.div`
           border-radius: 5px;
           display: flex;
           width: 48%;
+          text-transform: uppercase;
           @media (max-width: ${base.small}) {
             width: 90%;
           }

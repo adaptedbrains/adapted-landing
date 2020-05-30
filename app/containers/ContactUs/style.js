@@ -57,8 +57,8 @@ const DahsboardCss = styled.div`
       align-items: center;
       align-items: center;
       width: 55%;
-      justify-content: center;
       cursor: pointer;
+      justify-content: center;
       margin-top: 25px;
       @media (max-width: ${base.small}) {
         width: 85%;
@@ -353,7 +353,6 @@ const DahsboardCss = styled.div`
     flex: 1;
     flex-direction: row;
     padding: 60px 130px;
-    background-color: #f5f5f9;
     @media (max-width: ${base.small}) {
       flex-direction: column;
       padding: 60px 20px;
@@ -653,7 +652,7 @@ const DahsboardCss = styled.div`
         }
         .childbox {
           display: flex;
-          padding: 20px 70px;
+          padding: 40px 70px;
           flex-direction: row;
           border: solid 2px #fff;
           cursor: pointer;
@@ -703,7 +702,7 @@ const DahsboardCss = styled.div`
               flex-direction: row;
               flex-wrap: wrap;
               img {
-                width: 25vw;
+                height: 30px;
                 margin-right: 24px;
                 margin-bottom: 5px;
                 object-fit: contain;
@@ -752,92 +751,6 @@ const DahsboardCss = styled.div`
               margin-right: 20px;
               margin-bottom: 5px;
               object-fit: contain;
-              @media (max-width: ${base.small}) {
-                width: 70vw;
-                height: auto;
-              }
-            }
-          }
-        }
-        .firstVideo {
-          display: flex;
-          position: relative;
-          flex: 1;
-          img {
-            position: absolute;
-            right: 10vw;
-            top: 0;
-            bottom: 0;
-            margin: auto;
-            height: 100vh;
-            object-fit: contain;
-            @media (max-width: ${base.small}) {
-              position: absolute;
-              right: 0;
-              left: 0;
-              top: 0;
-              bottom: 0;
-              margin: auto;
-              height: 50vh;
-              object-fit: contain;
-            }
-          }
-          video {
-            position: absolute;
-            right: 11.5vw;
-            top: 21px;
-            bottom: 0;
-            margin: auto;
-            height: 84vh;
-            object-fit: contain;
-            @media (max-width: ${base.small}) {
-              position: absolute;
-              right: 0;
-              top: 9px;
-              left: 0;
-              bottom: 0;
-              margin: auto;
-              height: 43vh;
-              object-fit: contain;
-            }
-          }
-        }
-        .firstVideoImage {
-          display: flex;
-          position: relative;
-          flex: 1;
-          img {
-            position: absolute;
-            right: -2vw;
-            top: 10vw;
-            /* bottom: 0; */
-            margin: auto;
-            width: 50vw;
-            object-fit: contain;
-            @media (max-width: ${base.small}) {
-              position: absolute;
-              right: 0vw;
-              top: 10vw;
-              margin: auto;
-              width: 100vw;
-              object-fit: contain;
-            }
-          }
-          video {
-            position: absolute;
-            right: 4vw;
-            top: 13.1vw;
-            margin: auto;
-            width: 38vw;
-            object-fit: contain;
-            @media (max-width: ${base.small}) {
-              position: absolute;
-              right: 0;
-              left: 0;
-              top: 16.4vw;
-              margin: auto;
-              width: 75vw;
-              object-fit: contain;
             }
           }
         }
@@ -860,16 +773,6 @@ const DahsboardCss = styled.div`
               margin: 0px;
             }
           }
-
-          .floatingImg {
-            width: 33vw;
-            left: 50px;
-            @media (max-width: ${base.small}) {
-              width: 65vw;
-              left: 0;
-              top: 10px;
-            }
-          }
         }
         .secondimage {
           display: flex;
@@ -890,16 +793,6 @@ const DahsboardCss = styled.div`
               left: auto;
               right: -20vw;
               margin: 0px;
-            }
-          }
-          .floatingImg {
-            width: 33vw;
-            left: -17px;
-            @media (max-width: ${base.small}) {
-              width: 57vw;
-              right: 0px;
-              left: auto;
-              top: 15px;
             }
           }
         }

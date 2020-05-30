@@ -10,7 +10,13 @@ export default () => injectGlobal`
     p{
         margin-bottom:0
     }
+    a{
+        text-decoration-line:none !important;
+    }
     img{
+    }
+    textarea{
+        font: 400 13.3333px Arial;
     }
 
     ::placeholder { /* Firefox, Chrome, Opera */ 

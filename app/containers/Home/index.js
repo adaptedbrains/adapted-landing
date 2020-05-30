@@ -5,6 +5,20 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { Modal, ModalHeader, ModalBody } from "shards-react";
 import TextLoop from "react-text-loop";
+import { browserHistory, Router } from "react-router";
+import axios from "axios";
+
+function preloadImages(srcs) {
+  if (!preloadImages.cache) {
+    preloadImages.cache = [];
+  }
+  var img;
+  for (var i = 0; i < srcs.length; i++) {
+    img = new Image();
+    img.src = srcs[i];
+    preloadImages.cache.push(img);
+  }
+}
 
 class Home extends React.Component {
   constructor(props) {
@@ -12,10 +26,49 @@ class Home extends React.Component {
     this.state = {
       loading: true,
       showModal: false,
+      preview: [
+        {
+          name: "Worth",
+          desc: "Monetization layer over Instagram",
+          img: "https://i.imgur.com/JqX1hAw.png",
+          top:
+            "https://frontend-asset-files.s3.ap-south-1.amazonaws.com/Screenrecorder-2020-03-21-19-27-04-226_2.mp4",
+        },
+        {
+          name: "Soochi",
+          desc: "A collaborative multilingual list maker for WhatsApp",
+          img: "https://i.imgur.com/B0Tl2rE.png",
+          top: "",
+          bottom: "",
+        },
+        {
+          name: "Cinemadraft",
+          desc:
+            "Movie Fantasy League built on Tron with an inbuilt Investment Scheme.",
+          img: "https://i.imgur.com/jYZl54C.png",
+          top: "https://i.imgur.com/B4p4oZL.jpg",
+          bottom: "https://i.imgur.com/pQOGqSF.jpg",
+        },
+        {
+          name: "Stickerbook",
+          desc:
+            "Gamified surveys for company employees on sustainability practices.",
+          img: "https://i.imgur.com/KvgijTZ.png",
+          top: "https://i.imgur.com/Ek0ijQ4.jpg",
+          bottom: "https://i.imgur.com/d2DHXgj.jpg",
+        },
+      ],
+      selectedWork: 0,
       type: null,
     };
   }
   componentDidMount() {
+    preloadImages([
+      "https://i.imgur.com/B4p4oZL.jpg",
+      "https://i.imgur.com/pQOGqSF.jpg",
+      "https://i.imgur.com/Ek0ijQ4.jpg",
+      "https://i.imgur.com/d2DHXgj.jpg",
+    ]);
     this.setState({
       loading: false,
     });
@@ -31,7 +84,7 @@ class Home extends React.Component {
   }
 
   render() {
-    const { loading, showModal, type } = this.state;
+    const { loading, showModal, type, preview, selectedWork } = this.state;
     const { isMobile } = this.props;
     if (loading) {
       return null;
@@ -186,10 +239,14 @@ class Home extends React.Component {
                 </div>
               )}
               {type != "elastic" ? (
-                type == "cto" ? (
-                  <div className="modalButton">start building your team</div>
-                ) : (
-                  <div className="modalButton">book a call</div>
+                type == "cto" ? null : (
+                  <a
+                    target="blank"
+                    href="https://calendly.com/nurturelabs/meetingrequest"
+                    className="modalButton"
+                  >
+                    book a call
+                  </a>
                 )
               ) : null}
             </div>
@@ -207,7 +264,13 @@ class Home extends React.Component {
                     The down-payment is fully refundable if you end up hiring
                     from somewhere else
                   </span>
-                  <div className="modalButton flexStartButton">book a call</div>
+                  <a
+                    target="blank"
+                    href="https://calendly.com/nurturelabs/meetingrequest"
+                    className="modalButton flexStartButton"
+                  >
+                    book a call
+                  </a>
                 </>
               ) : type == "cto" ? (
                 <>
@@ -218,8 +281,14 @@ class Home extends React.Component {
                   <span className="elastictext colorblack">
                     You can choose to pay monthly, weekly or hourly basis
                   </span>
-                  <span className="ctogreen">Check out resource rate card</span>
-                  <div className="modalButton flexStartButton">book a call</div>
+                  {/* <span className="ctogreen">Check out resource rate card</span> */}
+                  <a
+                    target="blank"
+                    href="https://calendly.com/nurturelabs/meetingrequest"
+                    className="modalButton flexStartButton"
+                  >
+                    book a call
+                  </a>
                 </>
               ) : (
                 <>
@@ -251,9 +320,13 @@ class Home extends React.Component {
                       and at a cost of $7500
                     </span>
                   </div>
-                  <div className="modalButton flexStartButton">
+                  <a
+                    href="https://nurturelabs.typeform.com/to/E885wP"
+                    target="blank"
+                    className="modalButton flexStartButton"
+                  >
                     get your quote now
-                  </div>
+                  </a>
                 </>
               )}
             </div>
@@ -282,14 +355,26 @@ class Home extends React.Component {
                 bring your ideas to life and deliver high impact results.
               </span>
               <div className="btnHome">
-                <div className="btn1">chat with nurture bot</div>
-                <div className="btn1">book a discovery call</div>
+                <a
+                  target="blank"
+                  href="https://landbot.io/u/H-451190-1JDSWHZ1DHHKNJ3J/index.html"
+                  className="btn1"
+                >
+                  Chat with our bot
+                </a>
+                <a
+                  target="blank"
+                  href="https://calendly.com/nurturelabs/meetingrequest"
+                  className="btn1"
+                >
+                  Book a discovery call
+                </a>
               </div>
             </div>
 
             <div className="second">
               <img src="https://i.imgur.com/q1HaCXR.png" className="bubble" />
-              <img src="https://i.imgur.com/cwdZcLQ.png" className="tree" />
+              <img src="https://i.imgur.com/TLEB80T.png" className="tree" />
             </div>
           </div>
         </div>
@@ -319,7 +404,7 @@ class Home extends React.Component {
                 }}
                 className="knowMorespan"
               >
-                KNOW MORE
+                HOW IT WORKS
               </span>
             </div>
             <div className="feature">
@@ -342,7 +427,7 @@ class Home extends React.Component {
                 }}
                 className="knowMorespan"
               >
-                KNOW MORE
+                HOW IT WORKS
               </span>
             </div>
             <div className="feature">
@@ -365,7 +450,7 @@ class Home extends React.Component {
                 }}
                 className="knowMorespan"
               >
-                KNOW MORE
+                HOW IT WORKS
               </span>
             </div>
           </div>
@@ -499,95 +584,184 @@ class Home extends React.Component {
           <span className="container6Heading">Our Work</span>
           <div className="bottomBoxer">
             <div className="firstBox">
-              <div className="childbox">
+              <div
+                onClick={() => {
+                  this.setState({
+                    selectedWork: 0,
+                  });
+                }}
+                className={
+                  this.state.selectedWork == 0
+                    ? "childbox selectedBox"
+                    : "childbox"
+                }
+              >
                 <div className="firstChild">
-                  <img src="https://i.imgur.com/zODrXFt.png" />
+                  <img src="https://i.imgur.com/BJC3YVl.png" />
                 </div>
                 <div className="secondChild">
-                  <span className="headline">Project Name</span>
+                  <span className="headline">Worth</span>
                   <span className="subtitleline">
-                    Digital Media, Los Angeles, California, USA
+                    Monetization layer over Instagram
                   </span>
                   <div className="technologyBox">
-                    <img src="https://i.imgur.com/Tz8RR4F.png" />
-                    <img src="https://i.imgur.com/OP0Ek0B.png" />
-                    <img src="https://i.imgur.com/9SgQBl0.png" />
-                    <img src="https://i.imgur.com/28JDguE.png" />
+                    <img src="https://i.imgur.com/JqX1hAw.png" />
                   </div>
                 </div>
               </div>
-              <div className="childbox selectedBox">
+              <div
+                onClick={() => {
+                  this.setState({
+                    selectedWork: 1,
+                  });
+                }}
+                className={
+                  this.state.selectedWork == 1
+                    ? "childbox selectedBox"
+                    : "childbox"
+                }
+              >
                 <div className="firstChild">
-                  <img src="https://i.imgur.com/zODrXFt.png" />
+                  <img src="https://i.imgur.com/elEy6uT.png" />
                 </div>
                 <div className="secondChild">
-                  <span className="headline">Project Name</span>
+                  <span className="headline">Soochi</span>
                   <span className="subtitleline">
-                    Digital Media, Los Angeles, California, USA
+                    A collaborative multilingual list maker for WhatsApp
                   </span>
                   <div className="technologyBox">
-                    <img src="https://i.imgur.com/Tz8RR4F.png" />
-                    <img src="https://i.imgur.com/OP0Ek0B.png" />
-                    <img src="https://i.imgur.com/9SgQBl0.png" />
-                    <img src="https://i.imgur.com/28JDguE.png" />
+                    <img src="https://i.imgur.com/B0Tl2rE.png" />
                   </div>
                 </div>
               </div>
-              <div className="childbox">
+              <div
+                onClick={() => {
+                  this.setState({
+                    selectedWork: 2,
+                  });
+                }}
+                className={
+                  this.state.selectedWork == 2
+                    ? "childbox selectedBox"
+                    : "childbox"
+                }
+              >
                 <div className="firstChild">
-                  <img src="https://i.imgur.com/zODrXFt.png" />
+                  <img src="https://i.imgur.com/xpOkMqp.png" />
                 </div>
                 <div className="secondChild">
-                  <span className="headline">Project Name</span>
+                  <span className="headline">Cinemadraft</span>
                   <span className="subtitleline">
-                    Digital Media, Los Angeles, California, USA
+                    Movie Fantasy League built on Tron with an inbuilt
+                    Investment Scheme
                   </span>
                   <div className="technologyBox">
-                    <img src="https://i.imgur.com/Tz8RR4F.png" />
-                    <img src="https://i.imgur.com/OP0Ek0B.png" />
-                    <img src="https://i.imgur.com/9SgQBl0.png" />
-                    <img src="https://i.imgur.com/28JDguE.png" />
+                    <img src="https://i.imgur.com/jYZl54C.png" />
                   </div>
                 </div>
               </div>
-              <div className="childbox">
+              <div
+                onClick={() => {
+                  this.setState({
+                    selectedWork: 3,
+                  });
+                }}
+                className={
+                  this.state.selectedWork == 3
+                    ? "childbox selectedBox"
+                    : "childbox"
+                }
+              >
                 <div className="firstChild">
-                  <img src="https://i.imgur.com/zODrXFt.png" />
+                  <img src="https://i.imgur.com/dAzZkXF.png" />
                 </div>
                 <div className="secondChild">
-                  <span className="headline">Project Name</span>
+                  <span className="headline">Stickerbook</span>
                   <span className="subtitleline">
-                    Digital Media, Los Angeles, California, USA
+                    Gamified surveys for company employees on sustainability
+                    practices
                   </span>
                   <div className="technologyBox">
-                    <img src="https://i.imgur.com/Tz8RR4F.png" />
-                    <img src="https://i.imgur.com/OP0Ek0B.png" />
-                    <img src="https://i.imgur.com/9SgQBl0.png" />
-                    <img src="https://i.imgur.com/28JDguE.png" />
+                    <img src="https://i.imgur.com/KvgijTZ.png" />
                   </div>
                 </div>
               </div>
+              {!isMobile ? (
+                <div
+                  onClick={() => {
+                    browserHistory.push({
+                      pathname: "portfolio",
+                    });
+                  }}
+                  className="btn1"
+                >
+                  Checkout our Portfolio
+                </div>
+              ) : null}
             </div>
+
             <div className="secondBox">
               {isMobile ? (
                 <div className="secondChild">
-                  <span className="headline">Project Name</span>
+                  <span className="headline">{preview[selectedWork].name}</span>
                   <span className="subtitleline">
-                    Digital Media, Los Angeles, California, USA
+                    {preview[selectedWork].desc}
                   </span>
                   <div className="technologyBox">
-                    <img src="https://i.imgur.com/Tz8RR4F.png" />
-                    <img src="https://i.imgur.com/OP0Ek0B.png" />
-                    <img src="https://i.imgur.com/9SgQBl0.png" />
-                    <img src="https://i.imgur.com/28JDguE.png" />
+                    <img src={preview[selectedWork].img} />
                   </div>
                 </div>
               ) : null}
-              <div className="firstimage">
-                <img src="https://i.imgur.com/xdSxfy3.png" />
+
+              <div
+                className="firstVideo"
+                style={{ display: selectedWork == 1 ? "flex" : "none" }}
+              >
+                <video
+                  loop
+                  autoPlay
+                  muted
+                  src="https://frontend-asset-files.s3.ap-south-1.amazonaws.com/Screenrecorder-2020-03-21-19-27-04-226_2.mp4"
+                />
+                <img src="https://i.imgur.com/6TOkY1F.png" />
               </div>
-              <div className="secondimage">
-                <img src="https://i.imgur.com/xdSxfy3.png" />
+              <div
+                className="firstVideoImage"
+                style={{ display: selectedWork == 0 ? "flex" : "none" }}
+              >
+                <video
+                  loop
+                  autoPlay
+                  muted
+                  src="https://frontend-asset-files.s3.ap-south-1.amazonaws.com/videoplayback.mp4"
+                />
+                <img src="https://i.imgur.com/PRyUa7F.png" />
+              </div>
+              <div
+                className="firstimage"
+                style={{
+                  display:
+                    selectedWork != 0 && selectedWork != 1 ? "flex" : "none",
+                }}
+              >
+                <img
+                  className="floatingImg"
+                  src={preview[selectedWork].top || ""}
+                />
+                <img src="https://i.imgur.com/PRyUa7F.png" />
+              </div>
+              <div
+                className="secondimage"
+                style={{
+                  display:
+                    selectedWork != 0 && selectedWork != 1 ? "flex" : "none",
+                }}
+              >
+                <img
+                  className="floatingImg"
+                  src={preview[selectedWork].bottom || ""}
+                />
+                <img src="https://i.imgur.com/PRyUa7F.png" />
               </div>
             </div>
           </div>
@@ -597,32 +771,28 @@ class Home extends React.Component {
             What Our Client Says About Us
           </span>
           <div className="contentBox">
-            <div className="prevButton">
+            <div className="prevButton" style={{ display: "none" }}>
               <img src="https://i.imgur.com/kD3vPld.png" />
             </div>
             <div className="sliderContent">
-              <img className="sideimg" src="https://i.imgur.com/NfmquoL.png" />
+              <img className="sideimg" src="https://i.imgur.com/7Ja9ZAV.png" />
               <div className="contentText">
                 <img
                   className="floating"
                   src="https://i.imgur.com/IEsOLEN.png"
                 />
                 <span>
-                  s excepturi sint occaecati cupiditate non provident, similique
-                  sunt in culpa qui officia deserunt mollitia animi, id est
-                  laborum et dolorum fuga. Et harum quidem rerum facilis est et
-                  expedita distinctio. Nam libero tempore, cum soluta nobis est
-                  eligendi optio cumque nihil impedit quo minus id quod maxime
-                  placeat facere possimus, omnis voluptas assumenda est, omnis
-                  dolor repellendus. Te ia deserunt mollitia animi, id est
-                  laborum et dolorum fuga. Et harum qu . Nam libero tempore, cum
-                  soluta nobis est eligendi optio cumque nihil impedit quo minus
-                  id quod ma
+                  It has been a great experience working with Nurture Labs so
+                  far. Yash & his team are extremely efficient and adhere to
+                  deadlines. They have contributed to product ideas and are
+                  extremely flexible with regard to time commitment. We highly
+                  recommend this service for early stage companies that are
+                  looking to save capital on product development
                 </span>
                 <img src="https://i.imgur.com/1rmNfH4.png" />
               </div>
             </div>
-            <div className="nextButton">
+            <div className="nextButton" style={{ display: "none" }}>
               <img src="https://i.imgur.com/V6Ycu1z.png" />
             </div>
           </div>
@@ -631,34 +801,89 @@ class Home extends React.Component {
           <div className="formBox">
             <div className="inputBox">
               <span>Name</span>
-              <input placeholder="" />
+              <input
+                value={this.state.name}
+                onChange={(e) => {
+                  this.setState({
+                    name: e.target.value,
+                  });
+                }}
+                placeholder=""
+              />
             </div>
             <div className="inputBox">
               <span>Email</span>
-              <input placeholder="" />
+              <input
+                value={this.state.email}
+                onChange={(e) => {
+                  this.setState({
+                    email: e.target.value,
+                  });
+                }}
+                placeholder=""
+              />
             </div>
             <div className="inputBox">
-              <span>Name</span>
-              <textarea placeholder="" />
+              <span>Message</span>
+              <textarea
+                value={this.state.message}
+                onChange={(e) => {
+                  this.setState({
+                    message: e.target.value,
+                  });
+                }}
+                placeholder=""
+              />
             </div>
-            <div className="bottomButton">SEND US MESSAGE</div>
+            <div
+              onClick={() => {
+                if (this.state.name && this.state.email && this.state.message) {
+                  axios
+                    .post("/api/sendmessage", {
+                      email: this.state.email,
+                      name: this.state.name,
+                      message: this.state.message,
+                    })
+                    .then((e) => {
+                      if (e.status != 200) {
+                        alert("Something went wrong! Please try again.");
+                      } else {
+                        alert("Thank you for contacting us!");
+                      }
+                    });
+                } else {
+                  alert(
+                    "Please provide email name and message to send us message."
+                  );
+                }
+              }}
+              className="bottomButton"
+            >
+              SEND US MESSAGE
+            </div>
           </div>
           <div className="supportBox">
             <span className="headercontainer8">
               If you want to get on a call with us
             </span>
-            <div className="bookacall">BOOK A CALL</div>
+            <a
+              target="blank"
+              href="https://calendly.com/nurturelabs/meetingrequest"
+              className="bookacall"
+            >
+              BOOK A CALL
+            </a>
             <div className="dottedLine">
               {`- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  `}
             </div>
             <div className="contactUsStrip">
               <img src="https://i.imgur.com/bm0rg5G.png" />
-              <span>support@doyleandsmith.com</span>
+              <span>hello@nurtureLabs.co</span>
             </div>
-            <div className="contactUsStrip">
+            {/* <div className="contactUsStrip">
               <img src="https://i.imgur.com/IM81cXW.png" />
               <span>+91 79800 23053</span>
-            </div>
+            </div> */}
           </div>
         </div>
         <Footer />

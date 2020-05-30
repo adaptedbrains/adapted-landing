@@ -1,12 +1,12 @@
-import React from 'react';
-import {renderToString} from 'react-dom/server';
-import {RouterContext} from 'react-router';
-import {Provider} from 'react-redux';
-import serialize from 'serialize-javascript';
-import Helmet from 'react-helmet/lib/Helmet';
-import {routes} from '../../app/Routes';
-import {ServerStyleSheet, StyleSheetManager} from 'styled-components';
-const assetChunks = require('../../public/nurturelabs/stats.json');
+import React from "react";
+import { renderToString } from "react-dom/server";
+import { RouterContext } from "react-router";
+import { Provider } from "react-redux";
+import serialize from "serialize-javascript";
+import Helmet from "react-helmet/lib/Helmet";
+import { routes } from "../../app/Routes";
+import { ServerStyleSheet, StyleSheetManager } from "styled-components";
+const assetChunks = require("../../public/nurturelabs/stats.json");
 const FILE_EXTENSION_REGEX = /\.([a-z]+)$/;
 const TAWK_TO_SCRIPT = `
   <script type="text/javascript">
@@ -21,49 +21,49 @@ const TAWK_TO_SCRIPT = `
       })();
   </script>`;
 
-const NO_TAWK_TO_CONTAINERS = ['school'];
+const NO_TAWK_TO_CONTAINERS = ["school"];
 
 const RAZOR_PAY_SCRIPT = `<script src="https://checkout.razorpay.com/v1/checkout.js"></script>`;
 
 export default (req, store, renderProps) => {
-    const sheet = new ServerStyleSheet();
-    const content = renderToString(
-        <Provider store={store}>
-            <StyleSheetManager sheet={sheet.instance}>
-                <RouterContext {...renderProps} />
-            </StyleSheetManager>
-        </Provider>
-    );
+  const sheet = new ServerStyleSheet();
+  const content = renderToString(
+    <Provider store={store}>
+      <StyleSheetManager sheet={sheet.instance}>
+        <RouterContext {...renderProps} />
+      </StyleSheetManager>
+    </Provider>
+  );
 
-    const styleTags = sheet.getStyleTags();
+  const styleTags = sheet.getStyleTags();
 
-    const helmet = Helmet.renderStatic();
+  const helmet = Helmet.renderStatic();
 
-    // const assetChunkFileKeys = Object.keys(assetChunks["assetsByChunkName"]);
+  // const assetChunkFileKeys = Object.keys(assetChunks["assetsByChunkName"]);
 
-    const vendorFile = Array.isArray(assetChunks['assetsByChunkName']['vendor'])
-        ? assetChunks['assetsByChunkName']['vendor']
-        : [assetChunks['assetsByChunkName']['vendor']];
-    const mainFile = Array.isArray(assetChunks['assetsByChunkName']['main'])
-        ? assetChunks['assetsByChunkName']['main']
-        : [assetChunks['assetsByChunkName']['main']];
-    const manifestFile = Array.isArray(
-        assetChunks['assetsByChunkName']['manifest']
-    )
-        ? assetChunks['assetsByChunkName']['manifest']
-        : [assetChunks['assetsByChunkName']['manifest']];
-    const fileArray = [...manifestFile, ...vendorFile, ...mainFile];
-    let jsFiles = ``;
-    fileArray.forEach(file => {
-        let fileExtension = FILE_EXTENSION_REGEX.exec(file);
-        let newJsFile =
-            fileExtension[1] == 'css'
-                ? `<link rel="stylesheet" href="nurturelabs/${file}"></link>`
-                : `<script src="nurturelabs/${file}"></script>`;
-        jsFiles = jsFiles + newJsFile;
-    });
+  const vendorFile = Array.isArray(assetChunks["assetsByChunkName"]["vendor"])
+    ? assetChunks["assetsByChunkName"]["vendor"]
+    : [assetChunks["assetsByChunkName"]["vendor"]];
+  const mainFile = Array.isArray(assetChunks["assetsByChunkName"]["main"])
+    ? assetChunks["assetsByChunkName"]["main"]
+    : [assetChunks["assetsByChunkName"]["main"]];
+  const manifestFile = Array.isArray(
+    assetChunks["assetsByChunkName"]["manifest"]
+  )
+    ? assetChunks["assetsByChunkName"]["manifest"]
+    : [assetChunks["assetsByChunkName"]["manifest"]];
+  const fileArray = [...manifestFile, ...vendorFile, ...mainFile];
+  let jsFiles = ``;
+  fileArray.forEach((file) => {
+    let fileExtension = FILE_EXTENSION_REGEX.exec(file);
+    let newJsFile =
+      fileExtension[1] == "css"
+        ? `<link rel="stylesheet" href="nurturelabs/${file}"></link>`
+        : `<script src="nurturelabs/${file}"></script>`;
+    jsFiles = jsFiles + newJsFile;
+  });
 
-    return `
+  return `
     <!DOCTYPE html>
 		<html lang="en">
 			<head>
@@ -77,7 +77,8 @@ export default (req, store, renderProps) => {
                 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 				<link rel="shortcut icon" href="https://frontend-asset-files.s3.ap-south-1.amazonaws.com/favicon.ico" />
                 <script src="https://cdn.rawgit.com/progers/pathseg/master/pathseg.js"></script>
-                <base href="/">
+               
+             <base href="/">
 				${helmet.title.toString()}
 				${helmet.meta.toString()}
 				${styleTags}
@@ -88,7 +89,13 @@ export default (req, store, renderProps) => {
 					window.__REDUX_STATE__ = ${serialize(store.getState())}
                 </script>
                
-				${jsFiles}
+                ${jsFiles}
+                <script SameSite="None; Secure" src="https://static.landbot.io/landbot-widget/landbot-widget-1.0.0.js"></script>
+<script>
+  var myLandbot = new LandbotPopup({
+    index: 'https://landbot.io/u/H-451190-1JDSWHZ1DHHKNJ3J/index.html',
+  });
+</script>
         </body>
 		</html>
   `;

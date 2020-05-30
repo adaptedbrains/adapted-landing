@@ -44,6 +44,7 @@ const PartnerCss = styled.div`
       align-self: flex-start !important;
     }
     .modalButton {
+      text-transform: uppercase;
       padding: 10px 25px;
       font-family: Poppins;
       font-weight: 500;
@@ -57,6 +58,7 @@ const PartnerCss = styled.div`
       align-items: center;
       width: 55%;
       justify-content: center;
+      cursor: pointer;
       margin-top: 25px;
       @media (max-width: ${base.small}) {
         width: 85%;
@@ -667,6 +669,7 @@ const PartnerCss = styled.div`
           width: 45%;
           justify-content: center;
           cursor: pointer;
+          text-transform: uppercase;
           @media (max-width: ${base.small}) {
             width: 90%;
             margin: 10px 0px;
@@ -769,6 +772,7 @@ const PartnerCss = styled.div`
         width: 45%;
         justify-content: center;
         cursor: pointer;
+        text-transform: uppercase;
         @media (max-width: ${base.small}) {
           width: 90%;
           margin: 10px 0px;

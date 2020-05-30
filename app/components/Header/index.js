@@ -152,6 +152,7 @@ class Header extends React.Component {
                   textAlign: "center",
                   margin: 20,
                   fontWeight: 600,
+                  cursor: "pointer",
                   fontSize: 20,
                   color: "#303030",
                 }}
@@ -203,7 +204,13 @@ class Header extends React.Component {
             >
               Portfolio
             </div>
-            <div className="menuItem roundButton">Contact us</div>
+            <a
+              target="blank"
+              href="https://calendly.com/nurturelabs/meetingrequest"
+              className="menuItem roundButton"
+            >
+              Book a call
+            </a>
           </div>
         ) : null}
         {isMobile ? (

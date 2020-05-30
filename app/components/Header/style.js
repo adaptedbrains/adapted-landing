@@ -51,6 +51,7 @@ const HeaderCss = styled.div`
     min-width: 9vw;
     align-items: center;
     justify-content: center;
+    color: #303030;
   }
   .roundButton {
     border: solid 2px #303030;
