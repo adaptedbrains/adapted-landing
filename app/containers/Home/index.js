@@ -7,6 +7,7 @@ import { Modal, ModalHeader, ModalBody } from "shards-react";
 import TextLoop from "react-text-loop";
 import { browserHistory, Router } from "react-router";
 import axios from "axios";
+import Typist from "react-typist";
 
 function preloadImages(srcs) {
   if (!preloadImages.cache) {
@@ -26,6 +27,7 @@ class Home extends React.Component {
     this.state = {
       loading: true,
       showModal: false,
+      typereset: "init",
       preview: [
         {
           name: "Worth",
@@ -86,6 +88,7 @@ class Home extends React.Component {
   render() {
     const { loading, showModal, type, preview, selectedWork } = this.state;
     const { isMobile } = this.props;
+    const DATA_TO_ITERATE = Array(10).fill(0);
     if (loading) {
       return null;
     }
@@ -339,14 +342,23 @@ class Home extends React.Component {
             <div className="first">
               <span className="headerTitle">
                 {`Nurturing Ideas to Products that `}{" "}
-                <TextLoop
+                <Typist
+                  onTypingDone={() => {
+                    this.setState({
+                      typereset: Math.random() + "_",
+                    });
+                  }}
+                  key={this.state.typereset}
                   className="spanboxchangingtext"
-                  springConfig={{ stiffness: 180, damping: 8 }}
+                  cursor={{ show: false }}
                 >
                   <span>Scale</span>
+                  <Typist.Backspace count={5} delay={3000} />
                   <span>Create value</span>
+                  <Typist.Backspace count={12} delay={3000} />
                   <span>Raise funds</span>
-                </TextLoop>{" "}
+                  <Typist.Backspace count={11} delay={3000} />
+                </Typist>
               </span>
 
               <span className="subtitle">

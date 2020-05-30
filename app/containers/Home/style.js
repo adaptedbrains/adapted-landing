@@ -1415,6 +1415,7 @@ const DahsboardCss = styled.div`
         }
         .spanboxchangingtext {
           color: #5dbc7d;
+          display: contents;
         }
       }
       .subtitle {
