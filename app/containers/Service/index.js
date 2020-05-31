@@ -41,8 +41,8 @@ class Service extends React.Component {
       type == "cto"
         ? "CTO as a Service"
         : type == "elastic"
-        ? "Elastic Resourcing"
-        : "Rapid MVP Development";
+          ? "Elastic Resourcing"
+          : "Rapid MVP Development";
     return (
       <DahsboardCss>
         <Modal
@@ -74,7 +74,7 @@ class Service extends React.Component {
                 <div className="listwrapper">
                   <div className="listEntries">
                     <div className="numberBox">
-                      <div className="number">01</div>
+                      <div className="number">1</div>
                       <div className="linebelow" />
                     </div>
 
@@ -85,7 +85,7 @@ class Service extends React.Component {
                   </div>
                   <div className="listEntries">
                     <div className="numberBox">
-                      <div className="number">02</div>
+                      <div className="number">2</div>
                       <div className="linebelow" />
                     </div>
                     <span>
@@ -95,7 +95,7 @@ class Service extends React.Component {
                   </div>
                   <div className="listEntries">
                     <div className="numberBox">
-                      <div className="number">03</div>
+                      <div className="number">3</div>
                       <div className="linebelow" />
                     </div>
                     <span>
@@ -105,7 +105,7 @@ class Service extends React.Component {
                   </div>
                   <div className="listEntries">
                     <div className="numberBox">
-                      <div className="number">04</div>
+                      <div className="number">4</div>
                     </div>
                     <span>
                       Interview and hire the candidate who best fits your
@@ -117,7 +117,7 @@ class Service extends React.Component {
                 <div className="listwrapper">
                   <div className="listEntries">
                     <div className="numberBox">
-                      <div className="number">01</div>
+                      <div className="number">1</div>
                       <div className="linebelow" />
                     </div>
 
@@ -128,7 +128,7 @@ class Service extends React.Component {
                   </div>
                   <div className="listEntries">
                     <div className="numberBox">
-                      <div className="number">02</div>
+                      <div className="number">2</div>
                       <div className="linebelow" />
                     </div>
                     <span>
@@ -138,54 +138,54 @@ class Service extends React.Component {
                   </div>
                   <div className="listEntries">
                     <div className="numberBox">
-                      <div className="number">03</div>
+                      <div className="number">3</div>
                     </div>
                     <span>Scale your tech team up or down on the go .</span>
                   </div>
                 </div>
               ) : (
-                <div className="listwrapper">
-                  <div className="listEntries">
-                    <div className="numberBox">
-                      <div className="number">01</div>
-                      <div className="linebelow" />
-                    </div>
+                    <div className="listwrapper">
+                      <div className="listEntries">
+                        <div className="numberBox">
+                          <div className="number">1</div>
+                          <div className="linebelow" />
+                        </div>
 
-                    <span>
-                      Tell us what you want to build and your long and
-                      short-term goals
+                        <span>
+                          Tell us what you want to build and your long and
+                          short-term goals
                     </span>
-                  </div>
-                  <div className="listEntries">
-                    <div className="numberBox">
-                      <div className="number">02</div>
-                      <div className="linebelow" />
+                      </div>
+                      <div className="listEntries">
+                        <div className="numberBox">
+                          <div className="number">2</div>
+                          <div className="linebelow" />
+                        </div>
+                        <span>
+                          We’ll help you select core features and pick right
+                          technology stack
+                    </span>
+                      </div>
+                      <div className="listEntries">
+                        <div className="numberBox">
+                          <div className="number">3</div>
+                          <div className="linebelow" />
+                        </div>
+                        <span>
+                          We’ll onboard a team to design, develop and deploy your
+                          MVP
+                    </span>
+                      </div>
+                      <div className="listEntries">
+                        <div className="numberBox">
+                          <div className="number">4</div>
+                        </div>
+                        <span>
+                          Get post launch iteration and maintenance support.
+                    </span>
+                      </div>
                     </div>
-                    <span>
-                      We’ll help you select core features and pick right
-                      technology stack
-                    </span>
-                  </div>
-                  <div className="listEntries">
-                    <div className="numberBox">
-                      <div className="number">03</div>
-                      <div className="linebelow" />
-                    </div>
-                    <span>
-                      We’ll onboard a team to design, develop and deploy your
-                      MVP
-                    </span>
-                  </div>
-                  <div className="listEntries">
-                    <div className="numberBox">
-                      <div className="number">04</div>
-                    </div>
-                    <span>
-                      Get post launch iteration and maintenance support.
-                    </span>
-                  </div>
-                </div>
-              )}
+                  )}
               {type != "elastic" ? (
                 type == "cto" ? null : (
                   <a
@@ -222,13 +222,15 @@ class Service extends React.Component {
                 </>
               ) : type == "cto" ? (
                 <>
-                  <span className="elastictext colorblack">
-                    Flat 15% management fee over the cost of the onboarded tech
-                    team.
+                  <div>
+                    <span className="elastictext">
+                      Flat 15% management fee over the cost of the onboarded tech
+                      team.
                   </span>
-                  <span className="elastictext colorblack">
-                    You can choose to pay monthly, weekly or hourly basis
+                    <span className="elastictext">
+                      You can choose to pay monthly, weekly or hourly basis
                   </span>
+                  </div>
                   {/* <span className="ctogreen">Check out resource rate card</span> */}
                   <a
                     target="blank"
@@ -239,44 +241,43 @@ class Service extends React.Component {
                   </a>
                 </>
               ) : (
-                <>
-                  <div className="topBoxer">
-                    <div className="listwrapper">
-                      <div className="listEntries">
-                        <div className="number"></div>
-                        <span>Get upfront guaranteed cost and time</span>
-                      </div>
-                      <div className="listEntries">
-                        <div className="number"></div>
-                        <span>
-                          Start with 20% down payment and Pay remaining sum in
-                          equal weekly installments
+                    <>
+                      <div className="topBoxer">
+                        <div className="listwrapper">
+                          <div className="listEntries">
+                            <div className="number"></div>
+                            <span>Get upfront guaranteed cost and time</span>
+                          </div>
+                          <div className="listEntries">
+                            <div className="number"></div>
+                            <span>
+                              Start with 20% down payment and Pay remaining sum in
+                              equal weekly installments
                         </span>
-                      </div>
-                      <div className="listEntries">
-                        <div className="number"></div>
-                        <span>
-                          Cancel anytime if you don't get the desired traction
+                          </div>
+                          <div className="listEntries">
+                            <div className="number"></div>
+                            <span>
+                              Cancel anytime if you don't get the desired traction
                         </span>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                  <div className="bottomBoxer">
-                    <span>Pricing</span>
-                    <span>
-                      We typically deliver most of our projects within 10 weeks
-                      and at a cost of $7500
+                      <div className="bottomBoxer">
+                        <span>
+                          We typically deliver most of our projects within 10 weeks
+                          and at a cost of $7500
                     </span>
-                  </div>
-                  <a
-                    href="https://nurturelabs.typeform.com/to/E885wP"
-                    target="blank"
-                    className="modalButton flexStartButton"
-                  >
-                    get your quote now
+                      </div>
+                      <a
+                        href="https://nurturelabs.typeform.com/to/E885wP"
+                        target="blank"
+                        className="modalButton flexStartButton"
+                      >
+                        get your quote now
                   </a>
-                </>
-              )}
+                    </>
+                  )}
             </div>
           </ModalBody>
         </Modal>

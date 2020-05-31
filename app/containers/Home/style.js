@@ -113,14 +113,14 @@ const DahsboardCss = styled.div`
           display: flex;
           flex-direction: row;
           .number {
-            font-family: auto;
+            font-family: Poppins;
             font-weight: 100;
             font-size: 15px;
             height: 10px;
             width: 10px;
             border-radius: 19px;
-            background-color: #303030;
-            border: solid 1px #303030;
+            background-color: #898989;
+            margin-top: 1vh;
             margin-right: 15px;
           }
           span {
@@ -182,18 +182,23 @@ const DahsboardCss = styled.div`
           margin-right: 15px;
           .linebelow {
             width: 1px;
-            background-color: #000;
+            background-color: #898989;
             height: 100%;
           }
         }
         .number {
-          font-family: auto;
-          font-weight: 100;
+          font-family: Poppins;
+          font-weight: 500;
+          color: #898989;
           font-size: 14px;
           height: 18px;
-          padding: 5px 7px;
-          border-radius: 20px;
-          border: solid 1px #303030;
+          width: 18px;
+          padding: 5px;
+          border-radius: 50%;
+          justify-content: center;
+          align-items: center;
+          display: flex;
+          border: solid 1px #898989;
         }
         span {
           font-size: 16px;
@@ -221,7 +226,7 @@ const DahsboardCss = styled.div`
       flex: 1;
       margin: 0px;
       font-weight: 500;
-      font-size: 17px;
+      font-size: 18px;
     }
   }
 
@@ -995,6 +1000,7 @@ const DahsboardCss = styled.div`
         font-size: 20px;
         color: #303030;
         line-height: 20px;
+        text-transform: none;
         @media (max-width: ${base.small}) {
           font-size: 19px;
         }

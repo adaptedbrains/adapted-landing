@@ -209,7 +209,7 @@ class Header extends React.Component {
               href="https://calendly.com/nurturelabs/meetingrequest"
               className="menuItem roundButton"
             >
-              Book a call
+              Book a Call
             </a>
           </div>
         ) : null}

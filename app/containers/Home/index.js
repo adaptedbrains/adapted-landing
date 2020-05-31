@@ -96,8 +96,8 @@ class Home extends React.Component {
       type == "cto"
         ? "CTO as a Service"
         : type == "elastic"
-        ? "Elastic Resourcing"
-        : "Rapid MVP Development";
+          ? "Elastic Resourcing"
+          : "Rapid MVP Development";
     return (
       <DahsboardCss>
         <Modal
@@ -129,7 +129,7 @@ class Home extends React.Component {
                 <div className="listwrapper">
                   <div className="listEntries">
                     <div className="numberBox">
-                      <div className="number">01</div>
+                      <div className="number">1</div>
                       <div className="linebelow" />
                     </div>
 
@@ -140,7 +140,7 @@ class Home extends React.Component {
                   </div>
                   <div className="listEntries">
                     <div className="numberBox">
-                      <div className="number">02</div>
+                      <div className="number">2</div>
                       <div className="linebelow" />
                     </div>
                     <span>
@@ -150,7 +150,7 @@ class Home extends React.Component {
                   </div>
                   <div className="listEntries">
                     <div className="numberBox">
-                      <div className="number">03</div>
+                      <div className="number">3</div>
                       <div className="linebelow" />
                     </div>
                     <span>
@@ -160,7 +160,7 @@ class Home extends React.Component {
                   </div>
                   <div className="listEntries">
                     <div className="numberBox">
-                      <div className="number">04</div>
+                      <div className="number">4</div>
                     </div>
                     <span>
                       Interview and hire the candidate who best fits your
@@ -172,7 +172,7 @@ class Home extends React.Component {
                 <div className="listwrapper">
                   <div className="listEntries">
                     <div className="numberBox">
-                      <div className="number">01</div>
+                      <div className="number">1</div>
                       <div className="linebelow" />
                     </div>
 
@@ -183,7 +183,7 @@ class Home extends React.Component {
                   </div>
                   <div className="listEntries">
                     <div className="numberBox">
-                      <div className="number">02</div>
+                      <div className="number">2</div>
                       <div className="linebelow" />
                     </div>
                     <span>
@@ -193,54 +193,54 @@ class Home extends React.Component {
                   </div>
                   <div className="listEntries">
                     <div className="numberBox">
-                      <div className="number">03</div>
+                      <div className="number">3</div>
                     </div>
                     <span>Scale your tech team up or down on the go .</span>
                   </div>
                 </div>
               ) : (
-                <div className="listwrapper">
-                  <div className="listEntries">
-                    <div className="numberBox">
-                      <div className="number">01</div>
-                      <div className="linebelow" />
-                    </div>
+                    <div className="listwrapper">
+                      <div className="listEntries">
+                        <div className="numberBox">
+                          <div className="number">1</div>
+                          <div className="linebelow" />
+                        </div>
 
-                    <span>
-                      Tell us what you want to build and your long and
-                      short-term goals
+                        <span>
+                          Tell us what you want to build and your long and
+                          short-term goals
                     </span>
-                  </div>
-                  <div className="listEntries">
-                    <div className="numberBox">
-                      <div className="number">02</div>
-                      <div className="linebelow" />
+                      </div>
+                      <div className="listEntries">
+                        <div className="numberBox">
+                          <div className="number">2</div>
+                          <div className="linebelow" />
+                        </div>
+                        <span>
+                          We’ll help you select core features and pick right
+                          technology stack
+                    </span>
+                      </div>
+                      <div className="listEntries">
+                        <div className="numberBox">
+                          <div className="number">3</div>
+                          <div className="linebelow" />
+                        </div>
+                        <span>
+                          We’ll onboard a team to design, develop and deploy your
+                          MVP
+                    </span>
+                      </div>
+                      <div className="listEntries">
+                        <div className="numberBox">
+                          <div className="number">4</div>
+                        </div>
+                        <span>
+                          Get post launch iteration and maintenance support.
+                    </span>
+                      </div>
                     </div>
-                    <span>
-                      We’ll help you select core features and pick right
-                      technology stack
-                    </span>
-                  </div>
-                  <div className="listEntries">
-                    <div className="numberBox">
-                      <div className="number">03</div>
-                      <div className="linebelow" />
-                    </div>
-                    <span>
-                      We’ll onboard a team to design, develop and deploy your
-                      MVP
-                    </span>
-                  </div>
-                  <div className="listEntries">
-                    <div className="numberBox">
-                      <div className="number">04</div>
-                    </div>
-                    <span>
-                      Get post launch iteration and maintenance support.
-                    </span>
-                  </div>
-                </div>
-              )}
+                  )}
               {type != "elastic" ? (
                 type == "cto" ? null : (
                   <a
@@ -277,13 +277,16 @@ class Home extends React.Component {
                 </>
               ) : type == "cto" ? (
                 <>
-                  <span className="elastictext colorblack">
-                    Flat 15% management fee over the cost of the onboarded tech
-                    team.
+                  <div>
+                    <span className="elastictext">
+                      Flat 15% management fee over the cost of the onboarded tech
+                      team.
                   </span>
-                  <span className="elastictext colorblack">
-                    You can choose to pay monthly, weekly or hourly basis
+                    <br />
+                    <span className="elastictext">
+                      You can choose to pay monthly, weekly or hourly basis
                   </span>
+                  </div>
                   {/* <span className="ctogreen">Check out resource rate card</span> */}
                   <a
                     target="blank"
@@ -294,44 +297,43 @@ class Home extends React.Component {
                   </a>
                 </>
               ) : (
-                <>
-                  <div className="topBoxer">
-                    <div className="listwrapper">
-                      <div className="listEntries">
-                        <div className="number"></div>
-                        <span>Get upfront guaranteed cost and time</span>
-                      </div>
-                      <div className="listEntries">
-                        <div className="number"></div>
-                        <span>
-                          Start with 20% down payment and Pay remaining sum in
-                          equal weekly installments
+                    <>
+                      <div className="topBoxer">
+                        <div className="listwrapper">
+                          <div className="listEntries">
+                            <div className="number"></div>
+                            <span>Get upfront guaranteed cost and time</span>
+                          </div>
+                          <div className="listEntries">
+                            <div className="number"></div>
+                            <span>
+                              Start with 20% down payment and Pay remaining sum in
+                              equal weekly installments
                         </span>
-                      </div>
-                      <div className="listEntries">
-                        <div className="number"></div>
-                        <span>
-                          Cancel anytime if you don't get the desired traction
+                          </div>
+                          <div className="listEntries">
+                            <div className="number"></div>
+                            <span>
+                              Cancel anytime if you don't get the desired traction
                         </span>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                  <div className="bottomBoxer">
-                    <span>Pricing</span>
-                    <span>
-                      We typically deliver most of our projects within 10 weeks
-                      and at a cost of $7500
+                      <div className="bottomBoxer">
+                        <span>
+                          We typically deliver most of our projects within 10 weeks
+                          and at a cost of $7500
                     </span>
-                  </div>
-                  <a
-                    href="https://nurturelabs.typeform.com/to/E885wP"
-                    target="blank"
-                    className="modalButton flexStartButton"
-                  >
-                    get your quote now
+                      </div>
+                      <a
+                        href="https://nurturelabs.typeform.com/to/E885wP"
+                        target="blank"
+                        className="modalButton flexStartButton"
+                      >
+                        get your quote now
                   </a>
-                </>
-              )}
+                    </>
+                  )}
             </div>
           </ModalBody>
         </Modal>
@@ -352,11 +354,11 @@ class Home extends React.Component {
                   className="spanboxchangingtext"
                   cursor={{ show: false }}
                 >
-                  <span>Scale</span>
+                  <span>scale</span>
                   <Typist.Backspace count={5} delay={3000} />
-                  <span>Create value</span>
+                  <span>create value</span>
                   <Typist.Backspace count={12} delay={3000} />
-                  <span>Raise funds</span>
+                  <span>raise funds</span>
                   <Typist.Backspace count={11} delay={3000} />
                 </Typist>
               </span>
@@ -372,7 +374,7 @@ class Home extends React.Component {
                   href="https://landbot.io/u/H-451190-1JDSWHZ1DHHKNJ3J/index.html"
                   className="btn1"
                 >
-                  Chat with our bot
+                  Chat with us
                 </a>
                 <a
                   target="blank"
@@ -469,8 +471,7 @@ class Home extends React.Component {
         </div>
         <div className="container3">
           <span className="headingText">
-            Work With Pre-Vetted Remote Tech Talent Skilled In New Technologies
-            And Tailor Matched To Your Needs
+            Work with pre-vetted remote tech talent skilled in new technologies and tailor matched to your needs
           </span>
           <div className="teamSize">
             <div className="team">
@@ -522,8 +523,8 @@ class Home extends React.Component {
                     className="skillImg"
                   />
                   <span className="skillHeader">Web/Mobile Apps</span>
-                  <span className="skillSub">Front end development</span>
-                  <span className="skillSub">Android/iOS development</span>
+                  <span className="skillSub">Front-end Development</span>
+                  <span className="skillSub">Android/iOS Development</span>
                   <span className="skillSub">Quality Assurance</span>
                 </div>
                 <div className="skillSingle">
@@ -533,8 +534,8 @@ class Home extends React.Component {
                   />
                   <span className="skillHeader">Devops and Architecture</span>
                   <span className="skillSub">Database Architecture</span>
-                  <span className="skillSub">System design</span>
-                  <span className="skillSub">Devops engineering</span>
+                  <span className="skillSub">System Design</span>
+                  <span className="skillSub">DevOps Engineering</span>
                 </div>
                 <div className="skillSingle">
                   <img
@@ -566,7 +567,7 @@ class Home extends React.Component {
               <span className="boxsubheading">Lines of Code Deployed</span>
             </div>
             <div className="secondrbbox">
-              <span className="boxheading">25M+</span>
+              <span className="boxheading">250+</span>
               <span className="boxsubheading">Reusable Features Built</span>
             </div>
           </div>
@@ -582,11 +583,11 @@ class Home extends React.Component {
           <div className="bottomBox">
             <div className="firstBotbox">
               <span>Marketplaces</span>
-              <span>Membership sites</span>
-              <span>E-commerce</span>
-              <span>Login</span>
-              <span>Email Verification</span>
-              <span>In-app chat</span>
+              <span>Membership Sites</span>
+              <span>Discussion Forums</span>
+              <span>User Onboarding</span>
+              <span>In-app Notifications</span>
+              <span>In-app Chat</span>
             </div>
 
             <div className="secondBotbox" />
@@ -787,7 +788,7 @@ class Home extends React.Component {
               <img src="https://i.imgur.com/kD3vPld.png" />
             </div>
             <div className="sliderContent">
-              <img className="sideimg" src="https://i.imgur.com/7Ja9ZAV.png" />
+              <img className="sideimg" src="https://i.imgur.com/4rq0vAr.png" />
               <div className="contentText">
                 <img
                   className="floating"
@@ -795,13 +796,13 @@ class Home extends React.Component {
                 />
                 <span>
                   It has been a great experience working with Nurture Labs so
-                  far. Yash & his team are extremely efficient and adhere to
+                  far. They are extremely efficient and adhere to
                   deadlines. They have contributed to product ideas and are
                   extremely flexible with regard to time commitment. We highly
                   recommend this service for early stage companies that are
-                  looking to save capital on product development
+                  looking to scale their product development.
                 </span>
-                <img src="https://i.imgur.com/1rmNfH4.png" />
+                <img src="https://i.imgur.com/BJC3YVl.png" />
               </div>
             </div>
             <div className="nextButton" style={{ display: "none" }}>

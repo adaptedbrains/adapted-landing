@@ -119,7 +119,7 @@ const DahsboardCss = styled.div`
             width: 10px;
             border-radius: 19px;
             background-color: #303030;
-            border: solid 1px #303030;
+            margin-top: 1vh;
             margin-right: 15px;
           }
           span {
@@ -181,7 +181,7 @@ const DahsboardCss = styled.div`
           margin-right: 15px;
           .linebelow {
             width: 1px;
-            background-color: #000;
+            background-color: #898989;
             height: 100%;
           }
         }
@@ -219,7 +219,7 @@ const DahsboardCss = styled.div`
       flex: 1;
       margin: 0px;
       font-weight: 500;
-      font-size: 17px;
+      font-size: 18px;
     }
   }
 
