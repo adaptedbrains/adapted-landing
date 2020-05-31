@@ -67,7 +67,7 @@ class JoinNetwork extends React.Component {
               <img src="https://i.imgur.com/Gn5ovT5.png" />
               <span className="childboxheader">Fully Verified</span>
               <span className="childboxsubhead">
-                No spams, hidden information or
+                Apply to opportunities that best suit your skills and are fully verified
               </span>
             </div>
             <div className="childbox">
@@ -182,7 +182,7 @@ class JoinNetwork extends React.Component {
               <span className="headerText">Gmail Group</span>
             </div>
           </div>
-          <span className="headinContainer2">Genral FAQ</span>
+          <span className="headinContainer2">General FAQ</span>
           <div className="faq">
             <div className="faqsingle">
               <img
@@ -204,37 +204,13 @@ class JoinNetwork extends React.Component {
                     showfaq[0] ? "contentBox showContent" : "contentBox"
                   }
                 >
-                  em ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                  enim ad minim venia m, quis nostrud exercitation ullamco
-                  laboris n isi ut aliquip ex ea commodo consequ
-                </span>
-              </div>
-            </div>
-            <div className="faqsingle">
-              <img
-                onClick={() => {
-                  const showFaqDup = [...showfaq];
-                  showFaqDup[1] = !showfaq[1];
-                  this.setState({
-                    showfaq: showFaqDup,
-                  });
-                }}
-                src="https://i.imgur.com/irie2Wg.png"
-              />
-              <div className="spanBox">
-                <span className="headerspanBox">
-                  What does the test assignment includes?
-                </span>
-                <span
-                  className={
-                    showfaq[1] ? "contentBox showContent" : "contentBox"
-                  }
-                >
-                  em ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                  enim ad minim venia m, quis nostrud exercitation ullamco
-                  laboris n isi ut aliquip ex ea commodo consequ
+                  <ul>
+                    <li>2+ years of experience</li>
+                    <li>Fluency in English</li>
+                    <li>Linkedin profile or CV</li>
+                    <li>Profile on Github / GitLab / Bitbucket</li>
+                    <li>Willingness & Motivation to work remotely</li>
+                  </ul>
                 </span>
               </div>
             </div>
@@ -258,10 +234,7 @@ class JoinNetwork extends React.Component {
                     showfaq[2] ? "contentBox showContent" : "contentBox"
                   }
                 >
-                  em ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                  enim ad minim venia m, quis nostrud exercitation ullamco
-                  laboris n isi ut aliquip ex ea commodo consequ
+                  It generally takes 7-days for us to finish the assessment process and 7 more days to send you the result. You can reapply in a period of 6-months
                 </span>
               </div>
             </div>
@@ -285,10 +258,7 @@ class JoinNetwork extends React.Component {
                     showfaq[3] ? "contentBox showContent" : "contentBox"
                   }
                 >
-                  em ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                  enim ad minim venia m, quis nostrud exercitation ullamco
-                  laboris n isi ut aliquip ex ea commodo consequ
+                  Once, you are invited to our network. You will receive opportunities directly in your preferred inbox with all the required details. If you wish to apply for any of the opportunity you just need to follow the instructions accompanying the opportunity.
                 </span>
               </div>
             </div>

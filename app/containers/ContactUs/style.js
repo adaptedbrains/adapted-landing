@@ -548,8 +548,10 @@ const DahsboardCss = styled.div`
         }
         .sideimg {
           display: flex;
-          height: 50vh;
-          flex: 2;
+          border-radius: 50%;
+          width: 15%;
+          padding: 2.5%;
+          flex: 1;
           object-fit: contain;
         }
         .contentText {

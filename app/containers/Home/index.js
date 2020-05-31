@@ -795,7 +795,7 @@ class Home extends React.Component {
                   src="https://i.imgur.com/IEsOLEN.png"
                 />
                 <span>
-                  It has been a great experience working with Nurture Labs so
+                  It has been a great experience working with NurtureLabs so
                   far. They are extremely efficient and adhere to
                   deadlines. They have contributed to product ideas and are
                   extremely flexible with regard to time commitment. We highly

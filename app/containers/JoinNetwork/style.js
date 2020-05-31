@@ -221,6 +221,7 @@ const DahsboardCss = styled.div`
       width: 100%;
       @media (max-width: ${base.small}) {
         flex-wrap: wrap;
+        margin-bottom: 10vh;
       }
       .box {
         display: flex;

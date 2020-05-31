@@ -497,6 +497,7 @@ const DahsboardCss = styled.div`
     @media (max-width: ${base.small}) {
       padding: 0px 20px;
       padding-top: 10vh;
+      padding-bottom: 5vh;
     }
     .container7Heading {
       font-family: Poppins;
@@ -549,9 +550,15 @@ const DahsboardCss = styled.div`
         }
         .sideimg {
           display: flex;
-          height: 50vh;
-          flex: 2;
+          border-radius: 50%;
+          width: 15%;
+          padding: 2.5%;
+          flex: 1;
           object-fit: contain;
+          @media (max-width: ${base.small}) {
+            width: 50%;
+            align-self: center;
+          }
         }
         .contentText {
           display: flex;
@@ -677,6 +684,8 @@ const DahsboardCss = styled.div`
             img {
               width: 60px;
               object-fit: contain;
+              align-self: start;
+              margin-top: 1vh;
               @media (max-width: ${base.small}) {
                 width: 50px;
               }
@@ -688,19 +697,18 @@ const DahsboardCss = styled.div`
             }
             display: flex;
             flex-direction: column;
-            flex: 4;
+            flex: 5;
             .headline {
               font-family: Poppins;
               font-weight: 500;
               font-size: 22px;
               color: #303030;
-              margin-bottom: 10px;
             }
             .subtitleline {
               font-family: Poppins;
               font-weight: 400;
               color: #79818c;
-              font-size: 19px;
+              font-size: 16px;
               margin-bottom: 20px;
             }
             .technologyBox {
