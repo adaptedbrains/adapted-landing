@@ -340,7 +340,6 @@ const DahsboardCss = styled.div`
       font-family: Poppins;
       font-weight: 400;
       font-size: 15px;
-      margin-right: 30px;
       color: #303030;
     }
   }
@@ -386,12 +385,11 @@ const DahsboardCss = styled.div`
       .headercontainer8 {
         width: 80%;
         font-family: Poppins;
-        font-weight: 500;
+        font-weight: 400;
         color: #303030;
-        font-size: 24px;
-        margin-bottom: 55px;
+        font-size: 18px;
+        margin-bottom: 10px;
         @media (max-width: ${base.small}) {
-          text-align: center;
           margin-top: 20px;
         }
       }
@@ -405,7 +403,7 @@ const DahsboardCss = styled.div`
         color: #303030;
         padding: 15px;
         text-align: center;
-        margin-bottom: 55px;
+        margin-bottom: 25px;
         width: 50%;
         :hover {
           background-color: #303030;
@@ -454,6 +452,8 @@ const DahsboardCss = styled.div`
         color: #fff;
         font-size: 15px;
         text-align: center;
+        border-radius: 5px;
+        align-self: center;
         :hover {
           background-color: #fff;
           color: #303030;
@@ -467,21 +467,31 @@ const DahsboardCss = styled.div`
           color: #000;
           font-size: 20px;
           margin-bottom: 10px;
+          align-self: flex-start;
         }
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        // align-items: flex-start;
+        align-items: center;
         margin-bottom: 25px;
         input {
           border: solid 1px #dddddd;
-          padding: 10px;
-          width: 90%;
+          padding: 10px 1%;
+          width: 98%;
+          font-family: Poppins;
+          font-weight: 400;
+          color: #000;
+          font-size: 15px;
         }
         textarea {
           border: solid 1px #dddddd;
-          padding: 10px;
-          width: 90%;
           min-height: 200px;
+          padding: 10px 1%;
+          width: 98%;
+          font-family: Poppins;
+          font-weight: 400;
+          color: #000;
+          font-size: 15px;
         }
       }
     }

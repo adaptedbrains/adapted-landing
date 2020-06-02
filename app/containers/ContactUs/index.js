@@ -42,8 +42,8 @@ class ContactUs extends React.Component {
       type == "cto"
         ? "CTO as a Service"
         : type == "elastic"
-        ? "Elastic Resourcing"
-        : "Rapid MVP Development";
+          ? "Elastic Resourcing"
+          : "Rapid MVP Development";
     return (
       <DahsboardCss>
         <div className="containerBig">
@@ -119,7 +119,12 @@ class ContactUs extends React.Component {
             </div>
             <div className="supportBox">
               <span className="headercontainer8">
-                If you want to get on a call with us
+                Talk to us and get your project moving!
+              <ol>
+                  <li>We will respond to you within 24 hours.</li>
+                  <li>We’ll sign an NDA if requested.</li>
+                  <li>You'll be talking to product and tech experts (no account managers).</li>
+                </ol>
               </span>
               <a
                 target="blank"

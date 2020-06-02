@@ -127,19 +127,21 @@ class Footer extends React.Component {
                 <img src="https://i.imgur.com/EiQJ3KT.png" />
                 <span>+1 12345666</span>
               </div> */}
-              <div className="rowBox">
-                <img src="https://i.imgur.com/2aAwphY.png" />
-                <span>hello@nurturelabs.co</span>
-              </div>
-              <div className="line"></div>
-              <div className="rowBox">
-                <span>Follow-Us</span>
-                <a
-                  target="blank"
-                  href="https://www.linkedin.com/company/nurture-labs/"
-                >
-                  <img src="https://i.imgur.com/pStgaAW.png" />
-                </a>
+              <div class="social">
+                <div className="rowBox">
+                  <img src="https://i.imgur.com/2aAwphY.png" />
+                  <span>hello@nurturelabs.co</span>
+                </div>
+                <div className="line"></div>
+                <div className="rowBox">
+                  <span>Follow-Us</span>
+                  <a
+                    target="blank"
+                    href="https://www.linkedin.com/company/nurture-labs/"
+                  >
+                    <img src="https://i.imgur.com/pStgaAW.png" />
+                  </a>
+                </div>
               </div>
             </>
           ) : null}

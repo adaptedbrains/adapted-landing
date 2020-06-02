@@ -98,10 +98,20 @@ const FooterCss = styled.div`
       height: 30px;
       width: 2px;
       background-color: #303030;
+      margin: 0 10px;
+    }
+    .social {
+      display: flex;
+      flex-direction: row;
     }
     .rowBox {
       display: flex;
       align-items: center;
+      a {
+        height: 20px;
+        object-fit: contain;
+        margin: 0 20px 0 10px;
+      }
     }
     img {
       height: 20px;
@@ -112,7 +122,6 @@ const FooterCss = styled.div`
       font-family: Poppins;
       font-weight: 400;
       font-size: 15px;
-      margin-right: 30px;
       color: #303030;
 
       @media (max-width: ${base.small}) {

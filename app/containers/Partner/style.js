@@ -337,7 +337,6 @@ const PartnerCss = styled.div`
       font-family: Poppins;
       font-weight: 400;
       font-size: 15px;
-      margin-right: 30px;
       color: #303030;
     }
   }
@@ -797,14 +796,15 @@ const PartnerCss = styled.div`
         margin: 20px 0px;
         width: 22vw;
         background-color: #f0f6f2;
-        font-family: Roboto;
-        font-weight: 400;
+        font-family: Poppins;
+        font-weight: 500;
         color: #303030;
         font-size: 17px;
         @media (max-width: ${base.small}) {
           width: 65vw;
           padding: 15px 20px;
           margin: 10px 0px;
+          font-family: Poppins;
         }
       }
     }

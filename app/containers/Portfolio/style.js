@@ -333,7 +333,6 @@ const DahsboardCss = styled.div`
       font-family: Poppins;
       font-weight: 400;
       font-size: 15px;
-      margin-right: 30px;
       color: #303030;
     }
   }

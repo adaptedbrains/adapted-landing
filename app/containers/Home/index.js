@@ -573,7 +573,7 @@ class Home extends React.Component {
           </div>
           <span className="headingCont5">
             Directly use features from our reusable feature library and focus
-            only on what make your idea unique.
+            only on what makes your idea unique.
           </span>
           {/* <span className="subheadCont5">
             Directly pick and plug components from our pre-built reusable
@@ -803,6 +803,14 @@ class Home extends React.Component {
                   looking to scale their product development.
                 </span>
                 <img src="https://i.imgur.com/BJC3YVl.png" />
+                <span
+                  style={{
+                    marginTop: "2%",
+                    fontSize: "17px",
+                    fontWeight: "500"
+                  }}>
+                  Patrick Kim, CEO Worth Network Inc.
+                </span>
               </div>
             </div>
             <div className="nextButton" style={{ display: "none" }}>
@@ -877,7 +885,12 @@ class Home extends React.Component {
           </div>
           <div className="supportBox">
             <span className="headercontainer8">
-              If you want to get on a call with us
+              Talk to us and get your project moving!
+              <ol>
+                <li>We will respond to you within 24 hours.</li>
+                <li>We’ll sign an NDA if requested.</li>
+                <li>You'll be talking to product and tech experts (no account managers).</li>
+              </ol>
             </span>
             <a
               target="blank"
