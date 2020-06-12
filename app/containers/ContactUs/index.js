@@ -7,6 +7,7 @@ import { Modal, ModalHeader, ModalBody } from "shards-react";
 import TextLoop from "react-text-loop";
 import { browserHistory, Router } from "react-router";
 import axios from "axios";
+import { static } from "express";
 
 class ContactUs extends React.Component {
   constructor(props) {
@@ -15,6 +16,10 @@ class ContactUs extends React.Component {
       loading: true,
       showModal: false,
       type: null,
+      check1: false,
+      check2: false,
+      check3: false,
+      check4: false,
     };
   }
   componentDidMount() {
@@ -30,6 +35,31 @@ class ContactUs extends React.Component {
     document.body.style.top = -offset + "px";
 
     this.setState({ showModal: false, type: null });
+  }
+
+  handlecheck1() {
+
+    this.setState({
+      check1: !this.state.check1
+    });
+  }
+  handlecheck2() {
+
+    this.setState({
+      check2: !this.state.check2
+    });
+  }
+  handlecheck3() {
+
+    this.setState({
+      check3: !this.state.check3
+    });
+  }
+  handlecheck4() {
+
+    this.setState({
+      check4: !this.state.check4
+    });
   }
 
   render() {
@@ -74,6 +104,26 @@ class ContactUs extends React.Component {
                   placeholder=""
                 />
               </div>
+
+              <div className="checkbox">
+                <label>
+                  <input type="checkbox" checked={this.state.check1} onChange={this.handlecheck1.bind(this)} />
+                  $5000
+                </label>
+                <label>
+                  <input type="checkbox" checked={this.state.check2} onChange={this.handlecheck2.bind(this)} />
+                  $5,000-$10,000
+                </label>
+                <label>
+                  <input type="checkbox" checked={this.state.check3} onChange={this.handlecheck3.bind(this)} />
+                  $10,000-$25,000
+                </label>
+                <label>
+                  <input type="checkbox" checked={this.state.check4} onChange={this.handlecheck4.bind(this)} />
+                  $25,000-$50,000
+
+                </label>
+              </div>
               <div className="inputBox">
                 <span>Message</span>
                 <textarea
@@ -112,6 +162,7 @@ class ContactUs extends React.Component {
                     );
                   }
                 }}
+
                 className="bottomButton"
               >
                 SEND US MESSAGE
@@ -124,6 +175,14 @@ class ContactUs extends React.Component {
                   <li>We will respond to you within 24 hours.</li>
                   <li>We’ll sign an NDA if requested.</li>
                   <li>You'll be talking to product and tech experts (no account managers).</li>
+                </ol>
+              </span>
+              <span className="headercontainer8">
+                That's what you can expect after you book a call
+              <ol>
+                  <li>Assess your idea in terms of technical feasibility and complexity</li>
+                  <li>Get a tentative understanding of costs and time involved.</li>
+                  <li>Evaluate whether we are the right fit for your requirement</li>
                 </ol>
               </span>
               <a
@@ -147,7 +206,9 @@ class ContactUs extends React.Component {
             </div>
           </div>
         </div>
-        <Footer />
+        <div>
+          <Footer />
+        </div>
       </DahsboardCss>
     );
   }

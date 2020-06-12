@@ -232,7 +232,7 @@ const DahsboardCss = styled.div`
 
   .containerBig {
     position: relative;
-    height: 100vh;
+    height: 130vh;
     margin-bottom: 10vh;
   }
   .footerBox {
@@ -357,18 +357,28 @@ const DahsboardCss = styled.div`
     display: flex;
     flex: 1;
     flex-direction: row;
-    padding: 60px 130px;
+    padding: 30px 130px;
     @media (max-width: ${base.small}) {
       flex-direction: column;
       padding: 60px 20px;
     }
+
+
+    .checkbox{
+      display:flex;
+      flex:1;
+      flex-direction:column;
+      flex-wrap:wrap;
+      margin:10px;
+    }
+
     .supportBox {
       display: flex;
       flex: 1;
       padding-left: 10%;
-      justify-content: flex-start;
       padding-top: 5%;
       flex-direction: column;
+      align-items: center;
       @media (max-width: ${base.small}) {
         align-items: center;
         padding-left: 0%;
@@ -388,7 +398,7 @@ const DahsboardCss = styled.div`
         font-weight: 400;
         color: #303030;
         font-size: 18px;
-        margin-bottom: 10px;
+        margin-bottom:0px;
         @media (max-width: ${base.small}) {
           margin-top: 20px;
         }
@@ -418,7 +428,7 @@ const DahsboardCss = styled.div`
         flex-direction: row;
         align-items: center;
         justify-content: flex-start;
-        margin: 20px 0px;
+        margin: 0px 0px;
         img {
           width: 30px;
           margin-right: 20px;
