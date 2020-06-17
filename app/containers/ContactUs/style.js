@@ -232,7 +232,7 @@ const DahsboardCss = styled.div`
 
   .containerBig {
     position: relative;
-    height: 130vh;
+    height: 135vh;
     margin-bottom: 10vh;
   }
   .footerBox {
@@ -370,6 +370,15 @@ const DahsboardCss = styled.div`
       flex-direction:column;
       flex-wrap:wrap;
       margin:10px;
+      margin-left:0px;
+      span {
+        font-family: Poppins;
+        font-weight: 400;
+        color: #000;
+        font-size: 20px;
+        margin-bottom: 15px;
+        align-self: flex-start;
+      }
     }
 
     .supportBox {

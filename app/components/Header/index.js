@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { HeaderCss } from "./style";
 import { browserHistory, Router } from "react-router";
+import { upperCase } from "lodash";
 
 class Header extends React.Component {
   constructor(props) {
@@ -101,12 +102,13 @@ class Header extends React.Component {
                   fontFamily: "Poppins",
                   textAlign: "center",
                   margin: 20,
+                  textTransform: "upperCase",
                   fontWeight: 600,
                   fontSize: 20,
                   color: "#303030",
                 }}
               >
-                Partner with us
+                PARTNER WITH US
               </span>
               <span
                 onClick={() => {
@@ -125,13 +127,14 @@ class Header extends React.Component {
                 style={{
                   fontFamily: "Poppins",
                   textAlign: "center",
+                  textTransform: "upperCase",
                   margin: 20,
                   fontWeight: 600,
                   fontSize: 20,
                   color: "#303030",
                 }}
               >
-                Join Us
+                JOIN US
               </span>
               <span
                 onClick={() => {
@@ -151,13 +154,14 @@ class Header extends React.Component {
                   fontFamily: "Poppins",
                   textAlign: "center",
                   margin: 20,
+                  textTransform: "upperCase",
                   fontWeight: 600,
                   cursor: "pointer",
                   fontSize: 20,
                   color: "#303030",
                 }}
               >
-                Portfolio
+                PORTFOLIO
               </span>
             </div>
           </div>
@@ -192,7 +196,7 @@ class Header extends React.Component {
                 });
               }}
             >
-              Join Network
+              JOIN NETWORK
             </div>
             <div
               className="menuItem"
