@@ -21,11 +21,16 @@ function preloadImages(srcs) {
   }
 }
 
+
 class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       loading: true,
+      check1: false,
+      check2: false,
+      check3: false,
+      check4: false,
       showModal: false,
       typereset: "init",
       preview: [
@@ -84,6 +89,48 @@ class Home extends React.Component {
 
     this.setState({ showModal: false, type: null });
   }
+  handlecheck1() {
+
+    this.setState({
+      check1: !this.state.check1,
+      check2: false,
+      check3: false,
+      check4: false,
+      budget: "<=$5,000"
+    });
+  }
+  handlecheck2() {
+
+    this.setState({
+      check2: !this.state.check2,
+      check1: false,
+      check3: false,
+      check4: false,
+      budget: "$5,000-$10,000"
+    });
+  }
+  handlecheck3() {
+
+    this.setState({
+      check3: !this.state.check3,
+      check2: false,
+      check1: false,
+      check4: false,
+      budget: "$10,000-$25,000"
+    });
+  }
+  handlecheck4() {
+
+    this.setState({
+      check4: !this.state.check4,
+      check2: false,
+      check3: false,
+      check1: false,
+      budget: "$25,000-$50,000"
+
+    });
+  }
+
 
   render() {
     const { loading, showModal, type, preview, selectedWork } = this.state;
@@ -363,7 +410,7 @@ class Home extends React.Component {
                 </Typist>
               </span>
 
-              <span className="subtitle">
+              <span className="subtitle" style={{ fontFamily: "Roboto" }}>
                 At NurtureLabs, we bring together remote tech teams, advanced
                 product management skills and best in-class technologies to
                 bring your ideas to life and deliver high impact results.
@@ -374,14 +421,14 @@ class Home extends React.Component {
                   href="https://landbot.io/u/H-451190-1JDSWHZ1DHHKNJ3J/index.html"
                   className="btn1"
                 >
-                  Chat with us
+                  CHAT WITH US
                 </a>
                 <a
                   target="blank"
                   href="https://calendly.com/nurturelabs/meetingrequest"
                   className="btn1"
                 >
-                  Book a discovery call
+                  BOOK A DISCOVERY CALL
                 </a>
               </div>
             </div>
@@ -844,6 +891,27 @@ class Home extends React.Component {
                 placeholder=""
               />
             </div>
+            <div className="checkbox">
+              <span>Rough Project Budget</span>
+              <label>
+                <input type="checkbox" checked={this.state.check1} onChange={this.handlecheck1.bind(this)} />
+                <span>&#8804;$5000</span>
+              </label>
+              <label>
+                <input type="checkbox" checked={this.state.check2} onChange={this.handlecheck2.bind(this)} />
+                <span>$5,000-$10,000</span>
+              </label>
+              <label>
+                <input type="checkbox" checked={this.state.check3} onChange={this.handlecheck3.bind(this)} />
+                <span>$10,000-$25,000</span>
+              </label>
+              <label>
+                <input type="checkbox" checked={this.state.check4} onChange={this.handlecheck4.bind(this)} />
+                <span>$25,000-$50,000</span>
+
+              </label>
+            </div>
+
             <div className="inputBox">
               <span>Message</span>
               <textarea
@@ -858,12 +926,15 @@ class Home extends React.Component {
             </div>
             <div
               onClick={() => {
+
+                console.log("budget is", this.state.budget)
                 if (this.state.name && this.state.email && this.state.message) {
                   axios
                     .post("/api/sendmessage", {
                       email: this.state.email,
                       name: this.state.name,
                       message: this.state.message,
+                      budget: this.state.budget,
                     })
                     .then((e) => {
                       if (e.status != 200) {
@@ -892,6 +963,14 @@ class Home extends React.Component {
                 <li>You'll be talking to product and tech experts (no account managers).</li>
               </ol>
             </span>
+            <span className="headercontainer8">
+              That's what you can expect after you book a call
+              <ol>
+                <li>Assess your idea in terms of technical feasibility and complexity</li>
+                <li>Get a tentative understanding of costs and time involved.</li>
+                <li>Evaluate whether we are the right fit for your requirement</li>
+              </ol>
+            </span>
             <a
               target="blank"
               href="https://calendly.com/nurturelabs/meetingrequest"
@@ -904,7 +983,7 @@ class Home extends React.Component {
             </div>
             <div className="contactUsStrip">
               <img src="https://i.imgur.com/bm0rg5G.png" />
-              <span>hello@nurtureLabs.co</span>
+              <span>hello@nurturelabs.co</span>
             </div>
             {/* <div className="contactUsStrip">
               <img src="https://i.imgur.com/IM81cXW.png" />

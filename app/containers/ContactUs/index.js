@@ -7,7 +7,6 @@ import { Modal, ModalHeader, ModalBody } from "shards-react";
 import TextLoop from "react-text-loop";
 import { browserHistory, Router } from "react-router";
 import axios from "axios";
-import { static } from "express";
 
 class ContactUs extends React.Component {
   constructor(props) {
@@ -40,25 +39,41 @@ class ContactUs extends React.Component {
   handlecheck1() {
 
     this.setState({
-      check1: !this.state.check1
+      check1: !this.state.check1,
+      check2: false,
+      check3: false,
+      check4: false,
+      budget: "<=$5,000"
     });
   }
   handlecheck2() {
 
     this.setState({
-      check2: !this.state.check2
+      check2: !this.state.check2,
+      check1: false,
+      check3: false,
+      check4: false,
+      budget: "$5,000-$10,000"
     });
   }
   handlecheck3() {
 
     this.setState({
-      check3: !this.state.check3
+      check3: !this.state.check3,
+      check2: false,
+      check1: false,
+      check4: false,
+      budget: "$10,000-$25,000"
     });
   }
   handlecheck4() {
 
     this.setState({
-      check4: !this.state.check4
+      check4: !this.state.check4,
+      check2: false,
+      check3: false,
+      check1: false,
+      budget: "$25,000-$50,000"
     });
   }
 
@@ -106,21 +121,22 @@ class ContactUs extends React.Component {
               </div>
 
               <div className="checkbox">
+                <span>Rough Project Budget</span>
                 <label>
                   <input type="checkbox" checked={this.state.check1} onChange={this.handlecheck1.bind(this)} />
-                  $5000
+                  <span>&#8804;$5000</span>
                 </label>
                 <label>
                   <input type="checkbox" checked={this.state.check2} onChange={this.handlecheck2.bind(this)} />
-                  $5,000-$10,000
+                  <span>$5,000-$10,000</span>
                 </label>
                 <label>
                   <input type="checkbox" checked={this.state.check3} onChange={this.handlecheck3.bind(this)} />
-                  $10,000-$25,000
+                  <span>$10,000-$25,000</span>
                 </label>
                 <label>
                   <input type="checkbox" checked={this.state.check4} onChange={this.handlecheck4.bind(this)} />
-                  $25,000-$50,000
+                  <span>$25,000-$50,000</span>
 
                 </label>
               </div>
@@ -138,6 +154,8 @@ class ContactUs extends React.Component {
               </div>
               <div
                 onClick={() => {
+
+
                   if (
                     this.state.name &&
                     this.state.email &&
@@ -148,6 +166,7 @@ class ContactUs extends React.Component {
                         email: this.state.email,
                         name: this.state.name,
                         message: this.state.message,
+                        budget: this.state.budget,
                       })
                       .then((e) => {
                         if (e.status != 200) {
@@ -197,7 +216,7 @@ class ContactUs extends React.Component {
               </div>
               <div className="contactUsStrip">
                 <img src="https://i.imgur.com/bm0rg5G.png" />
-                <span>hello@nurtureLabs.co</span>
+                <span>hello@nurturelabs.co</span>
               </div>
               {/* <div className="contactUsStrip">
               <img src="https://i.imgur.com/IM81cXW.png" />
