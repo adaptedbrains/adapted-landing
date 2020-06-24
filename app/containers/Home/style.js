@@ -235,13 +235,13 @@ const DahsboardCss = styled.div`
     height: 100vh;
   }
 
-  .checkbox{
-    display:flex;
-    flex:1;
-    flex-direction:column;
-    flex-wrap:wrap;
-    margin:10px;
-    margin-left:0px;
+  .checkbox {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 10px;
+    margin-left: 0px;
     span {
       font-family: Poppins;
       font-weight: 400;
@@ -378,6 +378,7 @@ const DahsboardCss = styled.div`
     @media (max-width: ${base.small}) {
       flex-direction: column;
       padding: 60px 20px;
+      margin-top: 90px;
     }
     .supportBox {
       display: flex;
@@ -445,7 +446,7 @@ const DahsboardCss = styled.div`
           }
         }
         span {
-          font-family: Roboto;
+          font-family: Poppins;
           font-weight: 400;
           font-size: 22px;
           color: #303030;
@@ -484,7 +485,7 @@ const DahsboardCss = styled.div`
           font-weight: 400;
           color: #000;
           font-size: 20px;
-       
+
           align-self: flex-start;
         }
         display: flex;
@@ -596,7 +597,7 @@ const DahsboardCss = styled.div`
           justify-content: flex-start;
           padding-top: 5%;
           flex-direction: column;
-          font-family:Robota;
+          font-family: Poppins;
           font-weight: 400;
           font-size: 19px;
           color: #303030;
@@ -634,7 +635,7 @@ const DahsboardCss = styled.div`
     display: flex;
     flex-direction: column;
     background-color: #fff;
-    padding-top: 30vh;
+    padding-top: 15vh;
     position: relative;
     @media (max-width: ${base.small}) {
       padding-top: 25vh;
@@ -733,7 +734,7 @@ const DahsboardCss = styled.div`
               color: #303030;
             }
             .subtitleline {
-              font-family:Robota;
+              font-family: Poppins;
               font-weight: 400;
               color: #79818c;
               font-size: 16px;
@@ -816,7 +817,7 @@ const DahsboardCss = styled.div`
               position: absolute;
               right: 0;
               left: 0;
-              top: 0;
+              top: 200px;
               bottom: 0;
               margin: auto;
               height: 50vh;
@@ -834,7 +835,7 @@ const DahsboardCss = styled.div`
             @media (max-width: ${base.small}) {
               position: absolute;
               right: 0;
-              top: 9px;
+              top: 200px;
               left: 0;
               bottom: 0;
               margin: auto;
@@ -931,6 +932,7 @@ const DahsboardCss = styled.div`
               left: auto;
               right: -20vw;
               margin: 0px;
+              top: 130px;
             }
           }
           .floatingImg {
@@ -940,7 +942,7 @@ const DahsboardCss = styled.div`
               width: 57vw;
               right: 0px;
               left: auto;
-              top: 15px;
+              top: 150px;
             }
           }
         }
@@ -1136,6 +1138,7 @@ const DahsboardCss = styled.div`
       flex-direction: row;
       @media (max-width: ${base.small}) {
         flex-direction: column;
+        margin-top: 400px;
       }
       .firstBox {
         display: flex;
@@ -1250,12 +1253,12 @@ const DahsboardCss = styled.div`
     height: 70vh;
     padding: 0px 100px;
     padding-top: 150px;
-    margin-left:90px;
+    margin-left: 90px;
     flex-direction: column;
     @media (max-width: ${base.small}) {
       padding: 0px 20px;
       padding-top: 40px;
-      margin-left:auto;
+      margin-left: auto;
       height: auto;
     }
     .headingText {
@@ -1278,7 +1281,7 @@ const DahsboardCss = styled.div`
       margin-top: 50px;
       flex-direction: row;
       align-items: center;
-      align-content:center;
+      align-content: center;
       justify-content: space-between;
       @media (max-width: ${base.small}) {
         flex-direction: column;
@@ -1340,10 +1343,11 @@ const DahsboardCss = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-left:60px;
+    margin-left: 60px;
     @media (max-width: ${base.small}) {
-      padding: 0px 20px;
+      padding: 0px 20px 0px 0px;
       padding-top: 70px;
+      margin-left: 20px;
     }
     .headingText {
       font-family: Poppins;
@@ -1407,7 +1411,7 @@ const DahsboardCss = styled.div`
           }
         }
         .featureSubHeading {
-          font-family: Roboto;
+          font-family: Poppins;
           font-weight: 400;
           color: #79818c;
           font-size: 19px;

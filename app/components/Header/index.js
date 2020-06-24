@@ -196,7 +196,7 @@ class Header extends React.Component {
                 });
               }}
             >
-              JOIN NETWORK
+              Join Network
             </div>
             <div
               className="menuItem"
