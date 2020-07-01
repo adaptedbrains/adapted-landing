@@ -64,6 +64,12 @@ export function getRoutes(store) {
           cb(null, require("./containers/ContactUs").default);
         },
       },
+      {
+        path: "payment",
+        getComponent(location, cb) {
+          cb(null, require("./containers/Payment").default);
+        },
+      },
     ],
   };
 }
