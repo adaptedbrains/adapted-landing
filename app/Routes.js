@@ -15,6 +15,7 @@ function loadRoute(cb) {
 
 function gaUpdateOnRouteChange(previousRoute, nextRoute) {
   if (previousRoute.location.pathname !== nextRoute.location.pathname) {
+    const base_location = "https://www.nurturelabs.co";
     ReactGA.set({ page: base_location.concat(nextRoute.location.pathname) }); // Update the user's current page
     ReactGA.pageview(nextRoute.location.pathname); // Record a pageview for the given page
   }
