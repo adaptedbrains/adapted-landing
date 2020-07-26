@@ -46,7 +46,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    //ReactGA.initialize("UA-146171272-3");
+    ReactGA.initialize("UA-173596358-1");
   }
 
   render() {
