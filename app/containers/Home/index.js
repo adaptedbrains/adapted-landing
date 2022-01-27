@@ -36,8 +36,8 @@ class Home extends React.Component {
       typereset: "init",
       preview: [
         {
-          name: "Daily Recharges",
-          desc: "Your one-stop destination for all your recharge needs",
+          name: "Worth",
+          desc: "Monetization layer over Instagram",
           img: "https://i.imgur.com/JqX1hAw.png",
           top:
             "https://frontend-asset-files.s3.ap-south-1.amazonaws.com/Screenrecorder-2020-03-21-19-27-04-226_2.mp4",
@@ -583,9 +583,9 @@ class Home extends React.Component {
                   <img src="https://i.imgur.com/BJC3YVl.png" />
                 </div>
                 <div className="secondChild">
-                  <span className="headline">Daily Recharges</span>
+                  <span className="headline">Worth</span>
                   <span className="subtitleline">
-                    Your one-stop destination for all your recharge needs
+                    Monetization layer over Instagram
                   </span>
                   <div className="technologyBox">
                     <img src="https://i.imgur.com/JqX1hAw.png" />
@@ -607,7 +607,7 @@ class Home extends React.Component {
                   <img src="https://i.imgur.com/elEy6uT.png" />
                 </div>
                 <div className="secondChild">
-                  <span className="headline">AKmoney</span>
+                  <span className="headline">Soochi</span>
                   <span className="subtitleline">
                     A collaborative multilingual list maker for WhatsApp
                   </span>
