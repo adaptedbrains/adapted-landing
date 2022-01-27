@@ -1,3 +1,5 @@
+/** @format */
+
 import React from "react";
 import { connect } from "react-redux";
 import { DahsboardCss } from "./style";
@@ -41,8 +43,8 @@ class Service extends React.Component {
       type == "cto"
         ? "CTO as a Service"
         : type == "elastic"
-          ? "Elastic Resourcing"
-          : "Rapid MVP Development";
+        ? "Elastic Resourcing"
+        : "Rapid MVP Development";
     return (
       <DahsboardCss>
         <Modal
@@ -50,8 +52,7 @@ class Service extends React.Component {
           backdropClassName="lc-modal-backdrop"
           size="lg"
           open={showModal}
-          toggle={this.closeModal}
-        >
+          toggle={this.closeModal}>
           <ModalHeader className="headerBox">
             <span>{modalheader}</span>
             <div className="headerSubeheader">
@@ -144,55 +145,54 @@ class Service extends React.Component {
                   </div>
                 </div>
               ) : (
-                    <div className="listwrapper">
-                      <div className="listEntries">
-                        <div className="numberBox">
-                          <div className="number">1</div>
-                          <div className="linebelow" />
-                        </div>
-
-                        <span>
-                          Tell us what you want to build and your long and
-                          short-term goals
-                    </span>
-                      </div>
-                      <div className="listEntries">
-                        <div className="numberBox">
-                          <div className="number">2</div>
-                          <div className="linebelow" />
-                        </div>
-                        <span>
-                          We’ll help you select core features and pick right
-                          technology stack
-                    </span>
-                      </div>
-                      <div className="listEntries">
-                        <div className="numberBox">
-                          <div className="number">3</div>
-                          <div className="linebelow" />
-                        </div>
-                        <span>
-                          We’ll onboard a team to design, develop and deploy your
-                          MVP
-                    </span>
-                      </div>
-                      <div className="listEntries">
-                        <div className="numberBox">
-                          <div className="number">4</div>
-                        </div>
-                        <span>
-                          Get post launch iteration and maintenance support.
-                    </span>
-                      </div>
+                <div className="listwrapper">
+                  <div className="listEntries">
+                    <div className="numberBox">
+                      <div className="number">1</div>
+                      <div className="linebelow" />
                     </div>
-                  )}
+
+                    <span>
+                      Tell us what you want to build and your long and
+                      short-term goals
+                    </span>
+                  </div>
+                  <div className="listEntries">
+                    <div className="numberBox">
+                      <div className="number">2</div>
+                      <div className="linebelow" />
+                    </div>
+                    <span>
+                      We’ll help you select core features and pick right
+                      technology stack
+                    </span>
+                  </div>
+                  <div className="listEntries">
+                    <div className="numberBox">
+                      <div className="number">3</div>
+                      <div className="linebelow" />
+                    </div>
+                    <span>
+                      We’ll onboard a team to design, develop and deploy your
+                      MVP
+                    </span>
+                  </div>
+                  <div className="listEntries">
+                    <div className="numberBox">
+                      <div className="number">4</div>
+                    </div>
+                    <span>
+                      Get post launch iteration and maintenance support.
+                    </span>
+                  </div>
+                </div>
+              )}
               {type != "elastic" ? (
                 type == "cto" ? null : (
                   <a
                     target="blank"
-                    href="https://calendly.com/nurturelabs/meetingrequest"
-                    className="modalButton"
-                  >
+                    // href="https://calendly.com/nurturelabs/meetingrequest"
+                    className="modalButton">
                     Book a call
                   </a>
                 )
@@ -214,9 +214,8 @@ class Service extends React.Component {
                   </span>
                   <a
                     target="blank"
-                    href="https://calendly.com/nurturelabs/meetingrequest"
-                    className="modalButton flexStartButton"
-                  >
+                    // href="https://calendly.com/nurturelabs/meetingrequest"
+                    className="modalButton flexStartButton">
                     book a call
                   </a>
                 </>
@@ -224,60 +223,58 @@ class Service extends React.Component {
                 <>
                   <div>
                     <span className="elastictext">
-                      Flat 15% management fee over the cost of the onboarded tech
-                      team.
-                  </span>
+                      Flat 15% management fee over the cost of the onboarded
+                      tech team.
+                    </span>
                     <span className="elastictext">
                       You can choose to pay monthly, weekly or hourly basis
-                  </span>
+                    </span>
                   </div>
                   {/* <span className="ctogreen">Check out resource rate card</span> */}
                   <a
                     target="blank"
-                    href="https://calendly.com/nurturelabs/meetingrequest"
-                    className="modalButton flexStartButton"
-                  >
+                    // href="https://calendly.com/nurturelabs/meetingrequest"
+                    className="modalButton flexStartButton">
                     book a call
                   </a>
                 </>
               ) : (
-                    <>
-                      <div className="topBoxer">
-                        <div className="listwrapper">
-                          <div className="listEntries">
-                            <div className="number"></div>
-                            <span>Get upfront guaranteed cost and time</span>
-                          </div>
-                          <div className="listEntries">
-                            <div className="number"></div>
-                            <span>
-                              Start with 20% down payment and Pay remaining sum in
-                              equal weekly installments
-                        </span>
-                          </div>
-                          <div className="listEntries">
-                            <div className="number"></div>
-                            <span>
-                              Cancel anytime if you don't get the desired traction
-                        </span>
-                          </div>
-                        </div>
+                <>
+                  <div className="topBoxer">
+                    <div className="listwrapper">
+                      <div className="listEntries">
+                        <div className="number"></div>
+                        <span>Get upfront guaranteed cost and time</span>
                       </div>
-                      <div className="bottomBoxer">
+                      <div className="listEntries">
+                        <div className="number"></div>
                         <span>
-                          We typically deliver most of our projects within 10 weeks
-                          and at a cost of $7500
-                    </span>
+                          Start with 20% down payment and Pay remaining sum in
+                          equal weekly installments
+                        </span>
                       </div>
-                      <a
-                        href="https://nurturelabs.typeform.com/to/E885wP"
-                        target="blank"
-                        className="modalButton flexStartButton"
-                      >
-                        get your quote now
+                      <div className="listEntries">
+                        <div className="number"></div>
+                        <span>
+                          Cancel anytime if you don't get the desired traction
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bottomBoxer">
+                    <span>
+                      We typically deliver most of our projects within 10 weeks
+                      and at a cost of $7500
+                    </span>
+                  </div>
+                  <a
+                    // href="https://nurturelabs.typeform.com/to/E885wP"
+                    target="blank"
+                    className="modalButton flexStartButton">
+                    get your quote now
                   </a>
-                    </>
-                  )}
+                </>
+              )}
             </div>
           </ModalBody>
         </Modal>
@@ -289,8 +286,7 @@ class Service extends React.Component {
               <div className="feature">
                 <img
                   src="https://i.imgur.com/LGlglZW.png"
-                  className="featureimg"
-                ></img>
+                  className="featureimg"></img>
                 <span className="featureHeading">Elastic Resourcing</span>
                 <span className="featureSubHeading">
                   Fill gaps within your tech team by tapping into our global
@@ -305,16 +301,14 @@ class Service extends React.Component {
                       type: "elastic",
                     });
                   }}
-                  className="knowMorespan"
-                >
+                  className="knowMorespan">
                   HOW IT WORKS
                 </span>
               </div>
               <div className="feature">
                 <img
                   src="https://i.imgur.com/xFJDILF.png"
-                  className="featureimg"
-                ></img>
+                  className="featureimg"></img>
                 <span className="featureHeading">CTO as a Service</span>
                 <span className="featureSubHeading">
                   Onboard us as your technical co-founder and we'll help you
@@ -328,16 +322,14 @@ class Service extends React.Component {
                       type: "cto",
                     });
                   }}
-                  className="knowMorespan"
-                >
+                  className="knowMorespan">
                   HOW IT WORKS
                 </span>
               </div>
               <div className="feature">
                 <img
                   src="https://i.imgur.com/6PsgV1c.png"
-                  className="featureimg"
-                ></img>
+                  className="featureimg"></img>
                 <span className="featureHeading">Rapid MVP Development</span>
                 <span className="featureSubHeading">
                   We've helped early stage founders around the world to
@@ -351,8 +343,7 @@ class Service extends React.Component {
                       type: "mvp",
                     });
                   }}
-                  className="knowMorespan"
-                >
+                  className="knowMorespan">
                   HOW IT WORKS
                 </span>
               </div>

@@ -1,3 +1,5 @@
+/** @format */
+
 import React from "react";
 import { connect } from "react-redux";
 import { PartnerCss } from "./style";
@@ -45,12 +47,12 @@ class Partner extends React.Component {
           <div className="container1">
             <div className="first">
               <span className="headerTitle">
-                {`NurtureLabs Partner Network `}
+                {`Adapted Brains Partner Network `}
               </span>
 
               <span className="subtitle">
-                At NurtureLabs, we are constantly looking for partners who can
-                help us in reaching to masses. Our partners are key to our
+                At Adapted Brains, we are constantly looking for partners who
+                can help us in reaching to masses. Our partners are key to our
                 success and we make sure to share it with them.
               </span>
             </div>
@@ -61,17 +63,18 @@ class Partner extends React.Component {
         </div>
         <div className="container4">
           <div className="firstBox">
-            <span className="headerTitle">NurtureLabs Technology Partner</span>
+            <span className="headerTitle">
+              Adapted Brains Technology Partner
+            </span>
             <span className="subtitle">
               Join our technology partner network and we'll provide you with
               continuous stream of work so that you can focus on what you do the
               best
             </span>
             <a
-              href="https://forms.gle/p27ADUtyWGST9Der6"
+              // href="https://forms.gle/p27ADUtyWGST9Der6"
               target="blank"
-              className="btn1"
-            >
+              className="btn1">
               Become technology partner
             </a>
           </div>
@@ -92,10 +95,9 @@ class Partner extends React.Component {
                 within your network
               </span>
               <a
-                href="https://calendly.com/nurturelabs/meetingrequest"
+                // href="https://calendly.com/nurturelabs/meetingrequest"
                 target="blank"
-                className="btn1"
-              >
+                className="btn1">
                 Become sales partner
               </a>
             </div>
@@ -122,10 +124,9 @@ class Partner extends React.Component {
                 within your network
               </span>
               <a
-                href="https://calendly.com/nurturelabs/meetingrequest"
+                // href="https://calendly.com/nurturelabs/meetingrequest"
                 target="blank"
-                className="btn1"
-              >
+                className="btn1">
                 Become sales partner
               </a>
             </div>

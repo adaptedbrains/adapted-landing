@@ -1,3 +1,5 @@
+/** @format */
+
 import React from "react";
 import { connect } from "react-redux";
 import { DahsboardCss } from "./style";
@@ -37,43 +39,39 @@ class ContactUs extends React.Component {
   }
 
   handlecheck1() {
-
     this.setState({
       check1: !this.state.check1,
       check2: false,
       check3: false,
       check4: false,
-      budget: "<=$5,000"
+      budget: "<=$5,000",
     });
   }
   handlecheck2() {
-
     this.setState({
       check2: !this.state.check2,
       check1: false,
       check3: false,
       check4: false,
-      budget: "$5,000-$10,000"
+      budget: "$5,000-$10,000",
     });
   }
   handlecheck3() {
-
     this.setState({
       check3: !this.state.check3,
       check2: false,
       check1: false,
       check4: false,
-      budget: "$10,000-$25,000"
+      budget: "$10,000-$25,000",
     });
   }
   handlecheck4() {
-
     this.setState({
       check4: !this.state.check4,
       check2: false,
       check3: false,
       check1: false,
-      budget: "$25,000-$50,000"
+      budget: "$25,000-$50,000",
     });
   }
 
@@ -87,8 +85,8 @@ class ContactUs extends React.Component {
       type == "cto"
         ? "CTO as a Service"
         : type == "elastic"
-          ? "Elastic Resourcing"
-          : "Rapid MVP Development";
+        ? "Elastic Resourcing"
+        : "Rapid MVP Development";
     return (
       <DahsboardCss>
         <div className="containerBig">
@@ -123,21 +121,36 @@ class ContactUs extends React.Component {
               <div className="checkbox">
                 <span>Rough Project Budget</span>
                 <label>
-                  <input type="checkbox" checked={this.state.check1} onChange={this.handlecheck1.bind(this)} />
+                  <input
+                    type="checkbox"
+                    checked={this.state.check1}
+                    onChange={this.handlecheck1.bind(this)}
+                  />
                   <span>&#8804;$5000</span>
                 </label>
                 <label>
-                  <input type="checkbox" checked={this.state.check2} onChange={this.handlecheck2.bind(this)} />
+                  <input
+                    type="checkbox"
+                    checked={this.state.check2}
+                    onChange={this.handlecheck2.bind(this)}
+                  />
                   <span>$5,000-$10,000</span>
                 </label>
                 <label>
-                  <input type="checkbox" checked={this.state.check3} onChange={this.handlecheck3.bind(this)} />
+                  <input
+                    type="checkbox"
+                    checked={this.state.check3}
+                    onChange={this.handlecheck3.bind(this)}
+                  />
                   <span>$10,000-$25,000</span>
                 </label>
                 <label>
-                  <input type="checkbox" checked={this.state.check4} onChange={this.handlecheck4.bind(this)} />
+                  <input
+                    type="checkbox"
+                    checked={this.state.check4}
+                    onChange={this.handlecheck4.bind(this)}
+                  />
                   <span>$25,000-$50,000</span>
-
                 </label>
               </div>
               <div className="inputBox">
@@ -154,8 +167,6 @@ class ContactUs extends React.Component {
               </div>
               <div
                 onClick={() => {
-
-
                   if (
                     this.state.name &&
                     this.state.email &&
@@ -181,34 +192,41 @@ class ContactUs extends React.Component {
                     );
                   }
                 }}
-
-                className="bottomButton"
-              >
+                className="bottomButton">
                 SEND US MESSAGE
               </div>
             </div>
             <div className="supportBox">
               <span className="headercontainer8">
                 Talk to us and get your project moving!
-              <ol>
+                <ol>
                   <li>We will respond to you within 24 hours.</li>
                   <li>We’ll sign an NDA if requested.</li>
-                  <li>You'll be talking to product and tech experts (no account managers).</li>
+                  <li>
+                    You'll be talking to product and tech experts (no account
+                    managers).
+                  </li>
                 </ol>
               </span>
               <span className="headercontainer8">
                 That's what you can expect after you book a call
-              <ol>
-                  <li>Assess your idea in terms of technical feasibility and complexity</li>
-                  <li>Get a tentative understanding of costs and time involved.</li>
-                  <li>Evaluate whether we are the right fit for your requirement</li>
+                <ol>
+                  <li>
+                    Assess your idea in terms of technical feasibility and
+                    complexity
+                  </li>
+                  <li>
+                    Get a tentative understanding of costs and time involved.
+                  </li>
+                  <li>
+                    Evaluate whether we are the right fit for your requirement
+                  </li>
                 </ol>
               </span>
               <a
                 target="blank"
-                href="https://calendly.com/nurturelabs/meetingrequest"
-                className="bookacall"
-              >
+                // href="https://calendly.com/nurturelabs/meetingrequest"
+                className="bookacall">
                 BOOK A CALL
               </a>
               <div className="dottedLine">
@@ -216,7 +234,7 @@ class ContactUs extends React.Component {
               </div>
               <div className="contactUsStrip">
                 <img src="https://i.imgur.com/bm0rg5G.png" />
-                <span>hello@nurturelabs.co</span>
+                <span>hello@adaptedbrains.com</span>
               </div>
               {/* <div className="contactUsStrip">
               <img src="https://i.imgur.com/IM81cXW.png" />

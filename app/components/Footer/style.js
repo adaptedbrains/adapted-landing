@@ -1,6 +1,5 @@
-/**
- * Created by vivek ajage on 12/5/20.
- */
+/** @format */
+
 import styled from "styled-components";
 import base from "../../styles/base";
 
@@ -22,6 +21,13 @@ const FooterCss = styled.div`
           height: 50px;
           object-fit: contain;
           margin-bottom: 50px;
+        }
+        .FirstFooterBoxLogo {
+          display: flex;
+          font-family: Poppins;
+          justify-content: center;
+          font-weight: 450;
+          color: black;
         }
         .firstHeading {
           font-family: Poppins;
