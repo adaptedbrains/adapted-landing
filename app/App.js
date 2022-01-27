@@ -1,3 +1,5 @@
+/** @format */
+
 import localForage from "localforage";
 import React, { Component, Fragment } from "react";
 import { hydrate } from "react-dom";
@@ -54,7 +56,7 @@ class App extends Component {
     return (
       <Fragment>
         <Helmet>
-          <title>Nurture Labs</title>
+          <title>Adapted Brains</title>
         </Helmet>
         <Provider store={store}>{routes()}</Provider>
       </Fragment>

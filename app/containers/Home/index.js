@@ -1,3 +1,5 @@
+/** @format */
+
 import React from "react";
 import { connect } from "react-redux";
 import { DahsboardCss } from "./style";
@@ -34,8 +36,8 @@ class Home extends React.Component {
       typereset: "init",
       preview: [
         {
-          name: "Worth",
-          desc: "Monetization layer over Instagram",
+          name: "Daily Recharges",
+          desc: "Your one-stop destination for all your recharge needs",
           img: "https://i.imgur.com/JqX1hAw.png",
           top:
             "https://frontend-asset-files.s3.ap-south-1.amazonaws.com/Screenrecorder-2020-03-21-19-27-04-226_2.mp4",
@@ -145,8 +147,7 @@ class Home extends React.Component {
           backdropClassName="lc-modal-backdrop"
           size="lg"
           open={showModal}
-          toggle={this.closeModal}
-        >
+          toggle={this.closeModal}>
           <ModalHeader className="headerBox">
             <span>{modalheader}</span>
             <div className="headerSubeheader">
@@ -285,9 +286,8 @@ class Home extends React.Component {
                 type == "cto" ? null : (
                   <a
                     target="blank"
-                    href="https://calendly.com/nurturelabs/meetingrequest"
-                    className="modalButton"
-                  >
+                    // href="https://calendly.com/nurturelabs/meetingrequest"
+                    className="modalButton">
                     book a call
                   </a>
                 )
@@ -309,9 +309,8 @@ class Home extends React.Component {
                   </span>
                   <a
                     target="blank"
-                    href="https://calendly.com/nurturelabs/meetingrequest"
-                    className="modalButton flexStartButton"
-                  >
+                    // href="https://calendly.com/nurturelabs/meetingrequest"
+                    className="modalButton flexStartButton">
                     book a call
                   </a>
                 </>
@@ -330,9 +329,8 @@ class Home extends React.Component {
                   {/* <span className="ctogreen">Check out resource rate card</span> */}
                   <a
                     target="blank"
-                    href="https://calendly.com/nurturelabs/meetingrequest"
-                    className="modalButton flexStartButton"
-                  >
+                    // href="https://calendly.com/nurturelabs/meetingrequest"
+                    className="modalButton flexStartButton">
                     book a call
                   </a>
                 </>
@@ -366,10 +364,9 @@ class Home extends React.Component {
                     </span>
                   </div>
                   <a
-                    href="https://nurturelabs.typeform.com/to/E885wP"
+                    // href="https://nurturelabs.typeform.com/to/E885wP"
                     target="blank"
-                    className="modalButton flexStartButton"
-                  >
+                    className="modalButton flexStartButton">
                     get your quote now
                   </a>
                 </>
@@ -392,8 +389,7 @@ class Home extends React.Component {
                   }}
                   key={this.state.typereset}
                   className="spanboxchangingtext"
-                  cursor={{ show: false }}
-                >
+                  cursor={{ show: false }}>
                   <span>scale</span>
                   <Typist.Backspace count={5} delay={3000} />
                   <span>create value</span>
@@ -404,23 +400,21 @@ class Home extends React.Component {
               </span>
 
               <span className="subtitle">
-                At NurtureLabs, we bring together remote tech teams, advanced
+                At Adapted Brains, we bring together remote tech teams, advanced
                 product management skills and best in-class technologies to
                 bring your ideas to life and deliver high impact results.
               </span>
               <div className="btnHome">
                 <a
                   target="blank"
-                  href="https://landbot.io/u/H-451190-1JDSWHZ1DHHKNJ3J/index.html"
-                  className="btn1"
-                >
+                  // href="https://landbot.io/u/H-451190-1JDSWHZ1DHHKNJ3J/index.html"
+                  className="btn1">
                   CHAT WITH US
                 </a>
                 <a
                   target="blank"
-                  href="https://calendly.com/nurturelabs/meetingrequest"
-                  className="btn1"
-                >
+                  // href="https://calendly.com/nurturelabs/meetingrequest"
+                  className="btn1">
                   BOOK A DISCOVERY CALL
                 </a>
               </div>
@@ -441,8 +435,7 @@ class Home extends React.Component {
             <div className="feature">
               <img
                 src="https://i.imgur.com/LGlglZW.png"
-                className="featureimg"
-              ></img>
+                className="featureimg"></img>
               <span className="featureHeading">Elastic Resourcing</span>
               <span className="featureSubHeading">
                 Fill gaps within your tech team by tapping into our global
@@ -456,16 +449,14 @@ class Home extends React.Component {
                     type: "elastic",
                   });
                 }}
-                className="knowMorespan"
-              >
+                className="knowMorespan">
                 HOW IT WORKS
               </span>
             </div>
             <div className="feature">
               <img
                 src="https://i.imgur.com/xFJDILF.png"
-                className="featureimg"
-              ></img>
+                className="featureimg"></img>
               <span className="featureHeading">CTO as a Service</span>
               <span className="featureSubHeading">
                 Onboard us as your technical co-founder and we'll help you align
@@ -479,16 +470,14 @@ class Home extends React.Component {
                     type: "cto",
                   });
                 }}
-                className="knowMorespan"
-              >
+                className="knowMorespan">
                 HOW IT WORKS
               </span>
             </div>
             <div className="feature">
               <img
                 src="https://i.imgur.com/6PsgV1c.png"
-                className="featureimg"
-              ></img>
+                className="featureimg"></img>
               <span className="featureHeading">Rapid MVP Development</span>
               <span className="featureSubHeading">
                 We've helped early stage founders around the world to
@@ -502,8 +491,7 @@ class Home extends React.Component {
                     type: "mvp",
                   });
                 }}
-                className="knowMorespan"
-              >
+                className="knowMorespan">
                 HOW IT WORKS
               </span>
             </div>
@@ -553,7 +541,7 @@ class Home extends React.Component {
                   src="https://i.imgur.com/IEsOLEN.png"
                 />
                 <span>
-                  It has been a great experience working with NurtureLabs so
+                  It has been a great experience working with Adapted Brains so
                   far. They are extremely efficient and adhere to deadlines.
                   They have contributed to product ideas and are extremely
                   flexible with regard to time commitment. We highly recommend
@@ -566,8 +554,7 @@ class Home extends React.Component {
                     marginTop: "2%",
                     fontSize: "17px",
                     fontWeight: "500",
-                  }}
-                >
+                  }}>
                   Patrick Kim, CEO Worth Network Inc.
                 </span>
               </div>
@@ -591,15 +578,14 @@ class Home extends React.Component {
                   this.state.selectedWork == 0
                     ? "childbox selectedBox"
                     : "childbox"
-                }
-              >
+                }>
                 <div className="firstChild">
                   <img src="https://i.imgur.com/BJC3YVl.png" />
                 </div>
                 <div className="secondChild">
-                  <span className="headline">Worth</span>
+                  <span className="headline">Daily Recharges</span>
                   <span className="subtitleline">
-                    Monetization layer over Instagram
+                    Your one-stop destination for all your recharge needs
                   </span>
                   <div className="technologyBox">
                     <img src="https://i.imgur.com/JqX1hAw.png" />
@@ -616,13 +602,12 @@ class Home extends React.Component {
                   this.state.selectedWork == 1
                     ? "childbox selectedBox"
                     : "childbox"
-                }
-              >
+                }>
                 <div className="firstChild">
                   <img src="https://i.imgur.com/elEy6uT.png" />
                 </div>
                 <div className="secondChild">
-                  <span className="headline">Soochi</span>
+                  <span className="headline">AKmoney</span>
                   <span className="subtitleline">
                     A collaborative multilingual list maker for WhatsApp
                   </span>
@@ -641,8 +626,7 @@ class Home extends React.Component {
                   this.state.selectedWork == 2
                     ? "childbox selectedBox"
                     : "childbox"
-                }
-              >
+                }>
                 <div className="firstChild">
                   <img src="https://i.imgur.com/xpOkMqp.png" />
                 </div>
@@ -667,8 +651,7 @@ class Home extends React.Component {
                   this.state.selectedWork == 3
                     ? "childbox selectedBox"
                     : "childbox"
-                }
-              >
+                }>
                 <div className="firstChild">
                   <img src="https://i.imgur.com/dAzZkXF.png" />
                 </div>
@@ -690,8 +673,7 @@ class Home extends React.Component {
                       pathname: "portfolio",
                     });
                   }}
-                  className="btn1"
-                >
+                  className="btn1">
                   Checkout our Portfolio
                 </div>
               ) : null}
@@ -712,8 +694,7 @@ class Home extends React.Component {
 
               <div
                 className="firstVideo"
-                style={{ display: selectedWork == 1 ? "flex" : "none" }}
-              >
+                style={{ display: selectedWork == 1 ? "flex" : "none" }}>
                 <video
                   loop
                   autoPlay
@@ -724,8 +705,7 @@ class Home extends React.Component {
               </div>
               <div
                 className="firstVideoImage"
-                style={{ display: selectedWork == 0 ? "flex" : "none" }}
-              >
+                style={{ display: selectedWork == 0 ? "flex" : "none" }}>
                 <video
                   loop
                   autoPlay
@@ -739,8 +719,7 @@ class Home extends React.Component {
                 style={{
                   display:
                     selectedWork != 0 && selectedWork != 1 ? "flex" : "none",
-                }}
-              >
+                }}>
                 <img
                   className="floatingImg"
                   src={preview[selectedWork].top || ""}
@@ -752,8 +731,7 @@ class Home extends React.Component {
                 style={{
                   display:
                     selectedWork != 0 && selectedWork != 1 ? "flex" : "none",
-                }}
-              >
+                }}>
                 <img
                   className="floatingImg"
                   src={preview[selectedWork].bottom || ""}
@@ -943,28 +921,28 @@ class Home extends React.Component {
               onClick={() => {
                 console.log("budget is", this.state.budget);
                 if (this.state.name && this.state.email && this.state.message) {
-                  axios
-                    .post("/api/sendmessage", {
-                      email: this.state.email,
-                      name: this.state.name,
-                      message: this.state.message,
-                      budget: this.state.budget,
-                    })
-                    .then((e) => {
-                      if (e.status != 200) {
-                        alert("Something went wrong! Please try again.");
-                      } else {
-                        alert("Thank you for contacting us!");
-                      }
-                    });
+                  // axios
+                  //   .post("/api/sendmessage", {
+                  //     email: this.state.email,
+                  //     name: this.state.name,
+                  //     message: this.state.message,
+                  //     budget: this.state.budget,
+                  //   })
+                  //   .then((e) => {
+                  //     if (e.status != 200) {
+                  //       alert("Something went wrong! Please try again.");
+                  //     } else {
+                  //       alert("Thank you for contacting us!");
+                  //     }
+                  //   });
+                  alert("Thank you for contacting us!");
                 } else {
                   alert(
                     "Please provide email name and message to send us message."
                   );
                 }
               }}
-              className="bottomButton"
-            >
+              className="bottomButton">
               SEND US MESSAGE
             </div>
           </div>
@@ -997,9 +975,8 @@ class Home extends React.Component {
             </span>
             <a
               target="blank"
-              href="https://calendly.com/nurturelabs/meetingrequest"
-              className="bookacall"
-            >
+              // href="https://calendly.com/nurturelabs/meetingrequest"
+              className="bookacall">
               BOOK A CALL
             </a>
             <div className="dottedLine">
@@ -1007,7 +984,7 @@ class Home extends React.Component {
             </div>
             <div className="contactUsStrip">
               <img src="https://i.imgur.com/bm0rg5G.png" />
-              <span>hello@nurturelabs.co</span>
+              <span>hello@adaptedbrains.com</span>
             </div>
             {/* <div className="contactUsStrip">
               <img src="https://i.imgur.com/IM81cXW.png" />

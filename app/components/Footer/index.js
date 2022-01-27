@@ -1,3 +1,5 @@
+/** @format */
+
 import React from "react";
 import { connect } from "react-redux";
 import { FooterCss } from "./style";
@@ -27,14 +29,18 @@ class Footer extends React.Component {
           <div className="footerBox">
             <div className="footerContainer">
               <div className="firstFooterBox">
-                <img src="https://i.imgur.com/kK7cxAz.png" />
+                <div className="FirstFooterBoxLogo">
+                  <img src="https://i.imgur.com/qrnfCaO.png" />
+                  <p>Adapted Brains</p>
+                </div>
                 <span className="firstHeading">
                   Nurturing Ideas to Products that scale
                 </span>
                 <span className="subheadingFooter">
-                  At NurtureLabs, we bring together remote tech teams, advanced
-                  product management skills and best in-class technologies to
-                  bring your ideas to life and deliver high impact results.
+                  At Adapted Brains, we bring together remote tech teams,
+                  advanced product management skills and best in-class
+                  technologies to bring your ideas to life and deliver high
+                  impact results.
                 </span>
               </div>
               <div className="secondfooter">
@@ -44,8 +50,7 @@ class Footer extends React.Component {
                       browserHistory.push({
                         pathname: "join",
                       });
-                    }}
-                  >
+                    }}>
                     Join our Network
                   </span>
                   <span
@@ -53,8 +58,7 @@ class Footer extends React.Component {
                       browserHistory.push({
                         pathname: "/",
                       });
-                    }}
-                  >
+                    }}>
                     Work
                   </span>
                   <span
@@ -62,8 +66,7 @@ class Footer extends React.Component {
                       browserHistory.push({
                         pathname: "partner-with-us",
                       });
-                    }}
-                  >
+                    }}>
                     Partner with us
                   </span>
                   <span
@@ -71,8 +74,7 @@ class Footer extends React.Component {
                       browserHistory.push({
                         pathname: "service",
                       });
-                    }}
-                  >
+                    }}>
                     Service
                   </span>
                   <span
@@ -80,8 +82,7 @@ class Footer extends React.Component {
                       browserHistory.push({
                         pathname: "portfolio",
                       });
-                    }}
-                  >
+                    }}>
                     Portfolio
                   </span>
                   {/* <span
@@ -98,8 +99,7 @@ class Footer extends React.Component {
                       browserHistory.push({
                         pathname: "contact-us",
                       });
-                    }}
-                  >
+                    }}>
                     Contact us
                   </span>
                   {/* <span
@@ -130,22 +130,21 @@ class Footer extends React.Component {
               <div class="social">
                 <div className="rowBox">
                   <img src="https://i.imgur.com/2aAwphY.png" />
-                  <span>hello@nurturelabs.co</span>
+                  <span>hello@adaptedbrains.com</span>
                 </div>
                 <div className="line"></div>
                 <div className="rowBox">
                   <span>Follow-Us</span>
                   <a
                     target="blank"
-                    href="https://www.linkedin.com/company/nurture-labs/"
-                  >
+                    href="https://www.linkedin.com/company/80691207/">
                     <img src="https://i.imgur.com/pStgaAW.png" />
                   </a>
                 </div>
               </div>
             </>
           ) : null}
-          <span>All rights reserved by Ruuxa Technologies Pvt Ltd</span>
+          <span>All rights reserved by Adapted Brains</span>
         </div>
       </FooterCss>
     );

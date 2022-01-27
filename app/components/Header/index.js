@@ -1,3 +1,5 @@
+/** @format */
+
 import React from "react";
 import { connect } from "react-redux";
 import { HeaderCss } from "./style";
@@ -40,15 +42,13 @@ class Header extends React.Component {
               this.state.anim
                 ? "fullscreenMode secondAnim"
                 : "fullscreenMode firstAnim"
-            }
-          >
+            }>
             <div
               style={{
                 display: "flex",
                 flexDirection: "row",
                 padding: "40px 30px",
-              }}
-            >
+              }}>
               <div style={{ width: "90%" }}>
                 <img
                   onClick={() => {
@@ -56,7 +56,7 @@ class Header extends React.Component {
                       pathname: "/",
                     });
                   }}
-                  src="https://i.imgur.com/oFgkGUI.png"
+                  src="https://i.imgur.com/qrnfCaO.png"
                   style={{ display: "flex", width: 170 }}
                 />
               </div>
@@ -69,8 +69,7 @@ class Header extends React.Component {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                }}
-              >
+                }}>
                 <img
                   src="https://i.imgur.com/HKRhC0P.png"
                   style={{ width: 25 }}
@@ -82,8 +81,7 @@ class Header extends React.Component {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
-              }}
-            >
+              }}>
               <span
                 onClick={() => {
                   this.setState(
@@ -106,8 +104,7 @@ class Header extends React.Component {
                   fontWeight: 600,
                   fontSize: 20,
                   color: "#303030",
-                }}
-              >
+                }}>
                 PARTNER WITH US
               </span>
               <span
@@ -132,8 +129,7 @@ class Header extends React.Component {
                   fontWeight: 600,
                   fontSize: 20,
                   color: "#303030",
-                }}
-              >
+                }}>
                 JOIN US
               </span>
               <span
@@ -159,8 +155,7 @@ class Header extends React.Component {
                   cursor: "pointer",
                   fontSize: 20,
                   color: "#303030",
-                }}
-              >
+                }}>
                 PORTFOLIO
               </span>
             </div>
@@ -172,9 +167,9 @@ class Header extends React.Component {
               pathname: "/",
             });
           }}
-          className="first"
-        >
-          <img src="https://i.imgur.com/oFgkGUI.png" />
+          className="first">
+          <img src="https://i.imgur.com/qrnfCaO.png" />
+          <p className="first-logo">Adapted Brains</p>
         </div>
         {!isMobile ? (
           <div className="second">
@@ -184,8 +179,7 @@ class Header extends React.Component {
                   pathname: "partner-with-us",
                 });
               }}
-              className="menuItem"
-            >
+              className="menuItem">
               Partner with us
             </div>
             <div
@@ -194,8 +188,7 @@ class Header extends React.Component {
                 browserHistory.push({
                   pathname: "join",
                 });
-              }}
-            >
+              }}>
               Join Network
             </div>
             <div
@@ -204,15 +197,13 @@ class Header extends React.Component {
                 browserHistory.push({
                   pathname: "portfolio",
                 });
-              }}
-            >
+              }}>
               Portfolio
             </div>
             <a
               target="blank"
-              href="https://calendly.com/nurturelabs/meetingrequest"
-              className="menuItem roundButton"
-            >
+              // href="https://calendly.com/nurturelabs/meetingrequest"
+              className="menuItem roundButton">
               Book a Call
             </a>
           </div>

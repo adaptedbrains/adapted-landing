@@ -1,6 +1,9 @@
 /**
  * Created by vivek ajage on 12/5/20.
+ *
+ * @format
  */
+
 import styled from "styled-components";
 import base from "../../styles/base";
 
@@ -19,8 +22,8 @@ const HeaderCss = styled.div`
     padding-bottom: 5vh;
   }
   img {
-    width: 130px;
-    height: 50px;
+    ${"" /* width: 130px; */}
+    height: 80px;
     @media (max-width: ${base.small}) {
       object-fit: contain;
       width: 100px;
@@ -33,6 +36,11 @@ const HeaderCss = styled.div`
   .first {
     flex: 1;
     display: flex;
+    font-family: Poppins;
+    justify-content: center;
+    font-weight: 450;
+    color: black;
+    font-size: 1.5rem;
   }
   .second {
     flex: 5;

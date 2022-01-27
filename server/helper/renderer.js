@@ -1,3 +1,5 @@
+/** @format */
+
 import React from "react";
 import { renderToString } from "react-dom/server";
 import { RouterContext } from "react-router";
@@ -67,16 +69,16 @@ export default (req, store, renderProps) => {
     <!DOCTYPE html>
 		<html lang="en">
 			<head>
-				<title>Nurture Labs</title>
+				<title>Adapted Brains</title>
 				<meta charset="UTF-8">
 				<meta name="theme-color" content="#fff" />
-                <meta name="description" content="Nurture Labs" />
-                <meta property="og:image" content="https://i.imgur.com/cUNg6jH.png">
+                <meta name="description" content="Adapted Brains" />
+                <meta property="og:image" content="https://i.imgur.com/qrnfCaO.png">
                 <meta http-equiv="x-ua-compatible" content="ie=edge">
                 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
                 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
                 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
-				<link rel="shortcut icon" href="https://i.imgur.com/87P3UIl.png" />
+				<link rel="shortcut icon" href="https://i.imgur.com/qrnfCaO.png" />
                 <script src="https://cdn.rawgit.com/progers/pathseg/master/pathseg.js"></script>
                
              <base href="/">
