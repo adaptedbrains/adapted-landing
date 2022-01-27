@@ -81,14 +81,16 @@ class Portfolio extends React.Component {
               className="logoboxworth"
               src="https://i.imgur.com/BJC3YVl.png"
             />
-            <span className="bolderheader">Daily Recharges</span>
+            <span className="bolderheader">Worth</span>
             <span className="subtitletext">
-              Online Payment & Recharge, made easy! Your one-stop destination
-              for all your recharge needs - mobile recharge, DTH
-              recharge,electricity bill payment, insurance premium recharge for
-              businesses. We built the entire system comprising of the consumer
-              and business side apps for Android, a web landing page, a scalable
-              event-driven backend.
+              The Worth app is the best way to earn cash at your favorite
+              restaurants. Just post a photo of your dining experience on
+              Instagram and Worth will do the rest. Receive cash-back directly
+              into your bank account, and even more cash when you refer a friend
+              to do the same. Finally, Worth makes it possible to get paid for
+              eating and sharing your experiences. We built the entire system
+              comprising of the consumer and business side apps for iOS and
+              Android, a web landing page, a scalable event-driven backend.
             </span>
 
             {/* <div className="nameimgbox">
@@ -117,14 +119,17 @@ class Portfolio extends React.Component {
               className="logoboxworth"
               src="https://i.imgur.com/elEy6uT.png"
             />
-            <span className="bolderheader">AkMoney</span>
+            <span className="bolderheader">Soochi</span>
             <span className="subtitletext">
-              AkMoney is a platform for users to recharge their Mobile &DTH from
-              anywhere anytime. They can instantly recharge and get high
-              commission on every transaction. Users can also get Pan card at
-              their doorstep. Every Pan service is available.We built the entire
-              system comprising of the consumer and business side apps for
-              Android, a web landing page, a scalable event-driven backend.
+              Soochi is a multi-lingual real-time collaborative and contextual
+              to-do list build with WhatsApp first approach. It's truly a to-do
+              list for the next new billion internet users of India. This
+              product was internally build to summarise Whatsapp’s group chats
+              and have now been released for public use and is in the alpha
+              phase we are regularly listening to users and adding features and
+              other functionalities. As we are collecting more and more data,
+              with time the app will be able to suggest the easiest way to
+              complete some of the tasks written by the user in the list.
             </span>
 
             {/* <div className="nameimgbox">

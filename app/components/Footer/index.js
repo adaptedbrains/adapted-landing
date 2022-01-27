@@ -144,7 +144,7 @@ class Footer extends React.Component {
               </div>
             </>
           ) : null}
-          <span>All rights reserved by Adapted Brains</span>
+          <span>All rights reserved by Adapted Brains Pvt Ltd</span>
         </div>
       </FooterCss>
     );

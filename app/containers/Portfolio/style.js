@@ -1,6 +1,9 @@
 /**
  * Created by vivek ajage on 12/5/20.
+ *
+ * @format
  */
+
 import styled from "styled-components";
 import base from "../../styles/base";
 
@@ -530,7 +533,7 @@ const DahsboardCss = styled.div`
 
         height: 54vh;
         width: 30vh;
-        top: 10vh;
+        ${"" /* top: 10vh; */}
         position: absolute;
 
         @media (max-width: ${base.small}) {
